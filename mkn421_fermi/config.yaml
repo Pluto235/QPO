@@ -1,0 +1,42 @@
+data:
+  evfile : ft1.txt
+  scfile : ft2.txt
+
+binning:
+
+  roiwidth: 16.9          # 论文：16.9° × 16.9°
+  binsz: 0.1              # 0.1° 像素
+  enumbins: 37            # 37 个对数能 bin
+
+selection:
+
+  ra: 166.1138
+  dec: 38.2088
+  radius: 12.0         # 论文：12° 圆形选区
+  emin    : 100
+  emax    : 316227
+  zmax    : 90
+  evclass : 128       # P8R3 SOURCE
+  evtype  : 3
+  filter: "(DATA_QUAL>0)&&(LAT_CONFIG==1)"
+  tmin    : 239557417
+  tmax    : 612576000 # ? years
+  filter  : null
+  target  : mkn421
+
+gtlike:
+
+  edisp : True
+  irfs : 'P8R3_SOURCE_V3'
+  edisp_disable : ['isodiff','galdiff']
+
+model:
+
+  src_roiwidth : 17.0   # 模型扩展到 ROI+5°
+  galdiff  : ['$FERMI_DIFFUSE_DIR/gll_iem_v07.fits']
+  isodiff: ['$FERMI_DIFFUSE_DIR/iso_P8R3_SOURCE_V3_v1.txt']
+  catalogs : ['4FGL']  # 用 4FGL 初始化模型
+
+
+fileio:
+  outdir : mkn421

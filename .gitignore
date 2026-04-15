@@ -1,0 +1,34 @@
+.codex
+.codex/
+work/
+archive/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Nested repo metadata
+**/.git/
+
+# Fermi raw data and generated products
+mkn421_fermi/data/
+mkn421_fermi/fermipy-extra/
+mkn421_fermi/mkn421/
+mkn421_fermi/*.fits
+mkn421_fermi/*.npy
+mkn421_fermi/*.png
+mkn421_fermi/*.xml
+mkn421_fermi/*.log
+mkn421_fermi/*.par
+mkn421_fermi/DELCgen.py
+mkn421_fermi/fit2.txt
+
+# DELightcurveSimulation build artifacts
+mkn421_fermi/DELightcurveSimulation/build/
+mkn421_fermi/DELightcurveSimulation/DELCgen.egg-info/
+mkn421_fermi/DELightcurveSimulation/*.png
+
+# Emmanoulopoulos local artifacts
+mkn421_fermi/emmanoulopoulos/**/*.pyc
+
+# LHAASO generated simulations
+mkn421_lhaaso/simulations/*.h5
