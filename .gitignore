@@ -1,34 +1,44 @@
 .codex
 .codex/
-work/
-archive/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
+# Large/binary analysis products
+*.fits
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.pdf
+
+# Project data policy
+# Keep raw/intermediate/heavy products local. Only processed CSV products are
+# versioned so the GitHub checkout stays lightweight and reproducible.
+data/*
+!data/processed/
+data/processed/**
+!data/processed/**/
+!data/processed/**/*.csv
+
 # Nested repo metadata
 **/.git/
 
-# Fermi raw data and generated products
-mkn421_fermi/data/
-mkn421_fermi/fermipy-extra/
-mkn421_fermi/mkn421/
-mkn421_fermi/*.fits
-mkn421_fermi/*.npy
-mkn421_fermi/*.png
-mkn421_fermi/*.xml
-mkn421_fermi/*.log
-mkn421_fermi/*.par
-mkn421_fermi/DELCgen.py
-mkn421_fermi/fit2.txt
+# Cache and scratch
+work/*.tmp
+work/*.bak
 
-# DELightcurveSimulation build artifacts
-mkn421_fermi/DELightcurveSimulation/build/
-mkn421_fermi/DELightcurveSimulation/DELCgen.egg-info/
-mkn421_fermi/DELightcurveSimulation/*.png
+# Archived bundles
+archive/bundles/
+archive/compat/*.git/
+archive/legacy_methods/
+archive/legacy_outputs/
+archive/notebooks/
+archive/periodicity_v1_unscoped_*/
 
 # Emmanoulopoulos local artifacts
-mkn421_fermi/emmanoulopoulos/**/*.pyc
+src/methods/emmanoulopoulos/**/*.pyc
 
-# LHAASO generated simulations
-mkn421_lhaaso/simulations/*.h5
+# Notebook and Python caches under legacy wrappers
+mkn421_lhaaso/__pycache__/
+mkn421_lhaaso/simulations/__pycache__/

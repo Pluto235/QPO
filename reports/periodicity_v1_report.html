@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mrk 421 / Mrk 501 Periodicity Analysis v1 Report</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #5f6c7b;
+      --line: #d7dee8;
+      --panel: #f7f9fc;
+      --accent: #255c99;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin-top: 34px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+      font-size: 22px;
+    }
+    h3 { margin-top: 24px; font-size: 18px; }
+    .meta, .note, figcaption { color: var(--muted); }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 18px 0;
+    }
+    code { background: #eef2f7; padding: 2px 4px; border-radius: 4px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 12px 0 20px;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 9px;
+      text-align: right;
+      vertical-align: top;
+    }
+    th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
+    th { background: #eef3f9; }
+    figure { margin: 0; }
+    img {
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: white;
+    }
+    figcaption {
+      font-size: 13px;
+      margin-top: 6px;
+    }
+    .result-note {
+      background: var(--panel);
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      margin: 10px 0 26px;
+      font-size: 14px;
+    }
+    @media (max-width: 820px) {
+      main { padding: 22px 14px 40px; }
+      table { font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Mrk 421 / Mrk 501 WCDA Periodicity Analysis v1</h1>
+  <p class="meta">Generated from local pipeline outputs in <code>data/processed/periodicity/{mkn421,mkn501}/</code>. Current report date: 2026-05-14.</p>
+
+  <section class="panel">
+    <strong>Scope.</strong> This version keeps the existing Mrk 421 WCDA/Fermi quick-look analysis and adds the newly generated Mrk 501 LHAASO-WCDA weekly light curve. It runs CWT and WWZ checks and intentionally skips simulation-based significance testing.
+  </section>
+
+  <h2>Data and Alignment</h2>
+  <p>The WCDA merged products used here are:</p>
+  <ul>
+    <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv</code></li>
+    <li><code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv</code></li>
+    <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv</code></li>
+  </ul>
+  <p>Aligned CSV outputs are separated by source under <code>data/processed/aligned/mkn421/</code> and <code>data/processed/aligned/mkn501/</code>. Mrk 421 retains its Fermi weekly comparison on the WCDA weekly MJD axis; Mrk 501 currently uses only the WCDA weekly product because no Mrk 501 daily WCDA or Fermi weekly product was provided in this workspace.</p>
+
+  <h2>Methods</h2>
+  <p>WCDA flux is represented as an excess rate, <code>sum(n_on - n_bkg) / tobs</code>, with a Poisson-style on/off error approximation propagated per hit bin. CWT uses a Morlet wavelet through <code>pycwt</code>. WWZ uses <code>libwwz</code> with the v1 quick-look grid saved by <code>src/pipeline/periodicity_v1.py</code>.</p>
+  <p class="note">No red-noise simulations, Monte Carlo thresholds, local significance contours, pre-trial significance, or post-trial significance are included in this version.</p>
+
+  <h2>Peak Summary</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Source</th><th>Series</th><th>N</th><th>MJD min</th><th>MJD max</th><th>Median dt [d]</th><th>CWT peak [d]</th><th>CWT GWS</th><th>WWZ peak [d]</th><th>WWZ power</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Mrk 421</td><td>WCDA daily</td><td>360</td><td>60763.167</td><td>61128.167</td><td>1.000</td><td>104.95</td><td>19.650</td><td>109.77</td><td>29.772</td></tr>
+      <tr><td>Mrk 421</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>367.33</td><td>4.486</td><td>363.22</td><td>5.177</td></tr>
+      <tr><td>Mrk 421</td><td>Fermi weekly on WCDA axis</td><td>250</td><td>59284.333</td><td>61062.167</td><td>7.000</td><td>583.10</td><td>2.828</td><td>513.37</td><td>3.260</td></tr>
+      <tr><td>Mrk 501</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>389.17</td><td>4.407</td><td>402.98</td><td>6.385</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Mrk 421 Figures</h2>
+  <h3>WCDA daily</h3>
+  <p class="meta">Time coverage: 2025-03-29 04:00 UTC to 2026-03-29 04:00 UTC.</p>
+  <figure>
+    <img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity.png" alt="Mrk 421 WCDA daily light curve, CWT, and WWZ">
+    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
+  </figure>
+  <p class="result-note">Quick-look peaks: N=360, MJD 60763.167-61128.167, median cadence 1.000 d. CWT peak is 104.95 d with GWS 19.650; WWZ mean-power peak is 109.77 d with power 29.772.</p>
+
+  <h3>WCDA weekly</h3>
+  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
+  <figure>
+    <img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity.png" alt="Mrk 421 WCDA weekly light curve, CWT, and WWZ">
+    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
+  </figure>
+  <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 367.33 d with GWS 4.486; WWZ mean-power peak is 363.22 d with power 5.177.</p>
+
+  <h3>Fermi weekly on WCDA axis</h3>
+  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-01-22 04:00 UTC.</p>
+  <figure>
+    <img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity.png" alt="Mrk 421 Fermi weekly light curve, CWT, and WWZ">
+    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
+  </figure>
+  <p class="result-note">Quick-look peaks: N=250, MJD 59284.333-61062.167, median cadence 7.000 d. CWT peak is 583.10 d with GWS 2.828; WWZ mean-power peak is 513.37 d with power 3.260.</p>
+
+  <h2>Mrk 501 Figures</h2>
+  <h3>WCDA weekly</h3>
+  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
+  <figure>
+    <img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity.png" alt="Mrk 501 WCDA weekly light curve, CWT, and WWZ">
+    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
+  </figure>
+  <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 389.17 d with GWS 4.407; WWZ mean-power peak is 402.98 d with power 6.385.</p>
+
+  <h2>Outputs</h2>
+  <ul>
+    <li>Aligned CSVs: <code>data/processed/aligned/mkn421/</code>, <code>data/processed/aligned/mkn501/</code></li>
+    <li>CWT/WWZ arrays and plots: <code>data/processed/periodicity/mkn421/</code>, <code>data/processed/periodicity/mkn501/</code></li>
+    <li>Pipeline entry point: <code>python src/pipeline/periodicity_v1.py</code></li>
+  </ul>
+</main>
+</body>
+</html>
