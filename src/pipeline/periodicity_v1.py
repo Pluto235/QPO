@@ -13,6 +13,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+from matplotlib.colors import LogNorm  # noqa: E402
 
 
 SRC_DIR = Path(__file__).resolve().parents[1]
@@ -347,8 +348,17 @@ def _plot_wwz(path: Path, name: str, result: dict) -> None:
     ax_lc.set_xlabel("MJD")
     ax_lc.set_ylabel("Flux")
 
-    mesh = ax_map.pcolormesh(tau_plot, period_axis, wwz_plot.T, shading="auto", cmap="viridis")
+    wwz_plot_masked, wwz_norm = _positive_log_power(wwz_plot)
+    mesh = ax_map.pcolormesh(
+        tau_plot,
+        period_axis,
+        wwz_plot_masked.T,
+        shading="auto",
+        cmap="viridis",
+        norm=wwz_norm,
+    )
     ax_map.plot(result["ridge_tau"], result["ridge_period"], color="black", lw=1.2, alpha=0.9, label="ridge")
+    ax_map.set_yscale("log")
     ax_map.set_ylim(period_min, period_max)
     ax_map.set_xlabel("MJD")
     ax_map.set_ylabel("Period (day)")
@@ -429,8 +439,17 @@ def _plot_periodicity_summary(
     ax_cwt.legend(loc="upper right")
     fig.colorbar(cwt_im, ax=ax_cwt, pad=0.02, label="Power")
 
-    wwz_mesh = ax_wwz.pcolormesh(wwz_tau, wwz_period_axis, wwz_power.T, shading="auto", cmap="viridis")
+    wwz_power_masked, wwz_norm = _positive_log_power(wwz_power)
+    wwz_mesh = ax_wwz.pcolormesh(
+        wwz_tau,
+        wwz_period_axis,
+        wwz_power_masked.T,
+        shading="auto",
+        cmap="viridis",
+        norm=wwz_norm,
+    )
     ax_wwz.plot(wwz["ridge_tau"], wwz["ridge_period"], color="black", lw=1.1, alpha=0.9, label="ridge")
+    ax_wwz.set_yscale("log")
     ax_wwz.set_ylim(wwz_period_min, wwz_period_max)
     ax_wwz.set_xlabel("MJD")
     ax_wwz.set_ylabel("Period (day)")
@@ -440,6 +459,15 @@ def _plot_periodicity_summary(
 
     fig.savefig(path, dpi=180)
     plt.close(fig)
+
+
+def _positive_log_power(power: np.ndarray) -> tuple[np.ma.MaskedArray, LogNorm]:
+    power = np.asarray(power, dtype=float)
+    positive = np.isfinite(power) & (power > 0)
+    if not np.any(positive):
+        raise ValueError("WWZ log heatmap requires at least one positive finite power value.")
+    masked = np.ma.masked_where(~positive, power)
+    return masked, LogNorm(vmin=float(np.nanmin(power[positive])), vmax=float(np.nanmax(power[positive])))
 
 
 if __name__ == "__main__":

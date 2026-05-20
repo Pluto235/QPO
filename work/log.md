@@ -1,5 +1,11 @@
 # Work Log
 
+## 2026-05-20
+
+- Updated the periodicity v1 WWZ figures so their heatmap colors use log normalization and their period axes use log scaling.
+- Reran the Mrk 421 and Mrk 501 v1 periodicity plotting workflow without changing the CWT/WWZ analysis grids or adding simulation-based significance tests.
+- Refreshed the HTML and Markdown reports for `qpo-periodicity-v1` with the updated visualization note and report date.
+
 ## 2026-05-13
 
 - Synced the IHEP WCDA merged light curves to local processed data:

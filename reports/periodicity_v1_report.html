@@ -87,7 +87,7 @@
 <body>
 <main>
   <h1>Mrk 421 / Mrk 501 WCDA Periodicity Analysis v1</h1>
-  <p class="meta">Generated from local pipeline outputs in <code>data/processed/periodicity/{mkn421,mkn501}/</code>. Current report date: 2026-05-14.</p>
+  <p class="meta">Generated from local pipeline outputs in <code>data/processed/periodicity/{mkn421,mkn501}/</code>. Current report date: 2026-05-20.</p>
 
   <section class="panel">
     <strong>Scope.</strong> This version keeps the existing Mrk 421 WCDA/Fermi quick-look analysis and adds the newly generated Mrk 501 LHAASO-WCDA weekly light curve. It runs CWT and WWZ checks and intentionally skips simulation-based significance testing.
@@ -104,6 +104,7 @@
 
   <h2>Methods</h2>
   <p>WCDA flux is represented as an excess rate, <code>sum(n_on - n_bkg) / tobs</code>, with a Poisson-style on/off error approximation propagated per hit bin. CWT uses a Morlet wavelet through <code>pycwt</code>. WWZ uses <code>libwwz</code> with the v1 quick-look grid saved by <code>src/pipeline/periodicity_v1.py</code>.</p>
+  <p>WWZ heatmaps use log color normalization and a log-scaled period axis to improve visual contrast across the searched period range. This changes the display only; the WWZ peak search still uses the saved linear power values.</p>
   <p class="note">No red-noise simulations, Monte Carlo thresholds, local significance contours, pre-trial significance, or post-trial significance are included in this version.</p>
 
   <h2>Peak Summary</h2>
