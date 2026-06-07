@@ -11,7 +11,12 @@ import pycwt as wavelet
 from libwwz import wwt
 
 
+if not hasattr(np, "int"):
+    # pycwt still references np.int in some releases; NumPy 1.24+ removed it.
+    np.int = int  # type: ignore[attr-defined]
+
 WCDA_ARRAY_COLUMNS = ("n_on", "n_bkg", "n_off")
+WCDA_STRICT_FLUX_REQUIRED_COLUMNS = ("mjd", "N0", "N0_err", "fit_status")
 
 
 def parse_array_column(value) -> np.ndarray:
@@ -45,6 +50,32 @@ def read_wcda_counts_csv(path: Path) -> pd.DataFrame:
     df["tobs"] = pd.to_numeric(df["tobs"], errors="coerce")
     df = df.sort_values("mjd").reset_index(drop=True)
     return df
+
+
+def read_wcda_strict_flux_csv(path: Path) -> pd.DataFrame:
+    """Read a strict-batch WCDA flux CSV and keep only usable N0 rows."""
+    df = pd.read_csv(path, comment="#")
+    df.columns = [str(c).strip() for c in df.columns]
+    missing = set(WCDA_STRICT_FLUX_REQUIRED_COLUMNS) - set(df.columns)
+    if missing:
+        raise ValueError(f"{path} is missing required strict-flux columns: {sorted(missing)}")
+
+    for col in ("mjd", "N0", "N0_err", "F0", "F0_err", "F0_order", "TS", "gamma", "E0_TeV", "n_inputs"):
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce")
+
+    status = df["fit_status"].astype(str).str.strip()
+    mask = (
+        (status == "OK")
+        & np.isfinite(df["mjd"])
+        & np.isfinite(df["N0"])
+        & np.isfinite(df["N0_err"])
+        & (df["N0_err"] > 0)
+    )
+    out = df.loc[mask].copy()
+    out["wcda_n0"] = out["N0"].astype(float)
+    out["wcda_n0_err"] = out["N0_err"].astype(float)
+    return out.sort_values("mjd").reset_index(drop=True)
 
 
 def _compute_wcda_products(row: pd.Series) -> pd.Series:

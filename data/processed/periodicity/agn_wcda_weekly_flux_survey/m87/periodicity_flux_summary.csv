@@ -1,0 +1,2 @@
+source_id,source,series,n_rows,n_points,n_bad_fit_rows,mjd_min,mjd_max,date_min,date_max,median_dt_days,flux_min,flux_max,median_flux_err,cwt_peak_period_days,cwt_peak_gws,wwz_peak_period_days,wwz_peak_power
+m87,M 87,wcda_strict_flux_weekly,229,229,0,59284.5,60880.5,2021-03-08,2025-07-27,7.0,0.0,2.7013e-13,4.731e-14,367.3274243892357,1.3890267150304536,383.6538461538461,1.434365427721813

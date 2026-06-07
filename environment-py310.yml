@@ -1,0 +1,33 @@
+name: py310
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.26.4
+  - pandas
+  - scipy
+  - matplotlib=3.9.2
+  - astropy
+  - h5py
+  - joblib=1.4.2
+  - tqdm
+  - iminuit
+  - pycwt
+  - pytest
+  - ipykernel
+  - jupyterlab
+  - notebook
+  - ipywidgets
+  - ipympl
+  - pillow
+  - click
+  - xlrd
+  - pyyaml
+  - pip
+  - pip:
+      # libwwz is not available from conda-forge osx-arm64.
+      - libwwz==1.3.4
+
+# Scope: WCDA simulation, periodicity/CWT/WWZ analysis, and notebooks.
+# Fermi monthly analysis is intentionally excluded from this environment because
+# fermitools is not currently available from conda-forge osx-arm64.

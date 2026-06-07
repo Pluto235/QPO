@@ -1,0 +1,18 @@
+survey,panel,band,input_rows,plotted_rows,mjd_min,mjd_max,flux_min_mjy,flux_max_mjy,quality_rule
+AAVSO,optical,B,22,22,60327.92847000016,61116.92915500002,6.9959520201681435,25.730416861692763,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,CR,3,3,60751.800059999805,60756.812739999965,17.502043582530007,17.61524796322827,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,CV,46,46,59296.810419999994,61093.8330000001,12.607351882454026,41.746865677626616,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,R,1,1,59987.08322999999,59987.08322999999,27.459255682239846,27.459255682239846,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,TG,25,25,59313.87325999979,61065.97430999996,10.985662407860332,32.932617416475274,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,V,115,115,59311.15270199999,61116.926123000216,10.800002960848937,33.901887200977406,non-upper-limit points retained; Visual plotted with low alpha
+AAVSO,optical,Vis.,1104,1103,59284.944000000134,61124.93200000003,9.133219064968822,47.93181501391098,non-upper-limit points retained; Visual plotted with low alpha
+ASAS-SN Sky Patrol,optical,g,239,195,59295.25743999984,60451.28690310009,17.289045549984262,36.24826504750473,"quality == ""G"" with finite g magnitude"
+ATLAS,optical,c,613,463,59284.383306,61091.563764,0.092,19.444,"uJy > 0, duJy > 0, and uJy/duJy >= 5"
+ATLAS,optical,o,2246,923,59297.443984,61026.567182,0.12,26.336,"uJy > 0, duJy > 0, and uJy/duJy >= 5"
+CDS/VizieR A&A 684 A127,near-UV,M2,42,42,59696.9242,59755.1684,7.16,18.2,R-band and Swift-UVOT W1/M2/W2 mJy rows from fig1.dat
+CDS/VizieR A&A 684 A127,near-UV,W1,41,41,59696.9242,59755.1684,7.97,18.1,R-band and Swift-UVOT W1/M2/W2 mJy rows from fig1.dat
+CDS/VizieR A&A 684 A127,near-UV,W2,43,43,59696.9242,59755.1684,6.23,16.4,R-band and Swift-UVOT W1/M2/W2 mJy rows from fig1.dat
+CDS/VizieR A&A 684 A127,optical,R-band,76,34,59703.0,59747.7901,14.1,21.7,R-band and Swift-UVOT W1/M2/W2 mJy rows from fig1.dat
+ZTF public,optical,zg,277,277,59290.2290394,60814.2876042,0.03435076781299485,29.091171385920397,IRSA query uses BAD_CATFLAGS_MASK=32768; finite mag/magerr retained
+ZTF public,optical,zi,18,18,59308.3061343,60067.3903704,19.457600796682144,34.49547812853764,IRSA query uses BAD_CATFLAGS_MASK=32768; finite mag/magerr retained
+ZTF public,optical,zr,262,262,59290.2613657,60942.5266551,0.15941487718380182,33.31644152417454,IRSA query uses BAD_CATFLAGS_MASK=32768; finite mag/magerr retained

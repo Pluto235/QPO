@@ -1,0 +1,1 @@
+source_id,source,series,method,period_days,cycles,observed_statistic,statistic_name,null_model,local_fap,global_fap,local_confidence,global_confidence,reference_95,reference_99,above_95,above_99,n_surrogates,exceed_count,global_exceed_count,local_window_min_days,local_window_max_days,ar1_alpha,note

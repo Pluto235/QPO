@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mrk 421 / Mrk 501 Periodicity Analysis v1 Report</title>
+  <title>Mrk 421 / Mrk 501 WCDA Periodicity Analysis v1</title>
   <style>
     :root {
       --ink: #1f2933;
@@ -11,6 +11,7 @@
       --line: #d7dee8;
       --panel: #f7f9fc;
       --accent: #255c99;
+      --accent-soft: #e9f1fb;
     }
     body {
       margin: 0;
@@ -35,8 +36,36 @@
       padding-bottom: 6px;
       font-size: 22px;
     }
-    h3 { margin-top: 24px; font-size: 18px; }
-    .meta, .note, figcaption { color: var(--muted); }
+    h3 { margin-top: 22px; font-size: 18px; }
+    a { color: var(--accent); }
+    .meta, .note { color: var(--muted); }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .language-toggle {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      flex: 0 0 auto;
+      background: #ffffff;
+    }
+    .language-toggle button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+    }
+    .language-toggle button.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
     .panel {
       background: var(--panel);
       border: 1px solid var(--line);
@@ -59,6 +88,12 @@
     }
     th:first-child, td:first-child, th:nth-child(2), td:nth-child(2) { text-align: left; }
     th { background: #eef3f9; }
+    .figure-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
     figure { margin: 0; }
     img {
       width: 100%;
@@ -68,6 +103,7 @@
       background: white;
     }
     figcaption {
+      color: var(--muted);
       font-size: 13px;
       margin-top: 6px;
     }
@@ -78,7 +114,12 @@
       margin: 10px 0 26px;
       font-size: 14px;
     }
+    [data-lang-panel] { display: none; }
+    [data-lang-panel].active { display: block; }
     @media (max-width: 820px) {
+      .topline { display: block; }
+      .language-toggle { margin-top: 14px; }
+      .figure-grid { grid-template-columns: 1fr; }
       main { padding: 22px 14px 40px; }
       table { font-size: 12px; }
     }
@@ -86,82 +127,374 @@
 </head>
 <body>
 <main>
-  <h1>Mrk 421 / Mrk 501 WCDA Periodicity Analysis v1</h1>
-  <p class="meta">Generated from local pipeline outputs in <code>data/processed/periodicity/{mkn421,mkn501}/</code>. Current report date: 2026-05-20.</p>
+  <div class="topline">
+    <div>
+      <h1>Mrk 421 / Mrk 501 WCDA Periodicity Analysis v1</h1>
+      <p class="meta">Published on GitHub Pages. Report date: 2026-06-01.</p>
+    </div>
+    <div class="language-toggle" aria-label="Language switch">
+      <button type="button" data-lang-button="zh" class="active">中文</button>
+      <button type="button" data-lang-button="en">English</button>
+    </div>
+  </div>
 
-  <section class="panel">
-    <strong>Scope.</strong> This version keeps the existing Mrk 421 WCDA/Fermi quick-look analysis and adds the newly generated Mrk 501 LHAASO-WCDA weekly light curve. It runs CWT and WWZ checks and intentionally skips simulation-based significance testing.
+  <section data-lang-panel="zh" class="active">
+    <section class="panel">
+      <strong>范围。</strong>本页保留 Mrk 421 的 WCDA/Fermi quick-look 周期性分析和 Mrk 501 LHAASO-WCDA 周光变结果；本版还加入 xgm poster 的 Mrk 421 daily WWZ 复现检查、当前 Mrk 421 / Mrk 501 WCDA weekly 候选峰的第一版 local-significance assessment、Mrk 421 MJD 59500-60500 fixed-window local check、TELAMON 14 mm / 7 mm 长窗口 weekly 射电-LHAASO 对齐补充，以及 Mrk 421 同窗口光学/近紫外-LHAASO 对齐补充。
+    </section>
+
+    <h2>数据与对齐</h2>
+    <p>本报告使用的 WCDA 合并产品为：</p>
+    <ul>
+      <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv</code></li>
+      <li><code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv</code></li>
+      <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv</code></li>
+    </ul>
+    <p>本地中间结果按源分离保存到 <code>data/processed/aligned/mkn421/</code>、<code>data/processed/aligned/mkn501/</code>、<code>data/processed/periodicity/mkn421/</code> 与 <code>data/processed/periodicity/mkn501/</code>。Mrk 421 保留 Fermi weekly 对齐到 WCDA weekly MJD 轴的对照；Mrk 501 当前只使用 WCDA weekly，因为本工作区尚未提供 Mrk 501 的 WCDA daily 或 Fermi weekly 产品。</p>
+
+    <h2>2022-2026 TELAMON-LHAASO weekly 对齐补充</h2>
+    <p>这个长窗口补充使用公开的 TELAMON Mrk 421 源页面 <a href="https://telamon.astro.uni-wuerzburg.de/sources/1104-3812">1104+3812</a>，解析页面内嵌的 Plotly averaged light-curve 数组 <code>aver_lc14</code> 和 <code>aver_lc7</code>。这些是 TELAMON averaged 14 mm 和 7 mm flux-density 光变，单位 Jy，不是单频点。当前本地缓存共有 110 行：14 mm 为 65 点，7 mm 为 45 点。</p>
+    <p>与本地 WCDA weekly 的同步重叠窗口为 MJD 59580.0000-61125.1667；窗口内有 221 个 finite WCDA weekly 点、33 个 TELAMON 14 mm 点和 25 个 TELAMON 7 mm 点。顶部面板仍使用 <code>WCDA excess-rate proxy = sum(n_on - n_bkg) / tobs</code>，不是标定后的物理 flux。TELAMON 数据略晚于当前 WCDA weekly 文件，因此图窗右侧被 WCDA weekly 端点截断。</p>
+    <figure><img src="../data/processed/multiwavelength/mkn421/telamon_lhaaso_2022_2026/mkn421_telamon_lhaaso_2022_2026_weekly.png?v=telamon-20260601" alt="Mrk 421 TELAMON-LHAASO weekly alignment"><figcaption>Mrk 421 TELAMON 14 mm / 7 mm 与 LHAASO/WCDA weekly 长窗口对齐图。这张图只作探索性同步查看，不给出 DCF、FAP、相关系数、时延或 QPO 显著性结论。</figcaption></figure>
+
+    <h2>2021-2026 光学/近紫外-LHAASO 对齐补充</h2>
+    <p>这个补充把 Mrk 421 在本地 WCDA weekly 窗口内的公开 optical/near-UV 监测点加入同一时间轴。输入包括本地 ATLAS forced photometry、本地 ASAS-SN Sky Patrol、新缓存的 ZTF public light curves、AAVSO VSX export，以及 CDS/VizieR A&amp;A 684 A127 <code>fig1.dat</code> 表；后者作为 2022 IXPE/MWL campaign context 中可直接下载的数值表使用。本轮不把 Nature Astronomy IXPE supporting data 作为硬依赖。</p>
+    <p>绘图窗口为 MJD 59284.333-61125.167。主 optical 面板在质量筛选后共有 3487 个 quick-look flux-density 点，单独的 Swift-UVOT near-UV 面板有 126 点。底部仍使用本地 WCDA weekly <code>flux_excess = sum(n_on - n_bkg) / tobs</code> proxy，不是标定后的 gamma-ray 物理 flux。光学星等仅为可视化转换成近似 <code>F_nu</code> mJy；没有做宿主星扣除、颜色修正、跨滤光片归一化或 SED 建模。</p>
+    <table>
+      <thead><tr><th>Survey</th><th>Panel</th><th>Band</th><th>Input rows</th><th>Plotted rows</th><th>MJD min</th><th>MJD max</th></tr></thead>
+      <tbody>
+        <tr><td>ATLAS</td><td>optical</td><td>c</td><td>613</td><td>463</td><td>59284.3833</td><td>61091.5638</td></tr>
+        <tr><td>ATLAS</td><td>optical</td><td>o</td><td>2246</td><td>923</td><td>59297.4440</td><td>61026.5672</td></tr>
+        <tr><td>ASAS-SN Sky Patrol</td><td>optical</td><td>g</td><td>239</td><td>195</td><td>59295.2574</td><td>60451.2869</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zg</td><td>277</td><td>277</td><td>59290.2290</td><td>60814.2876</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zr</td><td>262</td><td>262</td><td>59290.2614</td><td>60942.5267</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zi</td><td>18</td><td>18</td><td>59308.3061</td><td>60067.3904</td></tr>
+        <tr><td>AAVSO</td><td>optical</td><td>Vis.</td><td>1104</td><td>1103</td><td>59284.9440</td><td>61124.9320</td></tr>
+        <tr><td>AAVSO</td><td>optical</td><td>B/V/R/CV/CR/TG</td><td>212</td><td>212</td><td>59296.8104</td><td>61116.9292</td></tr>
+        <tr><td>CDS/VizieR A&amp;A 684 A127</td><td>optical</td><td>R-band</td><td>76</td><td>34</td><td>59703.0000</td><td>59747.7901</td></tr>
+        <tr><td>CDS/VizieR A&amp;A 684 A127</td><td>near-UV</td><td>W1/M2/W2</td><td>126</td><td>126</td><td>59696.9242</td><td>59755.1684</td></tr>
+      </tbody>
+    </table>
+    <figure><img src="../data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/mkn421_optical_uv_lhaaso_2021_2026_weekly.png?v=optical-uv-20260601" alt="Mrk 421 optical/near-UV-LHAASO weekly alignment"><figcaption>Mrk 421 optical/near-UV 与 LHAASO/WCDA weekly 长窗口对齐图。这张图只作探索性同步查看，不给出 DCF、FAP、相关系数、时延、光学 QPO 显著性或跨波段物理 flux 归一化结论。</figcaption></figure>
+    <p class="note">完整 quick-look flux 表和质量汇总分别保存为 <code>data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/optical_uv_flux_points.csv</code> 与 <code>data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/optical_uv_quality_summary.csv</code>。</p>
+
+    <h2>方法</h2>
+    <p>WCDA flux 使用 excess rate 表示：<code>sum(n_on - n_bkg) / tobs</code>，误差使用逐 hit bin 传播的 Poisson-style on/off 近似。CWT 使用 <code>pycwt</code> 的 Morlet wavelet，WWZ 使用 <code>libwwz</code>，入口脚本为 <code>src/pipeline/periodicity_v1.py</code>。</p>
+    <p>xgm poster 复现章节之后的常规周期性分析主图现在使用线性 WWZ heatmap 色标；之前的 log-color 版本保留在折叠对照图中。周期轴仍保持 log scale，WWZ 峰值搜索仍使用保存的线性 power 数值。</p>
+    <p class="note">Quick-look CWT/WWZ 主图不是 post-trial significance 产品。下面新增的 local-significance section 只评估当前 weekly 候选峰，不包含 look-elsewhere、source-level 或 method-level trial correction。</p>
+
+    <h2>峰值摘要</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>源</th><th>序列</th><th>N</th><th>MJD min</th><th>MJD max</th><th>Median dt [d]</th><th>CWT peak [d]</th><th>CWT GWS</th><th>WWZ peak [d]</th><th>WWZ power</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mrk 421</td><td>WCDA daily</td><td>360</td><td>60763.167</td><td>61128.167</td><td>1.000</td><td>104.95</td><td>19.650</td><td>109.77</td><td>29.772</td></tr>
+        <tr><td>Mrk 421</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>367.33</td><td>4.486</td><td>363.22</td><td>5.177</td></tr>
+        <tr><td>Mrk 421</td><td>Fermi weekly on WCDA axis</td><td>250</td><td>59284.333</td><td>61062.167</td><td>7.000</td><td>583.10</td><td>2.828</td><td>513.37</td><td>3.260</td></tr>
+        <tr><td>Mrk 501</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>389.17</td><td>4.407</td><td>402.98</td><td>6.385</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>Mrk 421 WCDA weekly</strong>：CWT global peak 约 367.33 d；WWZ mean-power peak 约 363.22 d。</li>
+      <li><strong>Mrk 501 WCDA weekly</strong>：CWT global peak 约 389.17 d；WWZ mean-power peak 约 402.98 d。</li>
+    </ul>
+
+    <h2>Local-significance assessment of current candidate peaks</h2>
+    <p>本节把 Mrk 421 和 Mrk 501 WCDA weekly global spectra 中已经看到的候选峰固定下来，只问这些固定峰在简单 red-noise null model 下是否局部异常。当前 WCDA 序列仍是 <code>wcda_flux_excess</code>，也就是 photon-count / excess-rate proxy，不是最终 calibrated flux；后续拿到 flux 数据后需要重跑。</p>
+    <p>CWT 使用 <code>pycwt</code> Morlet global-wavelet-spectrum 的 AR(1) red-noise local reference。WWZ 使用 1000 条 AR(1) Gaussian surrogate light curves，保持同一 weekly sampling，并在每个候选周期 ±10% 的 local window 内给出 FAP。CWT 和 WWZ 是同一条光变结构的两种呈现，不当作独立发现。只有约 3-5 个 cycle 的峰只能写作 candidate/hint，不能写成 robust QPO detection。</p>
+    <table>
+      <thead><tr><th>源</th><th>方法</th><th>周期 [d]</th><th>Cycles</th><th>Observed</th><th>Local FAP</th><th>95% ref.</th><th>99% ref.</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>Mrk 421</td><td>CWT</td><td>129.87</td><td>14.17</td><td>GWS 2.965</td><td>—</td><td>11.371</td><td>14.095</td><td>低于 AR(1) 95% local reference。</td></tr>
+        <tr><td>Mrk 421</td><td>CWT</td><td>367.33</td><td>5.01</td><td>GWS 4.486</td><td>—</td><td>14.675</td><td>20.042</td><td>低于 AR(1) 95% local reference；只有约 5 个 cycle。</td></tr>
+        <tr><td>Mrk 421</td><td>WWZ</td><td>135.67</td><td>13.57</td><td>WWZ 4.634</td><td>0.4665</td><td>7.442</td><td>9.232</td><td>AR(1) surrogate 下不显得局部异常。</td></tr>
+        <tr><td>Mrk 421</td><td>WWZ</td><td>363.22</td><td>5.07</td><td>WWZ 5.177</td><td>0.6244</td><td>15.565</td><td>21.794</td><td>AR(1) surrogate 下不显得局部异常。</td></tr>
+        <tr><td>Mrk 501</td><td>CWT</td><td>137.59</td><td>13.38</td><td>GWS 1.270</td><td>—</td><td>3.687</td><td>4.593</td><td>低于 AR(1) 95% local reference。</td></tr>
+        <tr><td>Mrk 501</td><td>CWT</td><td>389.17</td><td>4.73</td><td>GWS 4.407</td><td>—</td><td>4.766</td><td>6.545</td><td>接近但低于 AR(1) 95% local reference；只有约 5 个 cycle。</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>61.22</td><td>30.07</td><td>WWZ 1.783</td><td>0.5165</td><td>2.500</td><td>2.984</td><td>AR(1) surrogate 下不显得局部异常。</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>140.87</td><td>13.07</td><td>WWZ 1.761</td><td>0.7113</td><td>3.665</td><td>4.692</td><td>AR(1) surrogate 下不显得局部异常。</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>402.98</td><td>4.57</td><td>WWZ 6.385</td><td>0.0310</td><td>5.233</td><td>7.726</td><td>通过本地 95% surrogate check，但没有通过 99%；仍不是 global/post-trial detection。</td></tr>
+      </tbody>
+    </table>
+    <p class="result-note">解读：第一版 local-only 检验中，大多数 weekly 候选峰与简单 AR(1) red-noise null 相容。最强例外是 Mrk 501 WWZ 的 ~403 d，local-window FAP ≈ 0.031；但它只有约 4.6 个 cycle，且还没有对 period search、两个源、多方法查看做 trial correction。</p>
+
+    <h2>Mrk 421 MJD 59500-60500 fixed-window local check</h2>
+    <p>本节检验用户指定的 Mrk 421 WCDA weekly 固定窗口 <code>MJD 59500-60500</code>，不是 sliding-window search。实际 finite weekly 样本覆盖 MJD 59501.167-60495.167，共 143 点，median cadence 为 7.000 d。这里同时报告窗口自身最强峰，并把 140 d 作为预指定目标带单独检验；不加入 Fermi weekly 或 WCDA daily，因为这次目标是 WCDA weekly only，且当前 WCDA daily 产品不覆盖这个 MJD 范围。</p>
+    <p>CWT strongest GWS peak 为 308.88 d，WWZ strongest mean-power peak 为 314.89 d。因为较短周期候选更值得关注，140 d 现在按 targeted test 处理：目标带预先固定为 140 d ±10%，即 126-154 d，并在该带内取 local maximum。目标带最大值在 CWT 中为 145.77 d，在 WWZ 中为 149.32 d。WWZ 使用 1000 条 AR(1) Gaussian surrogate weekly light curves，保持同一 sampling；314.89 d strongest-peak FAP 和 140 d targeted-band FAP 来自同一组 surrogate。这个结果是 fixed-window local-only；没有做 window-search、source-level、method-level 或 broad period-search trial correction。</p>
+    <table>
+      <thead><tr><th>窗口</th><th>方法</th><th>周期 [d]</th><th>Cycles</th><th>Observed</th><th>Local FAP</th><th>95% ref.</th><th>99% ref.</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>59500-60500</td><td>CWT</td><td>308.88</td><td>3.22</td><td>GWS 4.026</td><td>—</td><td>13.448</td><td>19.128</td><td>低于 AR(1) 95% local reference；少于 4 个 cycle。</td></tr>
+        <tr><td>59500-60500</td><td>WWZ</td><td>314.89</td><td>3.16</td><td>WWZ 5.499</td><td>0.3676</td><td>14.391</td><td>20.180</td><td>AR(1) surrogate 下不显得局部异常；少于 4 个 cycle。</td></tr>
+        <tr><td>59500-60500</td><td>CWT targeted 140 d band</td><td>145.77</td><td>6.82</td><td>GWS 3.857</td><td>—</td><td>11.187</td><td>14.824</td><td>126-154 d 目标带内最大值；低于 AR(1) 95% local reference。</td></tr>
+        <tr><td>59500-60500</td><td>WWZ targeted 140 d band</td><td>149.32</td><td>6.66</td><td>WWZ 5.130</td><td>0.3526</td><td>8.733</td><td>12.491</td><td>126-154 d 目标带内最大值；AR(1) surrogate 下不显得局部异常。</td></tr>
+      </tbody>
+    </table>
+    <p class="result-note">解读：这个 fixed-window check 中，~310 d 结构和预指定 140 d 目标带在 CWT 和 WWZ 下都没有通过当前 AR(1) local 95% reference。~310 d peak 额外受限于只有约 3.2 个 cycle；140 d 目标带约有 6.7 个 cycle，且现在已按 targeted hypothesis 检验，仍值得继续跟踪，但 WWZ local FAP = 0.3526，所以目前只能写作 candidate/hint，不是 robust QPO detection。</p>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_periodicity.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window periodicity, MJD 59500-60500"><figcaption>Mrk 421 WCDA weekly MJD 59500-60500 fixed-window 周期性图。红线是窗口内算法峰标注；橙色带是预指定 140 d ±10% 目标窗口，橙线为该带内 local maximum。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_cwt_global_significance.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window CWT local reference"><figcaption>CWT fixed-window global spectrum 与 AR(1) 95%/99% local reference。308.88 d strongest peak 和 145.77 d targeted-band maximum 均低于 95% reference。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_wwz_local_significance.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window WWZ local significance"><figcaption>WWZ fixed-window local-significance check。314.89 d strongest peak 的 FAP 为 0.3676；140 d 目标带内 149.32 d maximum 的 FAP 为 0.3526。</figcaption></figure>
+
+
+    <h2>xgm poster 复现对比</h2>
+    <p class="meta">输入文件：<code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2023-06-25_2026-03-29_day.csv</code>。这里使用 <code>excess_counts = sum(n_on - n_bkg)</code> 作为 photon-count flux proxy，不是标定后的物理 flux，也不保证与 xgm poster 的 flux 定义完全相同。本节是在比较 xgm poster 标注结果和我当前复现结果，不是调参去贴合他的结论。</p>
+    <table>
+      <thead><tr><th>窗口</th><th>xgm poster 标注</th><th>我的复现结果</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>MJD 60200-60700</td><td>51.05 d</td><td>Global WWZ peak 为 111.01 d；最接近 51.05 d 的网格点为 49.93 d，power=12.330，rank 3。</td><td>50 d 是局部强结构，但不是本次运行的主峰。</td></tr>
+        <tr><td>MJD 61020-61098</td><td>2.54, 5.2, 16.6 d</td><td>Global peak 位于 50.00 d 搜索上边界；16.96 d 排第 3，5.12 d 排第 10，2.52 d 不突出。</td><td>16.6 d 有较清楚对应；两个更短周期在本次运行中较弱。</td></tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>与 xgm poster 的显著性差异。</strong>xgm poster 周期是 poster 中的参考标注；本报告的显著性曲线是我用当前 daily <code>excess_counts</code> 序列重算的 AR(1) Gaussian surrogate WWZ reference，使用同一 daily sampling、同一保存的 WWZ period grid 和 1000 条 surrogate。它不是复现 poster 作者的显著性算法。因此，MJD 60200-60700 的 51 d 附近结构在这里高于 pointwise 95% reference，但低于 pointwise 99% reference；±10% local-window FAP 为 0.0619。下面所有 FAP 均未做 global look-elsewhere correction。</p>
+    <table>
+      <thead><tr><th>窗口</th><th>目标来源</th><th>目标 [d]</th><th>最近网格 [d]</th><th>Local peak [d]</th><th>WWZ power</th><th>95% ref.</th><th>99% ref.</th><th>Rank</th><th>Cycles</th><th>我的 local FAP</th><th>解读</th></tr></thead>
+      <tbody>
+        <tr><td>60200-60700</td><td>xgm poster reference</td><td>51.05</td><td>49.92</td><td>49.92</td><td>12.330</td><td>11.017</td><td>14.897</td><td>3</td><td>9.77</td><td>0.0619</td><td>高于 pointwise 95%，低于 99%；±10% local-window FAP 没有过 5%。</td></tr>
+        <tr><td>60200-60700</td><td>my reproduction peak</td><td>111.01</td><td>111.01</td><td>111.01</td><td>13.612</td><td>15.895</td><td>21.717</td><td>1</td><td>4.49</td><td>0.0779</td><td>我的 global peak 比 xgm 51.05 d 网格点更强，但低于本地 AR(1) reference。</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>2.54</td><td>2.52</td><td>2.30</td><td>0.671</td><td>0.550</td><td>0.650</td><td>24</td><td>30.31</td><td>0.0340</td><td>通过当前 pointwise 99% check，但绝对 WWZ power 很低，且未做 trial correction。</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>5.20</td><td>5.12</td><td>5.12</td><td>0.909</td><td>1.452</td><td>1.899</td><td>10</td><td>14.81</td><td>0.5095</td><td>在我的 AR(1) surrogate 检验中不显得局部异常。</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>16.60</td><td>16.96</td><td>15.28</td><td>2.767</td><td>8.582</td><td>11.784</td><td>2</td><td>4.64</td><td>0.6024</td><td>在我的复现中可见，但这个 surrogate 检验下不显著。</td></tr>
+        <tr><td>61020-61098</td><td>my reproduction boundary peak</td><td>50.00</td><td>50.00</td><td>50.00</td><td>18.573</td><td>15.768</td><td>29.757</td><td>1</td><td>1.54</td><td>0.0360</td><td>高于 pointwise 95%，低于 99%；位于搜索上边界且只有 1.54 cycles。</td></tr>
+      </tbody>
+    </table>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_poster_style.png?v=wwz-ar1-n1000-20260528" alt="xgm poster comparison for Mrk 421 WCDA daily MJD 60200-60700"><figcaption>MJD 60200-60700 对比图。红色 51.05 d 标记来自 xgm poster；右侧 Mean WWZ 面板显示 observed global spectrum，并叠加 N=1000 AR(1) surrogate 95%/99% reference。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_local_significance.png?v=wwz-ar1-n1000-20260528" alt="My WWZ local significance check for xgm poster window MJD 60200-60700"><figcaption>我对 MJD 60200-60700 的 local-significance 检查。红色是 xgm poster reference，蓝色是 my reproduction peak；显著性曲线使用 N=1000 AR(1) surrogate。</figcaption></figure>
+    <p class="result-note">我的结果：N=493，MJD 60200.167-60699.167，median cadence 1.000 d，max gap 4.351 d。Global mean-power peak 为 111.01 d（power=13.612）；最接近 51.05 d 的网格点为 49.93 d（power=12.330），rank 3。</p>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_61020_61098_wwz_poster_style.png?v=wwz-ar1-n1000-20260528" alt="xgm poster comparison for Mrk 421 WCDA daily MJD 61020-61098"><figcaption>MJD 61020-61098 对比图。标出的 2.54、5.2、16.6 d 是 xgm poster 的候选周期；右侧 Mean WWZ 面板叠加 N=1000 AR(1) surrogate 95%/99% reference。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_61020_61098_wwz_local_significance.png?v=wwz-ar1-n1000-20260528" alt="My WWZ local significance check for xgm poster window MJD 61020-61098"><figcaption>我对 MJD 61020-61098 的 local-significance 检查。红色是 xgm poster reference，蓝色是 my reproduction boundary peak；显著性曲线使用 N=1000 AR(1) surrogate。</figcaption></figure>
+    <p class="result-note">我的结果：N=78，MJD 61020.167-61097.167，median cadence 1.000 d，max gap 1.000 d。Global peak 位于 50.00 d 搜索上边界（power=18.573）。Poster 周期附近，16.96 d 为第 3 强 global-WWZ 网格点，5.12 d 排第 10，2.52 d 不突出。</p>
+
+    <h2>Mrk 421 图像</h2>
+    <h3>WCDA daily</h3>
+    <p class="meta">时间覆盖：2025-03-29 04:00 UTC 至 2026-03-29 04:00 UTC。</p>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity.png" alt="Mrk 421 WCDA daily light curve, CWT, and linear-color WWZ"><figcaption>主图使用线性 WWZ heatmap 色标；周期轴仍保持 log scale。</figcaption></figure>
+    <details>
+      <summary>展开 Mrk 421 WCDA daily 的 log-color WWZ 对照图</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity_logcolor.png" alt="Mrk 421 WCDA daily log-color WWZ comparison"><figcaption>之前的 log-color WWZ 渲染，仅用于视觉对照。</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks：N=360，MJD 60763.167-61128.167，median cadence 1.000 d。CWT peak 为 104.95 d，GWS=19.650；WWZ mean-power peak 为 109.77 d，power=29.772。</p>
+    <h3>WCDA weekly</h3>
+    <p class="meta">时间覆盖：2021-03-11 07:59 UTC 至 2026-03-26 04:00 UTC。</p>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity.png?v=peak-markers-20260521" alt="Mrk 421 WCDA weekly light curve, CWT, WWZ, and global spectra"><figcaption>主图使用线性 WWZ heatmap 色标；CWT 和 WWZ 的 global spectra 放在 2D map 下方。红色虚线标出 global spectra 中的算法候选峰，不等同于通过显著性检验的探测。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_cwt_global_significance.png?v=local-sig-20260521" alt="Mrk 421 WCDA weekly CWT global spectrum local significance"><figcaption>CWT global spectrum 的 AR(1) local reference。红色虚线是当前候选峰；没有做 trial correction。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_wwz_global_significance.png?v=local-sig-20260521" alt="Mrk 421 WCDA weekly WWZ global spectrum local significance"><figcaption>WWZ global spectrum 的 local-window surrogate assessment，使用 1000 条 AR(1) surrogate weekly 光变。</figcaption></figure>
+    <details>
+      <summary>展开 Mrk 421 WCDA weekly 的 log-color WWZ 对照图</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity_logcolor.png?v=peak-markers-20260521" alt="Mrk 421 WCDA weekly log-color WWZ comparison"><figcaption>之前的 log-color WWZ 渲染，仅用于视觉对照；global spectra 和红色候选峰标记不变。</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks：N=264，MJD 59284.333-61125.167，median cadence 7.000 d。CWT peak 为 367.33 d，GWS=4.486；WWZ mean-power peak 为 363.22 d，power=5.177。</p>
+    <h3>Fermi weekly on WCDA axis</h3>
+    <p class="meta">时间覆盖：2021-03-11 07:59 UTC 至 2026-01-22 04:00 UTC。</p>
+    <figure><img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity.png" alt="Mrk 421 Fermi weekly light curve, CWT, and linear-color WWZ"><figcaption>主图使用线性 WWZ heatmap 色标；周期轴仍保持 log scale。</figcaption></figure>
+    <details>
+      <summary>展开 Mrk 421 Fermi weekly on WCDA axis 的 log-color WWZ 对照图</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity_logcolor.png" alt="Mrk 421 Fermi weekly on WCDA axis log-color WWZ comparison"><figcaption>之前的 log-color WWZ 渲染，仅用于视觉对照。</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks：N=250，MJD 59284.333-61062.167，median cadence 7.000 d。CWT peak 为 583.10 d，GWS=2.828；WWZ mean-power peak 为 513.37 d，power=3.260。</p>
+
+    <h2>Mrk 501 图像</h2>
+    <h3>WCDA weekly</h3>
+    <p class="meta">时间覆盖：2021-03-11 07:59 UTC 至 2026-03-26 04:00 UTC。</p>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity.png?v=peak-markers-20260521" alt="Mrk 501 WCDA weekly light curve, CWT, WWZ, and global spectra"><figcaption>主图使用线性 WWZ heatmap 色标；CWT 和 WWZ 的 global spectra 放在 2D map 下方。红色虚线标出 global spectra 中的算法候选峰，不等同于通过显著性检验的探测。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_cwt_global_significance.png?v=local-sig-20260521" alt="Mrk 501 WCDA weekly CWT global spectrum local significance"><figcaption>CWT global spectrum 的 AR(1) local reference。红色虚线是当前候选峰；没有做 trial correction。</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_wwz_global_significance.png?v=local-sig-20260521" alt="Mrk 501 WCDA weekly WWZ global spectrum local significance"><figcaption>WWZ global spectrum 的 local-window surrogate assessment，使用 1000 条 AR(1) surrogate weekly 光变；~403 d 只通过 local 95% check。</figcaption></figure>
+    <details>
+      <summary>展开 Mrk 501 WCDA weekly 的 log-color WWZ 对照图</summary>
+      <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity_logcolor.png?v=peak-markers-20260521" alt="Mrk 501 WCDA weekly log-color WWZ comparison"><figcaption>之前的 log-color WWZ 渲染，仅用于视觉对照；global spectra 和红色候选峰标记不变。</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks：N=264，MJD 59284.333-61125.167，median cadence 7.000 d。CWT peak 为 389.17 d，GWS=4.407；WWZ mean-power peak 为 402.98 d，power=6.385。</p>
   </section>
 
-  <h2>Data and Alignment</h2>
-  <p>The WCDA merged products used here are:</p>
-  <ul>
-    <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv</code></li>
-    <li><code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv</code></li>
-    <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv</code></li>
-  </ul>
-  <p>Aligned CSV outputs are separated by source under <code>data/processed/aligned/mkn421/</code> and <code>data/processed/aligned/mkn501/</code>. Mrk 421 retains its Fermi weekly comparison on the WCDA weekly MJD axis; Mrk 501 currently uses only the WCDA weekly product because no Mrk 501 daily WCDA or Fermi weekly product was provided in this workspace.</p>
+  <section data-lang-panel="en">
+    <section class="panel">
+      <strong>Scope.</strong> This page keeps the existing Mrk 421 WCDA/Fermi quick-look periodicity analysis and the Mrk 501 LHAASO-WCDA weekly light curve. It also includes the xgm-poster-style Mrk 421 daily WWZ reproduction check, a first local-significance assessment of the current Mrk 421 / Mrk 501 WCDA weekly candidate peaks, a Mrk 421 MJD 59500-60500 fixed-window local check, a longer TELAMON 14 mm / 7 mm radio-LHAASO weekly comparison, and a same-window Mrk 421 optical/near-UV-LHAASO alignment supplement.
+    </section>
 
-  <h2>Methods</h2>
-  <p>WCDA flux is represented as an excess rate, <code>sum(n_on - n_bkg) / tobs</code>, with a Poisson-style on/off error approximation propagated per hit bin. CWT uses a Morlet wavelet through <code>pycwt</code>. WWZ uses <code>libwwz</code> with the v1 quick-look grid saved by <code>src/pipeline/periodicity_v1.py</code>.</p>
-  <p>WWZ heatmaps use log color normalization and a log-scaled period axis to improve visual contrast across the searched period range. This changes the display only; the WWZ peak search still uses the saved linear power values.</p>
-  <p class="note">No red-noise simulations, Monte Carlo thresholds, local significance contours, pre-trial significance, or post-trial significance are included in this version.</p>
+    <h2>Data and Alignment</h2>
+    <p>The WCDA merged products used here are:</p>
+    <ul>
+      <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv</code></li>
+      <li><code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv</code></li>
+      <li><code>data/processed/wcda_week/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv</code></li>
+    </ul>
+    <p>Local intermediate outputs are separated by source under <code>data/processed/aligned/mkn421/</code>, <code>data/processed/aligned/mkn501/</code>, <code>data/processed/periodicity/mkn421/</code>, and <code>data/processed/periodicity/mkn501/</code>. Mrk 421 retains its Fermi weekly comparison aligned to the WCDA weekly MJD axis; Mrk 501 currently uses only the WCDA weekly product because no Mrk 501 WCDA daily or Fermi weekly product is available in this workspace.</p>
 
-  <h2>Peak Summary</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Source</th><th>Series</th><th>N</th><th>MJD min</th><th>MJD max</th><th>Median dt [d]</th><th>CWT peak [d]</th><th>CWT GWS</th><th>WWZ peak [d]</th><th>WWZ power</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Mrk 421</td><td>WCDA daily</td><td>360</td><td>60763.167</td><td>61128.167</td><td>1.000</td><td>104.95</td><td>19.650</td><td>109.77</td><td>29.772</td></tr>
-      <tr><td>Mrk 421</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>367.33</td><td>4.486</td><td>363.22</td><td>5.177</td></tr>
-      <tr><td>Mrk 421</td><td>Fermi weekly on WCDA axis</td><td>250</td><td>59284.333</td><td>61062.167</td><td>7.000</td><td>583.10</td><td>2.828</td><td>513.37</td><td>3.260</td></tr>
-      <tr><td>Mrk 501</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>389.17</td><td>4.407</td><td>402.98</td><td>6.385</td></tr>
-    </tbody>
-  </table>
+    <h2>2022-2026 TELAMON-LHAASO Weekly Alignment</h2>
+    <p>This longer supplement uses the public TELAMON Mrk 421 source page, <a href="https://telamon.astro.uni-wuerzburg.de/sources/1104-3812">1104+3812</a>, and parses the embedded Plotly averaged light-curve arrays <code>aver_lc14</code> and <code>aver_lc7</code>. These are TELAMON averaged 14 mm and 7 mm flux-density light curves in Jy, not single-frequency measurements. The local parsed cache has 110 total TELAMON rows: 14 mm = 65 and 7 mm = 45.</p>
+    <p>The plotted overlap with the local WCDA weekly file covers MJD 59580.0000-61125.1667. Within that synchronized window there are 221 finite WCDA weekly points, 33 TELAMON 14 mm points, and 25 TELAMON 7 mm points. The top panel again uses <code>WCDA excess-rate proxy = sum(n_on - n_bkg) / tobs</code>, not calibrated physical flux. TELAMON extends slightly later than the current WCDA weekly file, so the figure is clipped at the WCDA weekly endpoint.</p>
+    <figure><img src="../data/processed/multiwavelength/mkn421/telamon_lhaaso_2022_2026/mkn421_telamon_lhaaso_2022_2026_weekly.png?v=telamon-20260601" alt="Mrk 421 TELAMON-LHAASO weekly alignment"><figcaption>Mrk 421 TELAMON 14 mm / 7 mm and LHAASO/WCDA weekly long-window alignment. This figure is exploratory only and reports no DCF, FAP, correlation coefficient, lag, or QPO significance.</figcaption></figure>
 
-  <h2>Mrk 421 Figures</h2>
-  <h3>WCDA daily</h3>
-  <p class="meta">Time coverage: 2025-03-29 04:00 UTC to 2026-03-29 04:00 UTC.</p>
-  <figure>
-    <img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity.png" alt="Mrk 421 WCDA daily light curve, CWT, and WWZ">
-    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
-  </figure>
-  <p class="result-note">Quick-look peaks: N=360, MJD 60763.167-61128.167, median cadence 1.000 d. CWT peak is 104.95 d with GWS 19.650; WWZ mean-power peak is 109.77 d with power 29.772.</p>
+    <h2>2021-2026 Optical/UV-LHAASO Alignment</h2>
+    <p>This supplement adds public optical and near-UV monitoring points for Mrk 421 in the local WCDA weekly window. Inputs include the local ATLAS forced-photometry table, the local ASAS-SN Sky Patrol table, freshly cached ZTF public light curves, AAVSO VSX export data, and the CDS/VizieR A&amp;A 684 A127 <code>fig1.dat</code> table as a directly downloadable numerical counterpart to the 2022 IXPE/MWL campaign context. The Nature Astronomy IXPE supporting data are not treated as a hard dependency in this pass.</p>
+    <p>The plotted window is MJD 59284.333-61125.167. The main optical panel contains 3487 quick-look flux-density points after quality cuts, and the separate Swift-UVOT near-UV panel contains 126 points. The lower panel again uses the local WCDA weekly <code>flux_excess = sum(n_on - n_bkg) / tobs</code> proxy, not calibrated physical gamma-ray flux. Optical magnitudes are converted to approximate <code>F_nu</code> in mJy for visualization only; no host-galaxy subtraction, color correction, cross-filter normalization, or SED modeling is applied.</p>
+    <table>
+      <thead><tr><th>Survey</th><th>Panel</th><th>Band</th><th>Input rows</th><th>Plotted rows</th><th>MJD min</th><th>MJD max</th></tr></thead>
+      <tbody>
+        <tr><td>ATLAS</td><td>optical</td><td>c</td><td>613</td><td>463</td><td>59284.3833</td><td>61091.5638</td></tr>
+        <tr><td>ATLAS</td><td>optical</td><td>o</td><td>2246</td><td>923</td><td>59297.4440</td><td>61026.5672</td></tr>
+        <tr><td>ASAS-SN Sky Patrol</td><td>optical</td><td>g</td><td>239</td><td>195</td><td>59295.2574</td><td>60451.2869</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zg</td><td>277</td><td>277</td><td>59290.2290</td><td>60814.2876</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zr</td><td>262</td><td>262</td><td>59290.2614</td><td>60942.5267</td></tr>
+        <tr><td>ZTF public</td><td>optical</td><td>zi</td><td>18</td><td>18</td><td>59308.3061</td><td>60067.3904</td></tr>
+        <tr><td>AAVSO</td><td>optical</td><td>Vis.</td><td>1104</td><td>1103</td><td>59284.9440</td><td>61124.9320</td></tr>
+        <tr><td>AAVSO</td><td>optical</td><td>B/V/R/CV/CR/TG</td><td>212</td><td>212</td><td>59296.8104</td><td>61116.9292</td></tr>
+        <tr><td>CDS/VizieR A&amp;A 684 A127</td><td>optical</td><td>R-band</td><td>76</td><td>34</td><td>59703.0000</td><td>59747.7901</td></tr>
+        <tr><td>CDS/VizieR A&amp;A 684 A127</td><td>near-UV</td><td>W1/M2/W2</td><td>126</td><td>126</td><td>59696.9242</td><td>59755.1684</td></tr>
+      </tbody>
+    </table>
+    <figure><img src="../data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/mkn421_optical_uv_lhaaso_2021_2026_weekly.png?v=optical-uv-20260601" alt="Mrk 421 optical/near-UV-LHAASO weekly alignment"><figcaption>Mrk 421 optical/near-UV and LHAASO/WCDA weekly long-window alignment. This figure is exploratory only and reports no DCF, FAP, correlation coefficient, lag, optical QPO significance, or physical cross-band flux normalization.</figcaption></figure>
+    <p class="note">The full quick-look flux table and quality summary are saved as <code>data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/optical_uv_flux_points.csv</code> and <code>data/processed/multiwavelength/mkn421/optical_lhaaso_2021_2026/optical_uv_quality_summary.csv</code>.</p>
 
-  <h3>WCDA weekly</h3>
-  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
-  <figure>
-    <img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity.png" alt="Mrk 421 WCDA weekly light curve, CWT, and WWZ">
-    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
-  </figure>
-  <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 367.33 d with GWS 4.486; WWZ mean-power peak is 363.22 d with power 5.177.</p>
+    <h2>Methods</h2>
+    <p>WCDA flux is represented as an excess rate, <code>sum(n_on - n_bkg) / tobs</code>, with a Poisson-style on/off error approximation propagated per hit bin. CWT uses a Morlet wavelet through <code>pycwt</code>. WWZ uses <code>libwwz</code>, with the v1 quick-look grid saved by <code>src/pipeline/periodicity_v1.py</code>.</p>
+    <p>The regular periodicity figures after the xgm poster comparison now use linear WWZ heatmap color normalization in the main display. The previous log-color versions are retained in folded comparison panels. The period axis remains log-scaled, and the WWZ peak search still uses the saved linear power values.</p>
+    <p class="note">The quick-look CWT/WWZ maps are not post-trial significance products. The local-significance section below only assesses the current weekly candidate peaks and applies no look-elsewhere, source-level, or method-level trial correction.</p>
 
-  <h3>Fermi weekly on WCDA axis</h3>
-  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-01-22 04:00 UTC.</p>
-  <figure>
-    <img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity.png" alt="Mrk 421 Fermi weekly light curve, CWT, and WWZ">
-    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
-  </figure>
-  <p class="result-note">Quick-look peaks: N=250, MJD 59284.333-61062.167, median cadence 7.000 d. CWT peak is 583.10 d with GWS 2.828; WWZ mean-power peak is 513.37 d with power 3.260.</p>
+    <h2>Peak Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Source</th><th>Series</th><th>N</th><th>MJD min</th><th>MJD max</th><th>Median dt [d]</th><th>CWT peak [d]</th><th>CWT GWS</th><th>WWZ peak [d]</th><th>WWZ power</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mrk 421</td><td>WCDA daily</td><td>360</td><td>60763.167</td><td>61128.167</td><td>1.000</td><td>104.95</td><td>19.650</td><td>109.77</td><td>29.772</td></tr>
+        <tr><td>Mrk 421</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>367.33</td><td>4.486</td><td>363.22</td><td>5.177</td></tr>
+        <tr><td>Mrk 421</td><td>Fermi weekly on WCDA axis</td><td>250</td><td>59284.333</td><td>61062.167</td><td>7.000</td><td>583.10</td><td>2.828</td><td>513.37</td><td>3.260</td></tr>
+        <tr><td>Mrk 501</td><td>WCDA weekly</td><td>264</td><td>59284.333</td><td>61125.167</td><td>7.000</td><td>389.17</td><td>4.407</td><td>402.98</td><td>6.385</td></tr>
+      </tbody>
+    </table>
+    <ul>
+      <li><strong>Mrk 421 WCDA weekly</strong>: CWT global peak near 367.33 d; WWZ mean-power peak near 363.22 d.</li>
+      <li><strong>Mrk 501 WCDA weekly</strong>: CWT global peak near 389.17 d; WWZ mean-power peak near 402.98 d.</li>
+    </ul>
 
-  <h2>Mrk 501 Figures</h2>
-  <h3>WCDA weekly</h3>
-  <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
-  <figure>
-    <img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity.png" alt="Mrk 501 WCDA weekly light curve, CWT, and WWZ">
-    <figcaption>Light curve is shown on the first row; CWT and WWZ maps are separated on the second row.</figcaption>
-  </figure>
-  <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 389.17 d with GWS 4.407; WWZ mean-power peak is 402.98 d with power 6.385.</p>
+    <h2>Local-significance assessment of current candidate peaks</h2>
+    <p>This section freezes the candidate peaks already visible in the Mrk 421 and Mrk 501 WCDA weekly global spectra and asks only whether those fixed peaks look locally unusual under simple red-noise null models. The WCDA series is still <code>wcda_flux_excess</code>, a photon-count/excess-rate proxy rather than a final calibrated flux product; this workflow should be rerun once calibrated flux is available.</p>
+    <p>CWT uses <code>pycwt</code> Morlet global-wavelet-spectrum references for an AR(1) red-noise null. WWZ uses 1000 AR(1) Gaussian surrogate light curves on the same weekly sampling and reports a local-window FAP within ±10% of each candidate period. CWT and WWZ are two views of the same light curve structure, not independent discoveries. Peaks with only about 3-5 observed cycles should be treated as candidates or hints, not robust QPO detections.</p>
+    <table>
+      <thead><tr><th>Source</th><th>Method</th><th>Period [d]</th><th>Cycles</th><th>Observed</th><th>Local FAP</th><th>95% ref.</th><th>99% ref.</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>Mrk 421</td><td>CWT</td><td>129.87</td><td>14.17</td><td>GWS 2.965</td><td>—</td><td>11.371</td><td>14.095</td><td>Below AR(1) 95% local reference.</td></tr>
+        <tr><td>Mrk 421</td><td>CWT</td><td>367.33</td><td>5.01</td><td>GWS 4.486</td><td>—</td><td>14.675</td><td>20.042</td><td>Below AR(1) 95% local reference; only about five cycles.</td></tr>
+        <tr><td>Mrk 421</td><td>WWZ</td><td>135.67</td><td>13.57</td><td>WWZ 4.634</td><td>0.4665</td><td>7.442</td><td>9.232</td><td>Not locally unusual in the AR(1) surrogate test.</td></tr>
+        <tr><td>Mrk 421</td><td>WWZ</td><td>363.22</td><td>5.07</td><td>WWZ 5.177</td><td>0.6244</td><td>15.565</td><td>21.794</td><td>Not locally unusual in the AR(1) surrogate test.</td></tr>
+        <tr><td>Mrk 501</td><td>CWT</td><td>137.59</td><td>13.38</td><td>GWS 1.270</td><td>—</td><td>3.687</td><td>4.593</td><td>Below AR(1) 95% local reference.</td></tr>
+        <tr><td>Mrk 501</td><td>CWT</td><td>389.17</td><td>4.73</td><td>GWS 4.407</td><td>—</td><td>4.766</td><td>6.545</td><td>Close to but below the AR(1) 95% local reference; only about five cycles.</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>61.22</td><td>30.07</td><td>WWZ 1.783</td><td>0.5165</td><td>2.500</td><td>2.984</td><td>Not locally unusual in the AR(1) surrogate test.</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>140.87</td><td>13.07</td><td>WWZ 1.761</td><td>0.7113</td><td>3.665</td><td>4.692</td><td>Not locally unusual in the AR(1) surrogate test.</td></tr>
+        <tr><td>Mrk 501</td><td>WWZ</td><td>402.98</td><td>4.57</td><td>WWZ 6.385</td><td>0.0310</td><td>5.233</td><td>7.726</td><td>Passes this local 95% surrogate check but not 99%; still not a global/post-trial detection.</td></tr>
+      </tbody>
+    </table>
+    <p class="result-note">Reading: in this first local-only pass, most current weekly peaks are consistent with the simple AR(1) red-noise null. The strongest exception is Mrk 501 WWZ near 403 d, with local-window FAP ≈ 0.031, but it has only about 4.6 cycles and has not been corrected for the period search, two-source comparison, or using both CWT and WWZ.</p>
 
-  <h2>Outputs</h2>
-  <ul>
-    <li>Aligned CSVs: <code>data/processed/aligned/mkn421/</code>, <code>data/processed/aligned/mkn501/</code></li>
-    <li>CWT/WWZ arrays and plots: <code>data/processed/periodicity/mkn421/</code>, <code>data/processed/periodicity/mkn501/</code></li>
-    <li>Pipeline entry point: <code>python src/pipeline/periodicity_v1.py</code></li>
-  </ul>
+    <h2>Mrk 421 fixed-window local check, MJD 59500-60500</h2>
+    <p>This section tests the user-specified Mrk 421 WCDA weekly window <code>MJD 59500-60500</code> as a fixed window, not as a sliding-window search. The actual finite weekly samples cover MJD 59501.167-60495.167 with 143 points and a median cadence of 7.000 d. The window's own strongest peak is reported, and a pre-specified 140 d target band is tested separately. No Fermi weekly or WCDA daily counterpart is included here because the requested result is WCDA weekly only and the current WCDA daily product does not cover this MJD range.</p>
+    <p>The CWT strongest GWS peak is 308.88 d, and the WWZ strongest mean-power peak is 314.89 d. Because the shorter-period candidate is scientifically interesting, the 140 d hypothesis is now treated as a targeted test: the band is fixed in advance to 140 d ±10%, i.e. 126-154 d, and the local maximum inside that band is evaluated. The targeted-band maxima are 145.77 d in CWT and 149.32 d in WWZ. The WWZ result uses 1000 AR(1) Gaussian surrogate weekly light curves on the same sampling; the 314.89 d strongest-peak FAP and the 140 d targeted-band FAP are computed from the same surrogate ensemble. This is fixed-window local-only: no window-search, source-level, method-level, or broad period-search trial correction is applied.</p>
+    <table>
+      <thead><tr><th>Window</th><th>Method</th><th>Period [d]</th><th>Cycles</th><th>Observed</th><th>Local FAP</th><th>95% ref.</th><th>99% ref.</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>59500-60500</td><td>CWT</td><td>308.88</td><td>3.22</td><td>GWS 4.026</td><td>—</td><td>13.448</td><td>19.128</td><td>Below AR(1) 95% local reference; fewer than four cycles.</td></tr>
+        <tr><td>59500-60500</td><td>WWZ</td><td>314.89</td><td>3.16</td><td>WWZ 5.499</td><td>0.3676</td><td>14.391</td><td>20.180</td><td>Not locally unusual in the AR(1) surrogate test; fewer than four cycles.</td></tr>
+        <tr><td>59500-60500</td><td>CWT targeted 140 d band</td><td>145.77</td><td>6.82</td><td>GWS 3.857</td><td>—</td><td>11.187</td><td>14.824</td><td>Target-band maximum inside 126-154 d; below AR(1) 95% local reference.</td></tr>
+        <tr><td>59500-60500</td><td>WWZ targeted 140 d band</td><td>149.32</td><td>6.66</td><td>WWZ 5.130</td><td>0.3526</td><td>8.733</td><td>12.491</td><td>Target-band maximum inside 126-154 d; not locally unusual in the AR(1) surrogate test.</td></tr>
+      </tbody>
+    </table>
+    <p class="result-note">Reading: in this fixed-window check, neither the ~310 d structure nor the pre-specified 140 d target band passes the current AR(1) local 95% reference in CWT or WWZ. The ~310 d peak is additionally weak because the window covers only about 3.2 cycles. The 140 d band remains worth tracking because it gives about 6.7 cycles and was tested as a targeted hypothesis, but with WWZ local FAP = 0.3526 it is still a candidate/hint rather than a robust QPO detection.</p>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_periodicity.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window periodicity, MJD 59500-60500"><figcaption>Mrk 421 WCDA weekly MJD 59500-60500 fixed-window periodicity figure. Red lines mark algorithmic strongest/global-spectrum peaks; the orange band marks the pre-specified 140 d ±10% target window, and the orange line marks the local maximum inside that band.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_cwt_global_significance.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window CWT local reference"><figcaption>CWT fixed-window global spectrum with AR(1) 95%/99% local references. Both the 308.88 d strongest peak and the 145.77 d targeted-band maximum are below the 95% reference.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/windows/59500_60500/wcda_weekly_window_wwz_local_significance.png?v=mkn421-window-target140-20260601" alt="Mrk 421 WCDA weekly fixed-window WWZ local significance"><figcaption>WWZ fixed-window local-significance check. The 314.89 d strongest peak has FAP 0.3676; the 149.32 d maximum inside the 140 d target band has FAP 0.3526.</figcaption></figure>
+
+
+    <h2>xgm Poster Comparison</h2>
+    <p class="meta">Input file: <code>data/processed/wcda_day/LHAASO-WCDA_Mkn421_2023-06-25_2026-03-29_day.csv</code>. The plotted series is <code>excess_counts = sum(n_on - n_bkg)</code>, used as a photon-count flux proxy rather than a calibrated physical flux. This section compares the xgm poster labels with my current reproduction; it is not tuned to force agreement.</p>
+    <table>
+      <thead><tr><th>Window</th><th>xgm poster reported</th><th>My reproduction</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>MJD 60200-60700</td><td>51.05 d</td><td>Global WWZ peak 111.01 d; nearest 51.05 d grid point is 49.93 d, power 12.330, rank 3.</td><td>50 d is a strong local feature, but not the dominant peak in this run.</td></tr>
+        <tr><td>MJD 61020-61098</td><td>2.54, 5.2, 16.6 d</td><td>Global peak at the 50.00 d upper search boundary; 16.96 d ranks 3, 5.12 d ranks 10, and 2.52 d is not prominent.</td><td>16.6 d has a visible counterpart; the shorter candidates are weaker here.</td></tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>Difference from the xgm poster significance.</strong>The xgm poster periods are reference labels from the poster. The significance curves in this report are my AR(1) Gaussian surrogate WWZ references, computed with the current daily <code>excess_counts</code> series, the same daily sampling, the same saved WWZ period grid, and 1000 surrogates. They are not a reproduction of the poster author's significance calculation. Under this null model, the MJD 60200-60700 feature near 51 d is above the pointwise 95% reference but below the pointwise 99% reference; its ±10% local-window FAP is 0.0619. No global look-elsewhere correction is applied.</p>
+    <table>
+      <thead><tr><th>Window</th><th>Target source</th><th>Target [d]</th><th>Nearest grid [d]</th><th>Local peak [d]</th><th>WWZ power</th><th>95% ref.</th><th>99% ref.</th><th>Rank</th><th>Cycles</th><th>My local FAP</th><th>Reading</th></tr></thead>
+      <tbody>
+        <tr><td>60200-60700</td><td>xgm poster reference</td><td>51.05</td><td>49.92</td><td>49.92</td><td>12.330</td><td>11.017</td><td>14.897</td><td>3</td><td>9.77</td><td>0.0619</td><td>Above pointwise 95% but below 99%; it does not pass the ±10% local-window 5% FAP threshold.</td></tr>
+        <tr><td>60200-60700</td><td>my reproduction peak</td><td>111.01</td><td>111.01</td><td>111.01</td><td>13.612</td><td>15.895</td><td>21.717</td><td>1</td><td>4.49</td><td>0.0779</td><td>My global peak is stronger than the xgm 51.05 d grid point, but remains below the local AR(1) references.</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>2.54</td><td>2.52</td><td>2.30</td><td>0.671</td><td>0.550</td><td>0.650</td><td>24</td><td>30.31</td><td>0.0340</td><td>Passes the current pointwise 99% check, but the absolute WWZ power is low and this is not trial corrected.</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>5.20</td><td>5.12</td><td>5.12</td><td>0.909</td><td>1.452</td><td>1.899</td><td>10</td><td>14.81</td><td>0.5095</td><td>Not locally unusual in my AR(1) surrogate test.</td></tr>
+        <tr><td>61020-61098</td><td>xgm poster reference</td><td>16.60</td><td>16.96</td><td>15.28</td><td>2.767</td><td>8.582</td><td>11.784</td><td>2</td><td>4.64</td><td>0.6024</td><td>Visible in my reproduction but not locally significant in this surrogate test.</td></tr>
+        <tr><td>61020-61098</td><td>my reproduction boundary peak</td><td>50.00</td><td>50.00</td><td>50.00</td><td>18.573</td><td>15.768</td><td>29.757</td><td>1</td><td>1.54</td><td>0.0360</td><td>Above pointwise 95% but below 99%; it is at the search upper boundary with only 1.54 cycles.</td></tr>
+      </tbody>
+    </table>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_poster_style.png?v=wwz-ar1-n1000-20260528" alt="xgm poster comparison for Mrk 421 WCDA daily MJD 60200-60700"><figcaption>MJD 60200-60700 comparison. The red 51.05 d marker is the xgm poster period; the right-side Mean WWZ panel shows the observed global spectrum with N=1000 AR(1) surrogate 95%/99% references.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_local_significance.png?v=wwz-ar1-n1000-20260528" alt="My WWZ local significance check for xgm poster window MJD 60200-60700"><figcaption>My local-significance check for MJD 60200-60700. Red marks the xgm poster reference period; blue marks my reproduction peak. The references use N=1000 AR(1) surrogates.</figcaption></figure>
+    <p class="result-note">My result: N=493, MJD 60200.167-60699.167, median cadence 1.000 d, max gap 4.351 d. The global mean-power peak is 111.01 d (power 13.612), while the nearest 51.05 d grid point is 49.93 d (power 12.330), rank 3.</p>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_61020_61098_wwz_poster_style.png?v=wwz-ar1-n1000-20260528" alt="xgm poster comparison for Mrk 421 WCDA daily MJD 61020-61098"><figcaption>MJD 61020-61098 comparison. The marked 2.54, 5.2, and 16.6 d lines are the xgm poster candidate periods; the right-side Mean WWZ panel overlays N=1000 AR(1) surrogate 95%/99% references.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_61020_61098_wwz_local_significance.png?v=wwz-ar1-n1000-20260528" alt="My WWZ local significance check for xgm poster window MJD 61020-61098"><figcaption>My local-significance check for MJD 61020-61098. Red marks the xgm poster reference periods; blue marks my reproduction boundary peak. The references use N=1000 AR(1) surrogates.</figcaption></figure>
+    <p class="result-note">My result: N=78, MJD 61020.167-61097.167, median cadence 1.000 d, max gap 1.000 d. The global peak sits at the 50.00 d upper search boundary (power 18.573). Around the poster periods, 16.96 d is the third strongest global-WWZ grid point, 5.12 d ranks tenth, and 2.52 d is not prominent.</p>
+
+    <h2>Mrk 421 Figures</h2>
+    <h3>WCDA daily</h3>
+    <p class="meta">Time coverage: 2025-03-29 04:00 UTC to 2026-03-29 04:00 UTC.</p>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity.png" alt="Mrk 421 WCDA daily light curve, CWT, and linear-color WWZ"><figcaption>Main display uses linear WWZ heatmap color normalization; the period axis remains log-scaled.</figcaption></figure>
+    <details>
+      <summary>Show log-color WWZ comparison for Mrk 421 WCDA daily</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/wcda_daily_periodicity_logcolor.png" alt="Mrk 421 WCDA daily log-color WWZ comparison"><figcaption>Previous log-color WWZ rendering kept for visual comparison only.</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks: N=360, MJD 60763.167-61128.167, median cadence 1.000 d. CWT peak is 104.95 d with GWS 19.650; WWZ mean-power peak is 109.77 d with power 29.772.</p>
+    <h3>WCDA weekly</h3>
+    <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity.png?v=peak-markers-20260521" alt="Mrk 421 WCDA weekly light curve, CWT, WWZ, and global spectra"><figcaption>Main display uses linear WWZ heatmap color normalization; CWT and WWZ global spectra are shown below the 2D maps. Red dashed lines mark algorithmic candidate peaks in the global spectra, not significance-vetted detections.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_cwt_global_significance.png?v=local-sig-20260521" alt="Mrk 421 WCDA weekly CWT global spectrum local significance"><figcaption>CWT global-spectrum local reference under an AR(1) red-noise null. The red dashed lines are the current candidate peaks; this is local-only and not trial corrected.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_wwz_global_significance.png?v=local-sig-20260521" alt="Mrk 421 WCDA weekly WWZ global spectrum local significance"><figcaption>WWZ global-spectrum local-window surrogate assessment using 1000 AR(1) surrogate light curves on the same weekly sampling.</figcaption></figure>
+    <details>
+      <summary>Show log-color WWZ comparison for Mrk 421 WCDA weekly</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/wcda_weekly_periodicity_logcolor.png?v=peak-markers-20260521" alt="Mrk 421 WCDA weekly log-color WWZ comparison"><figcaption>Previous log-color WWZ rendering kept for visual comparison only; the global spectra and red candidate-peak markers are unchanged.</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 367.33 d with GWS 4.486; WWZ mean-power peak is 363.22 d with power 5.177.</p>
+    <h3>Fermi weekly on WCDA axis</h3>
+    <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-01-22 04:00 UTC.</p>
+    <figure><img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity.png" alt="Mrk 421 Fermi weekly light curve, CWT, and linear-color WWZ"><figcaption>Main display uses linear WWZ heatmap color normalization; the period axis remains log-scaled.</figcaption></figure>
+    <details>
+      <summary>Show log-color WWZ comparison for Mrk 421 Fermi weekly on WCDA axis</summary>
+      <figure><img src="../data/processed/periodicity/mkn421/fermi_weekly_on_wcda_axis_periodicity_logcolor.png" alt="Mrk 421 Fermi weekly on WCDA axis log-color WWZ comparison"><figcaption>Previous log-color WWZ rendering kept for visual comparison only.</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks: N=250, MJD 59284.333-61062.167, median cadence 7.000 d. CWT peak is 583.10 d with GWS 2.828; WWZ mean-power peak is 513.37 d with power 3.260.</p>
+
+    <h2>Mrk 501 Figures</h2>
+    <h3>WCDA weekly</h3>
+    <p class="meta">Time coverage: 2021-03-11 07:59 UTC to 2026-03-26 04:00 UTC.</p>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity.png?v=peak-markers-20260521" alt="Mrk 501 WCDA weekly light curve, CWT, WWZ, and global spectra"><figcaption>Main display uses linear WWZ heatmap color normalization; CWT and WWZ global spectra are shown below the 2D maps. Red dashed lines mark algorithmic candidate peaks in the global spectra, not significance-vetted detections.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_cwt_global_significance.png?v=local-sig-20260521" alt="Mrk 501 WCDA weekly CWT global spectrum local significance"><figcaption>CWT global-spectrum local reference under an AR(1) red-noise null. The red dashed lines are the current candidate peaks; this is local-only and not trial corrected.</figcaption></figure>
+    <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_wwz_global_significance.png?v=local-sig-20260521" alt="Mrk 501 WCDA weekly WWZ global spectrum local significance"><figcaption>WWZ global-spectrum local-window surrogate assessment using 1000 AR(1) surrogate light curves on the same weekly sampling. The ~403 d peak passes this local 95% check but remains uncorrected for trials.</figcaption></figure>
+    <details>
+      <summary>Show log-color WWZ comparison for Mrk 501 WCDA weekly</summary>
+      <figure><img src="../data/processed/periodicity/mkn501/wcda_weekly_periodicity_logcolor.png?v=peak-markers-20260521" alt="Mrk 501 WCDA weekly log-color WWZ comparison"><figcaption>Previous log-color WWZ rendering kept for visual comparison only; the global spectra and red candidate-peak markers are unchanged.</figcaption></figure>
+    </details>
+    <p class="result-note">Quick-look peaks: N=264, MJD 59284.333-61125.167, median cadence 7.000 d. CWT peak is 389.17 d with GWS 4.407; WWZ mean-power peak is 402.98 d with power 6.385.</p>
+  </section>
 </main>
+
+<script>
+  (function () {
+    const buttons = document.querySelectorAll("[data-lang-button]");
+    const panels = document.querySelectorAll("[data-lang-panel]");
+    function setLang(lang) {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      buttons.forEach((button) => button.classList.toggle("active", button.dataset.langButton === lang));
+      panels.forEach((panel) => panel.classList.toggle("active", panel.dataset.langPanel === lang));
+      try { localStorage.setItem("qpo-periodicity-v1-lang", lang); } catch (_err) {}
+    }
+    buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.langButton)));
+    let preferred = "zh";
+    try { preferred = localStorage.getItem("qpo-periodicity-v1-lang") || preferred; } catch (_err) {}
+    if (!["zh", "en"].includes(preferred)) preferred = "zh";
+    setLang(preferred);
+  })();
+</script>
 </body>
 </html>

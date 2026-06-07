@@ -1,0 +1,471 @@
+source_id,survey,mjd,value,value_err,band,instrument,unit,source_catalog,source_url
+mkn421,CDS/VizieR A&A 684 A127,59695.0034,18.1,0.642,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59695.0034,2.52,0.181,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.5,5.27e-08,1.22e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.9214,21.5,0.386,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.9214,4.15,0.193,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.9242,11.5,0.381,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.9242,11.9,0.397,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59696.9242,10.3,0.343,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59698.7206,0.24,0.1,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.0435,25.5,0.48,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.0435,5.86,0.274,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.0458,12.1,0.402,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.0458,12.4,0.412,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.0458,10.7,0.356,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59699.5,1.02e-07,1.63e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59700.6387,35.6,0.4,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59700.6387,10.1,0.292,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59700.6417,12.1,0.402,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59700.6417,12.3,0.408,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59700.6417,10.8,0.36,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.4991,36.2,0.461,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.4991,9.54,0.3,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.5019,11.8,0.391,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.5019,12.1,0.401,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.5019,10.8,0.36,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.975,5.77e-11,6.84e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59701.975,1.14e-12,5.08e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.3637,33.7,0.607,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.3637,8.24,0.289,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.3665,11.4,0.377,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.3665,11.7,0.39,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.3665,10.4,0.347,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.5,6.08e-08,1.48e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.8419,31.0,0.485,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.8419,7.12,0.273,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.8444,10.8,0.36,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.8444,11.1,0.369,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.8444,9.69,0.322,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.95,5.52e-11,9.11e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59702.95,1.25e-12,7.57e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.0,19.6,3.93,R-band,KANATA,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.0,3.05,0.196,R-band,KANATA,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.0,200.0,0.304,R-band,KANATA,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.159,27.5,2.58,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.159,1.3,0.491,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.159,220.0,10.6,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.3958,17.1,0.376,R-band,NOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.3958,2.89,0.11,R-band,NOT,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.3958,202.0,0.8,R-band,NOT,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.555,30.5,0.456,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.555,8.41,0.345,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.5574,10.7,0.357,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.5574,11.0,0.365,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.5574,9.69,0.322,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.974,5.27e-11,3.89e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59703.996,1.48e-12,3.53e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,0.28,0.01,86GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,3.0,0.7,86GHz,IRAM,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,237.0,7.0,86GHz,IRAM,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,16.1,3.28,R-band,KANATA,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,3.35,0.253,R-band,KANATA,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0,201.0,0.45,R-band,KANATA,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0199,33.0,0.413,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0199,11.3,0.386,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0216,10.6,0.353,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0216,11.0,0.365,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.0216,9.43,0.313,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.03,10.6,0.02,2-10keV,XMM-Newton,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.1748,32.8,2.97,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.1748,2.88,0.83,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.1748,212.0,8.19,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.441,15.0,2.0,2-8keV,IXPE,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.441,215.0,4.0,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.6199,35.9,0.55,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.6199,12.1,0.386,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.6225,10.9,0.363,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.6225,11.3,0.376,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.6225,9.87,0.328,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.9444,5.95e-11,5.6e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.9444,1.46e-12,5.33e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.9911,17.1,0.0164,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.9918,17.2,0.0185,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59704.9925,17.1,0.0164,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59705.5,7.94e-08,1.62e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0,0.25,0.1,230GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0,0.38,0.02,86GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0,2.2,0.5,86GHz,IRAM,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0,212.0,8.0,86GHz,IRAM,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0131,47.1,0.525,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0131,16.4,0.511,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0138,11.7,0.388,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0138,12.1,0.401,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0138,10.1,0.337,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0193,6.03e-11,7.91e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59706.0193,2.51e-12,8.39e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.208,58.6,0.603,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.208,25.3,0.611,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.2104,12.1,0.402,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.2104,12.3,0.408,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.2104,10.6,0.353,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59707.696,0.41,0.12,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59708.2381,30.2,2.76,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59708.2381,3.12,0.758,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59708.2381,181.0,6.92,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59708.5,7e-08,1.53e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59711.5,1.12e-07,2.64e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7837,16.0,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7837,2.67,0.24,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7837,192.0,2.44,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7897,16.4,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7897,3.17,0.22,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7897,195.0,1.83,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7948,16.1,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7948,2.67,0.18,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59712.7948,193.0,1.83,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.1737,23.8,2.31,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.1737,1.71,1.03,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.1737,175.0,17.2,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.8205,14.8,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.8205,3.68,0.24,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59713.8205,179.0,1.75,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59714.5,1.2e-07,2.5e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59715.8046,14.1,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59715.8046,3.53,0.29,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59715.8046,176.0,2.24,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.1598,70.5,0.595,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.1598,36.8,0.771,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.1625,7.16,0.279,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.1625,7.97,0.265,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.1625,6.23,0.207,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.5,1.45e-07,2.58e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.8649,14.1,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.8649,2.67,0.43,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59717.8649,179.0,4.67,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59718.1474,82.6,0.55,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59718.1474,54.8,0.871,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59718.9093,1.83e-10,1.64e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59718.9093,9.17e-12,2.18e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.0763,77.8,0.588,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.0763,45.9,0.841,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.0786,9.1,0.638,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.0786,8.74,0.613,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.0786,8.6,0.603,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59719.6264,0.31,0.12,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.5,1.15e-07,2.22e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9234,2.31e-10,1.42e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9234,1.43e-11,1.97e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9381,91.5,0.567,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9381,81.8,1.07,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9407,9.44,0.314,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9407,10.0,0.333,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59720.9407,8.14,0.27,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.2138,95.5,0.607,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.2138,76.8,1.05,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.2162,10.6,0.353,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.2162,10.8,0.359,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.2162,9.69,0.322,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.8659,15.3,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.8659,3.31,0.24,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.8659,118.0,1.97,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.8992,16.0,0.00972,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.8999,15.9,0.00971,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.9006,16.1,0.00977,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.9108,2.96e-10,2.14e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59721.9108,2.87e-11,4.02e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.9099,1.9e-10,1.65e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.9099,1.04e-11,2.22e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.9243,65.7,0.475,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.9243,36.5,0.666,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.927,10.8,0.36,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.927,11.4,0.379,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59722.927,9.52,0.316,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.195,63.1,0.596,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.195,31.0,0.636,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.1975,11.5,0.381,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.1975,11.2,0.372,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.1975,9.96,0.331,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59723.5,1.03e-07,2.07e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9118,1.08e-10,1.13e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9118,4.2e-12,1.4e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9123,55.1,0.509,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9123,27.1,0.676,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9146,10.7,0.357,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9146,11.1,0.369,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59724.9146,9.78,0.325,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59725.177,56.6,0.581,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59725.177,26.2,0.646,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59725.1793,11.4,0.377,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59725.1793,11.5,0.383,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59725.1793,10.3,0.343,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.5,8.73e-08,1.95e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9075,66.9,0.558,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9075,35.4,0.731,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9098,13.2,0.437,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9098,13.6,0.452,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9098,12.1,0.402,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9128,1.1e-10,1.19e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59726.9128,5.3e-12,1.48e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59727.166,68.0,0.565,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59727.166,32.0,0.681,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59727.1684,13.4,0.445,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59727.1684,13.6,0.452,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59727.1684,12.0,0.398,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59728.9046,62.8,0.564,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59728.9046,25.7,0.611,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59728.9071,11.9,0.395,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59728.9071,12.4,0.412,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59728.9071,10.7,0.356,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.5,6.63e-08,1.68e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.8054,20.2,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.8054,5.63,0.2,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.8054,149.0,0.85,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9376,20.5,0.0212,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9383,20.1,0.0139,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.939,20.3,0.014,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9655,82.7,0.689,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9655,28.2,0.591,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9682,14.2,0.47,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9682,14.0,0.464,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59729.9682,12.8,0.424,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.0033,0.323,0.016,86GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.0033,7.91,0.85,86GHz,IRAM,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.0033,128.0,2.4,86GHz,IRAM,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8345,19.8,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8345,5.38,0.2,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8345,150.0,0.89,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8873,83.5,0.562,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8873,45.8,0.711,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8891,13.2,0.513,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8891,14.0,0.464,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.8891,11.2,0.373,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.912,1.72e-10,3.2e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59730.912,1.49e-11,5.77e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.2203,65.9,0.517,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.2203,27.6,0.546,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.2231,13.9,0.462,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.2231,14.2,0.473,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.2231,12.7,0.42,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.846,20.5,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.846,5.28,0.16,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59731.846,142.0,0.67,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.5,6.42e-08,1.78e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.8147,19.3,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.8147,5.11,0.21,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.8147,152.0,1.0,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9329,1.14e-10,1.8e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9329,7.13e-12,2.45e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9374,63.4,0.572,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9374,26.7,0.591,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9398,11.1,0.37,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9398,12.5,0.416,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59732.9398,9.78,0.325,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.1474,63.4,0.556,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.1474,24.4,0.571,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.1498,13.6,0.453,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.1498,13.8,0.46,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.1498,12.2,0.405,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.97,9.49e-11,1.78e-11,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59733.9761,4.07e-12,1.16e-12,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.0089,56.8,0.698,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.0089,18.5,0.566,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.0089,14.4,0.479,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.0089,14.5,0.482,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.0089,13.1,0.436,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.2042,0.281,0.028,225GHz,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.2042,126.0,2.86,225GHz,SMA,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.5324,9.79,10.5,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.6597,9.97,14.6,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.6721,11.1,0.126,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.6721,5.93,0.102,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.7161,10.4,0.211,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.7161,5.29,0.163,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.7601,10.1,0.138,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.7601,4.99,0.103,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.7755,-6.45,8.38,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.785,18.4,0.02,2-10keV,XMM-Newton,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.804,10.3,0.117,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.804,5.47,0.0944,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.848,9.85,0.171,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.848,4.9,0.134,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.892,10.1,0.133,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.892,5.13,0.103,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.8968,18.5,0.401,R-band,NOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.8968,4.75,0.11,R-band,NOT,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.8968,153.0,0.392,R-band,NOT,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.9028,-10.7,11.0,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.9237,58.6,0.548,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.9237,20.1,0.536,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.926,14.3,0.475,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.926,14.5,0.482,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.926,12.8,0.424,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.936,9.39,0.117,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.936,4.86,0.0923,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.9395,1.15e-10,8.06e-12,0.2-1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.9604,4.06e-12,6.3e-13,>1TeV,MAGIC,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.98,8.16,0.157,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59734.98,4.18,0.125,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0034,52.1,0.637,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0034,17.0,0.541,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0037,15.2,0.506,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0037,15.2,0.504,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0037,13.5,0.448,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.024,8.64,0.117,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.024,4.54,0.0961,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0301,2.72,18.0,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0679,7.69,0.107,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.0679,4.16,0.0905,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.1574,11.7,19.8,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.2731,65.7,27.7,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.4005,79.3,14.9,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.4597,10.0,1.0,2-8keV,IXPE,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.5,5.64e-08,1.54e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.5278,136.0,24.4,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.6137,0.49,0.11,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.6435,38.0,24.2,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.7708,83.8,18.6,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.8981,84.9,17.7,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.9209,21.0,0.448,R-band,NOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.9209,3.85,0.094,R-band,NOT,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59735.9209,133.0,0.509,R-band,NOT,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.0255,72.9,27.5,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.1412,111.0,11.4,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.1566,37.0,3.04,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.1566,3.85,0.49,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.1566,128.0,3.17,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2656,79.1,0.648,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2656,36.8,0.766,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2678,15.2,0.506,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2678,15.3,0.509,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2678,13.6,0.453,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.2685,130.0,6.86,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.3958,130.0,10.8,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9171,21.2,0.678,R-band,NOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9171,5.58,0.16,R-band,NOT,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9171,146.0,0.365,R-band,NOT,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9517,0.262,0.01,230GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9517,0.36,0.014,86GHz,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9517,1.76,0.6,86GHz,IRAM,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59736.9517,116.0,9.0,86GHz,IRAM,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.1703,33.5,2.86,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.1703,4.76,0.856,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.1703,147.0,5.07,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.4375,222.0,7.4,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5539,27.8,0.187,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5539,22.1,0.21,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5648,205.0,15.6,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5758,28.1,0.225,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5758,22.5,0.252,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5819,88.1,0.398,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5819,52.6,0.566,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5851,13.9,0.462,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5851,14.4,0.477,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.5851,12.4,0.413,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.6196,30.6,0.203,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.6196,24.9,0.236,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.6634,30.8,0.317,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.6634,23.2,0.343,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.6921,214.0,8.9,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.7072,29.4,0.219,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.7072,22.4,0.238,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.751,25.7,0.196,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.751,18.3,0.2,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.7947,25.2,0.276,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.7947,18.6,0.298,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8194,227.0,18.6,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8385,24.8,0.194,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8385,18.3,0.205,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8823,26.5,0.205,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8823,19.9,0.22,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8893,21.2,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8893,5.42,0.28,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.8893,145.0,1.37,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.9261,26.4,0.279,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.9261,20.8,0.316,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.9468,245.0,6.83,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.9698,25.7,0.189,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59737.9698,20.7,0.213,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.0136,22.0,0.198,3-7keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.0136,16.6,0.213,7-30keV,Nustar,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.0741,246.0,9.39,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.1507,29.7,2.8,H-band,Perkins,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.1507,6.2,1.29,H-band,Perkins,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.1507,145.0,5.93,H-band,Perkins,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.2014,250.0,8.3,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.2542,69.5,1.0,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.2542,34.0,1.2,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.2564,12.4,0.413,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.3287,275.0,27.9,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.3889,10.0,1.0,2-8keV,IXPE,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.456,290.0,10.3,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.5,5.26e-08,1.32e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.5833,287.0,21.2,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.7106,317.0,8.43,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.8264,320.0,8.35,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59738.9537,332.0,11.8,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59739.081,333.0,15.3,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59739.2083,375.0,15.7,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59739.3356,365.0,18.7,2-8keV,IXPE,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59740.273,0.278,0.028,225GHz,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59740.273,131.0,9.69,225GHz,SMA,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59740.8952,18.9,0.0199,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59740.8959,18.8,0.0198,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59740.8966,18.9,0.0222,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59741.5,3.93e-08,1.14e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59742.2193,51.5,0.759,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59742.2193,21.3,0.886,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59742.2212,13.0,0.508,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59742.2212,11.4,0.38,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59742.8502,0.33,0.1,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59744.5,7.48e-08,1.43e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.1989,41.9,0.517,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.1989,9.91,0.309,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.2016,13.6,0.453,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.2016,13.8,0.46,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.2016,12.3,0.409,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.2889,0.277,0.028,225GHz,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.2889,127.0,2.82,225GHz,SMA,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9786,7.07,0.677,R-band,T90,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9786,137.0,2.09,R-band,T90,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9794,20.9,0.0743,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9813,21.5,0.0907,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9824,8.23,0.716,R-band,T90,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9824,142.0,1.91,R-band,T90,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59746.9832,21.7,0.0938,R-band,T90,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.1341,52.2,0.499,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.1341,17.1,0.406,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.1371,14.6,0.483,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.1371,14.6,0.486,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.1371,12.8,0.424,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.5,6.76e-08,1.45e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.7901,20.5,0.4,R-band,RoboPol,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.7901,4.67,0.27,R-band,RoboPol,%(PolarizationDegree),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59747.7901,152.0,1.53,R-band,Robopol,deg(PolarizationAngle),CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59749.1818,76.3,0.653,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59749.1818,33.7,0.711,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59749.1841,14.4,0.479,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59749.1841,14.4,0.477,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59749.1841,13.3,0.44,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.1766,57.8,0.687,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.1766,15.9,0.481,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.1789,15.2,0.506,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.1789,15.2,0.504,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.1789,13.3,0.44,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59750.5,8.06e-08,1.63e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59751.1829,47.6,0.58,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59751.1829,11.9,0.366,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59751.1853,16.0,0.53,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59751.1853,15.9,0.528,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59751.1853,14.0,0.465,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59752.1755,49.0,0.563,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59752.1755,11.7,0.356,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59752.1779,16.0,0.53,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59752.1779,16.0,0.533,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59752.1779,14.5,0.483,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.1731,52.4,0.717,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.1731,9.5,0.376,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.175,18.2,0.603,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.175,18.1,0.601,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.175,16.4,0.544,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.5,9.86e-08,1.95e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59753.7418,0.59,0.14,37GHz,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59754.1662,46.5,0.574,0.3-2keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59754.1662,10.0,0.282,2-10keV,Swift-XRT,10^-11 erg/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59754.169,17.8,0.592,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59754.169,17.8,0.59,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59754.169,16.1,0.534,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59755.1684,14.7,0.573,M2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59755.1684,16.0,0.533,W1,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59755.1684,12.0,0.398,W2,Swift-UVOT,mJy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+mkn421,CDS/VizieR A&A 684 A127,59756.5,9.71e-08,2.25e-08,0.3-300GeV,Fermi-LAT,ph/cm^2/s^1,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat

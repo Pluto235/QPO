@@ -1,0 +1,3 @@
+window,target,period_days,cwt_power,cycles,significance
+60200-60700,v2 flux CWT global peak,124.80811046265804,15.423842672896942,3.998137606203872,pending
+60200-60700,xgm poster reference 51.05 d nearest grid,52.47534634131939,8.829130029960828,9.509227376115183,pending

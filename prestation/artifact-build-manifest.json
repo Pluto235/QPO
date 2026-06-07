@@ -1,0 +1,27 @@
+{
+  "output": "/Users/luoji/Documents/projects/QPO/prestation/qpo_nature_cover_letter_slide.pptx",
+  "outputBytes": 13226,
+  "slideCount": 1,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "previewDir": "/Users/luoji/Documents/projects/QPO/outputs/qpo-cover-letter-plain/presentations/qpo-cover-letter/preview",
+  "previewPaths": [
+    "/Users/luoji/Documents/projects/QPO/outputs/qpo-cover-letter-plain/presentations/qpo-cover-letter/preview/slide-01.png"
+  ],
+  "layoutDir": "/Users/luoji/Documents/projects/QPO/outputs/qpo-cover-letter-plain/presentations/qpo-cover-letter/layout",
+  "layoutResults": [
+    {
+      "layoutPath": "/Users/luoji/Documents/projects/QPO/outputs/qpo-cover-letter-plain/presentations/qpo-cover-letter/layout/slide-01.layout.json"
+    }
+  ],
+  "slides": [
+    {
+      "index": 1,
+      "requestedSlideNumber": 1,
+      "modulePath": "/Users/luoji/Documents/projects/QPO/outputs/qpo-cover-letter-plain/presentations/qpo-cover-letter/slides/slide-01.mjs",
+      "exportName": "slide01"
+    }
+  ]
+}

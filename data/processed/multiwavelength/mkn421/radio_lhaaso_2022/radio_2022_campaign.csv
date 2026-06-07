@@ -1,0 +1,16 @@
+mjd,flux_jy,flux_err_jy,band,frequency_ghz,instrument,unit,source_catalog,source_url
+59698.7206,0.24,0.1,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59707.696,0.41,0.12,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59719.6264,0.31,0.12,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59735.6137,0.49,0.11,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59742.8502,0.33,0.1,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59753.7418,0.59,0.14,37GHz,37.0,Metsahovi,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59704.0,0.28,0.01,86GHz,86.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59706.0,0.38,0.02,86GHz,86.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59730.0033,0.323,0.016,86GHz,86.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59736.9517,0.36,0.014,86GHz,86.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59734.2042,0.281,0.028,225GHz,225.0,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59740.273,0.278,0.028,225GHz,225.0,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59746.2889,0.277,0.028,225GHz,225.0,SMA,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59706.0,0.25,0.1,230GHz,230.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat
+59736.9517,0.262,0.01,230GHz,230.0,IRAM,Jy,CDS/VizieR J/A+A/684/A127 fig1.dat,https://cdsarc.cds.unistra.fr/ftp/J/A+A/684/A127/fig1.dat

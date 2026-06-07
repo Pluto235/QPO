@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mrk 421 / Mrk 501 WCDA Flux Periodicity Analysis v2</title>
+  <style>
+    :root { --ink:#1f2933; --muted:#5f6c7b; --line:#d7dee8; --panel:#f7f9fc; --accent:#255c99; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:#fff; line-height:1.55; }
+    main { max-width:1180px; margin:0 auto; padding:32px 24px 56px; }
+    h1 { margin:0 0 8px; font-size:30px; letter-spacing:0; }
+    h2 { margin-top:34px; border-bottom:1px solid var(--line); padding-bottom:6px; font-size:22px; }
+    h3 { margin-top:22px; font-size:18px; }
+    a { color:var(--accent); }
+    .meta,.note { color:var(--muted); }
+    .topline { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:18px; }
+    .language-toggle { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; flex:0 0 auto; background:#fff; }
+    .language-toggle button { border:0; background:transparent; color:var(--muted); padding:8px 12px; cursor:pointer; font:inherit; }
+    .language-toggle button.active { background:var(--accent); color:#fff; }
+    .panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:16px 18px; margin:18px 0; }
+    code { background:#eef2f7; padding:2px 4px; border-radius:4px; }
+    table { width:100%; border-collapse:collapse; font-size:14px; margin:12px 0 20px; }
+    th,td { border:1px solid var(--line); padding:8px 9px; text-align:right; vertical-align:top; }
+    th:first-child,td:first-child,th:nth-child(2),td:nth-child(2) { text-align:left; }
+    th { background:#eef3f9; }
+    figure { margin:18px 0 26px; }
+    img { width:100%; height:auto; border:1px solid var(--line); border-radius:6px; background:#fff; }
+    figcaption { color:var(--muted); font-size:13px; margin-top:6px; }
+    .result-note { background:var(--panel); border-left:4px solid var(--accent); padding:10px 12px; margin:10px 0 26px; font-size:14px; }
+    details.foldout { border:1px solid var(--line); border-radius:8px; background:#fff; margin:14px 0 24px; padding:0; }
+    details.foldout summary { cursor:pointer; padding:12px 14px; font-weight:700; background:var(--panel); border-radius:8px; }
+    details.foldout[open] summary { border-bottom:1px solid var(--line); border-radius:8px 8px 0 0; }
+    details.foldout .foldout-body { padding:14px 14px 2px; }
+    details.foldout figure { margin:10px 0 18px; }
+    [data-lang-panel] { display:none; }
+    [data-lang-panel].active { display:block; }
+    @media (max-width:820px) { .topline { display:block; } .language-toggle { margin-top:14px; } main { padding:22px 14px 40px; } table { font-size:12px; } }
+  </style>
+</head>
+<body>
+<main>
+  <div class="topline">
+    <div>
+      <h1>Mrk 421 / Mrk 501 WCDA Flux Periodicity Analysis v2</h1>
+      <p class="meta">Report date: 2026-06-03.</p>
+    </div>
+    <div class="language-toggle" aria-label="Language switch">
+      <button type="button" data-lang-button="zh" class="active">中文</button>
+      <button type="button" data-lang-button="en">English</button>
+    </div>
+  </div>
+
+  <section data-lang-panel="zh" class="active">
+    <section class="panel"><strong>范围。</strong>v2 将 v1 中 WCDA photon-count / excess-rate proxy 全面替换为 strict-batch forward-folded <code>N0</code> flux；<code>E0=3 TeV</code>，固定 <code>gamma=2.6</code>。本页包括 Mrk 421/501 daily 与 weekly WCDA flux、Mrk 421 Fermi weekly 重新对齐到 v2 WCDA weekly flux 轴、TELAMON-LHAASO flux 对齐，以及 Mrk 421 MJD 59500-60500 fixed-window quick-look。</section>
+    <h2>数据与方法</h2>
+    <p>WCDA 主序列使用 <code>N0/N0_err</code>，先保留 <code>fit_status=OK</code>、有限 <code>N0</code>、有限且正的 <code>N0_err</code>。随后按源和时间尺度应用不确定度离群点 QC：排除 <code>N0_err &gt; 5 × median(N0_err)</code> 的行；被排除行保存到 aligned CSV 旁边的 <code>qc_rejected</code> 表。</p>
+    <p>CWT 使用 Morlet wavelet，WWZ 使用 <code>libwwz</code>；周期图为 quick-look 产品。</p>
+    <p class="result-note"><strong>显著性范围。</strong>主序列 CWT/WWZ 峰值仍是 quick-look 候选；本版只对用户指定的 xgm MJD 60200-60700 CWT/WWZ 目标运行 AR(1) surrogate 检验，且不做 source/method/window-search/post-trial correction。</p>
+    <h2>峰值摘要</h2>
+    <table><thead><tr><th>源</th><th>序列</th><th>N</th><th>MJD min</th><th>MJD max</th><th>dt [d]</th><th>CWT [d]</th><th>WWZ [d]</th></tr></thead><tbody><tr><td>Mrk 421</td><td>WCDA daily N0 flux</td><td>1570</td><td>59281.500</td><td>60887.500</td><td>1.000</td><td>132.23</td><td>128.17</td></tr>
+<tr><td>Mrk 421</td><td>WCDA weekly N0 flux</td><td>229</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>367.33</td><td>131.25</td></tr>
+<tr><td>Mrk 421</td><td>Fermi weekly on WCDA flux axis</td><td>224</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>583.10</td><td>600.00</td></tr>
+<tr><td>Mrk 501</td><td>WCDA daily N0 flux</td><td>1560</td><td>59282.500</td><td>60887.500</td><td>1.000</td><td>157.25</td><td>152.49</td></tr>
+<tr><td>Mrk 501</td><td>WCDA weekly N0 flux</td><td>229</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>462.80</td><td>436.07</td></tr></tbody></table>
+    <h2>覆盖范围说明</h2>
+    <ul><li>WCDA daily flux 覆盖到 2025-07-31。</li><li>WCDA weekly flux 覆盖到 2025-07-27。</li><li>因此 v2 比 v1 counts/proxy 覆盖短，不复现晚 2025/2026 的 WCDA-only 结果。</li></ul>
+    <h2>WCDA flux QC 摘要</h2>
+    <table><thead><tr><th>源</th><th>尺度</th><th>OK行</th><th>保留</th><th>排除</th><th>N0_err上限</th></tr></thead><tbody><tr><td>Mkn421</td><td>day</td><td>1588</td><td>1570</td><td>18</td><td>8.206e-13</td></tr>
+<tr><td>Mkn421</td><td>week</td><td>229</td><td>229</td><td>0</td><td>3.142e-13</td></tr>
+<tr><td>Mkn501</td><td>day</td><td>1591</td><td>1560</td><td>31</td><td>6.963e-13</td></tr>
+<tr><td>Mkn501</td><td>week</td><td>229</td><td>229</td><td>0</td><td>2.571e-13</td></tr></tbody></table>
+    <h2>主图</h2>
+    <h3>Mrk 421 WCDA daily N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/wcda_daily_flux_periodicity.png" alt="Mrk 421 WCDA daily flux"><figcaption>N=1570, MJD 59281.500-60887.500; CWT peak 132.23 d, WWZ peak 128.17 d. 显著性暂缓。</figcaption></figure>
+<h3>Mrk 421 WCDA weekly N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/wcda_weekly_flux_periodicity.png" alt="Mrk 421 WCDA weekly flux"><figcaption>N=229, MJD 59284.500-60880.500; CWT peak 367.33 d, WWZ peak 131.25 d. 显著性暂缓。</figcaption></figure>
+<h3>Mrk 421 Fermi weekly on WCDA flux axis</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/fermi_weekly_on_wcda_flux_axis_periodicity.png" alt="Mrk 421 Fermi weekly on WCDA flux axis"><figcaption>N=224, MJD 59284.500-60880.500; CWT peak 583.10 d, WWZ peak 600.00 d. 显著性暂缓。</figcaption></figure>
+<h3>Mrk 501 WCDA daily N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn501/wcda_daily_flux_periodicity.png" alt="Mrk 501 WCDA daily flux"><figcaption>N=1560, MJD 59282.500-60887.500; CWT peak 157.25 d, WWZ peak 152.49 d. 显著性暂缓。</figcaption></figure>
+<h3>Mrk 501 WCDA weekly N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn501/wcda_weekly_flux_periodicity.png" alt="Mrk 501 WCDA weekly flux"><figcaption>N=229, MJD 59284.500-60880.500; CWT peak 462.80 d, WWZ peak 436.07 d. 显著性暂缓。</figcaption></figure>
+    <h2>Mrk 421 MJD 59500-60500 fixed-window quick-look</h2>
+    <p>使用 weekly <code>N0</code> flux 重算窗口 CWT/WWZ，并保留 140 d ±10% target-band 峰值定位；不计算 FAP 或显著性参考线。</p>
+    <table><thead><tr><th>方法</th><th>周期 [d]</th><th>Cycles</th><th>Observed</th><th>显著性</th></tr></thead><tbody><tr><td>CWT strongest</td><td>137.59</td><td>7.22</td><td>3.669</td><td>暂缓</td></tr>
+<tr><td>WWZ strongest</td><td>138.89</td><td>7.16</td><td>4.776</td><td>暂缓</td></tr>
+<tr><td>CWT targeted 140 d band</td><td>137.59</td><td>7.22</td><td>3.669</td><td>暂缓</td></tr>
+<tr><td>WWZ targeted 140 d band</td><td>138.89</td><td>7.16</td><td>4.776</td><td>暂缓</td></tr></tbody></table>
+    <figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/windows/59500_60500/wcda_weekly_flux_window_periodicity.png" alt="Mrk 421 fixed-window flux quick-look"><figcaption>Mrk 421 WCDA weekly N0 fixed-window quick-look；橙色带标出 140 d ±10%。</figcaption></figure>
+    <h2>xgm poster flux quick-look</h2>
+    <p>只用 daily <code>N0</code> flux 重算 MJD 60200-60700。MJD 61020-61098 超出当前 flux 覆盖范围，标为待更新。</p>
+    <p class="result-note">与 xgm poster 第 5 页的 51.05 d 结果不是同一口径：poster 面板使用 WCDA counts，并在 PSD 面板上显示参考线；v2 表格使用 strict-batch daily <code>N0</code> flux，并报告同一采样下 AR(1) surrogate 的 local/global FAP。因此 poster 上读到的 &gt;99% 不能直接等价为 v2 flux 的 &gt;99%。</p><table><thead><tr><th>口径</th><th>输入</th><th>方法</th><th>N</th><th>alpha</th><th>局部峰 [d]</th><th>power</th><th>local FAP</th><th>global FAP</th><th>99%</th></tr></thead><tbody><tr><td>xgm poster page 5</td><td>WCDA counts</td><td>WWZ/PSD visual reference</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>claimed on poster</td></tr>
+<tr><td>local v1 counts/proxy reproduction</td><td>excess counts proxy</td><td>WWZ AR(1) local-window</td><td>493</td><td>0.722</td><td>49.92</td><td>12.330</td><td>0.0619</td><td>-</td><td>no</td></tr>
+<tr><td>v2 strict-flux WWZ</td><td>daily N0 flux</td><td>WWZ AR(1) local/global</td><td>491</td><td>0.828</td><td>49.92</td><td>16.697</td><td>0.1009</td><td>0.7463</td><td>no</td></tr>
+<tr><td>v2 strict-flux CWT</td><td>daily N0 flux</td><td>CWT AR(1) local/global</td><td>491</td><td>0.828</td><td>49.53</td><td>9.781</td><td>0.3317</td><td>0.9540</td><td>no</td></tr></tbody></table>
+    <table><thead><tr><th>目标</th><th>周期 [d]</th><th>WWZ power</th><th>Cycles</th><th>显著性</th></tr></thead><tbody><tr><td>v2 flux global peak</td><td>111.01</td><td>17.175</td><td>4.50</td><td>见下方 targeted AR(1)</td></tr>
+<tr><td>xgm poster reference 51.05 d nearest grid</td><td>49.92</td><td>16.697</td><td>10.00</td><td>见下方 targeted AR(1)</td></tr></tbody></table>
+    <figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_quicklook.png" alt="Mrk 421 xgm 60200-60700 flux WWZ quick-look"><figcaption>MJD 60200-60700 daily N0 WWZ quick-look；红线为 xgm poster 51.05 d reference。</figcaption></figure>
+    <details class="foldout"><summary>展开查看之前的 counts/proxy 版本</summary><div class="foldout-body"><p>以下是 v1 counts/proxy 的同一 MJD 60200-60700 窗口，仅作输入数据和显著性口径对照；不属于 v2 strict-flux 结果。</p><figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_poster_style.png" alt="Mrk 421 xgm counts/proxy WWZ quick-look"><figcaption>v1 counts/proxy WWZ poster-style quick-look。</figcaption></figure><figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_local_significance.png" alt="Mrk 421 xgm counts/proxy WWZ significance"><figcaption>v1 counts/proxy AR(1) local-window WWZ 显著性对照。</figcaption></figure></div></details>
+    <h3>xgm 窗口 WWZ 显著性</h3><p>AR(1) Gaussian surrogate 使用同一 v2 daily flux 采样；local FAP 是目标周期 ±10% 窗口内最大 global-WWZ 的检验，global FAP 是同一 2-200 d 搜索范围内最大值参考；不包含 source/method/window-search/post-trial correction。</p><table><thead><tr><th>目标</th><th>目标周期 [d]</th><th>局部峰 [d]</th><th>WWZ</th><th>local FAP</th><th>global FAP</th><th>99%</th><th>Nsim</th></tr></thead><tbody><tr><td>v2 flux global peak</td><td>111.01</td><td>111.01</td><td>17.175</td><td>0.1728</td><td>0.7233</td><td>否</td><td>1000</td></tr>
+<tr><td>xgm poster reference 51.05 d</td><td>51.05</td><td>49.92</td><td>16.697</td><td>0.1009</td><td>0.7463</td><td>否</td><td>1000</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_significance.png" alt="Mrk 421 xgm flux WWZ significance"><figcaption>MJD 60200-60700 daily N0 WWZ 显著性；虚线为 AR(1) surrogate pointwise 95%/99% 参考。</figcaption></figure>
+    <h3>xgm 窗口 CWT quick-look</h3><table><thead><tr><th>目标</th><th>周期 [d]</th><th>CWT power</th><th>Cycles</th><th>显著性</th></tr></thead><tbody><tr><td>v2 flux CWT global peak</td><td>124.81</td><td>15.424</td><td>4.00</td><td>见下方 CWT AR(1)</td></tr>
+<tr><td>xgm poster reference 51.05 d nearest grid</td><td>52.48</td><td>8.829</td><td>9.51</td><td>见下方 CWT AR(1)</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_quicklook.png" alt="Mrk 421 xgm flux CWT quick-look"><figcaption>MJD 60200-60700 daily N0 CWT quick-look；红线为 xgm poster 51.05 d reference。</figcaption></figure><h3>xgm 窗口 CWT 显著性</h3><p>CWT 使用同一 v2 daily flux 采样的 AR(1) Gaussian surrogate；local FAP 是目标周期 ±10% 窗口内最大 global-CWT 的检验，global FAP 是同一 2-200 d 搜索范围内最大值参考；不包含 source/method/window-search/post-trial correction。</p><table><thead><tr><th>目标</th><th>目标周期 [d]</th><th>局部峰 [d]</th><th>CWT</th><th>local FAP</th><th>global FAP</th><th>99%</th><th>Nsim</th></tr></thead><tbody><tr><td>v2 flux CWT global peak</td><td>124.81</td><td>124.81</td><td>15.424</td><td>0.2148</td><td>0.6394</td><td>否</td><td>1000</td></tr>
+<tr><td>xgm poster reference 51.05 d</td><td>51.05</td><td>49.53</td><td>9.781</td><td>0.3317</td><td>0.9540</td><td>否</td><td>1000</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_significance.png" alt="Mrk 421 xgm flux CWT significance"><figcaption>MJD 60200-60700 daily N0 CWT 显著性；虚线为 AR(1) surrogate pointwise 95%/99% 参考。</figcaption></figure>
+    <h2>TELAMON-LHAASO flux 对齐</h2>
+    <p>v2 使用 WCDA weekly <code>N0</code> 重画 gamma-ray 面板。重叠窗口为 MJD 59580.000-60880.500；WCDA 186 点，TELAMON 14 mm 31 点，7 mm 23 点。此图只作视觉同步上下文，不给出相关、时延或 QPO 显著性。</p>
+    <figure><img src="../data/processed/multiwavelength/mkn421/telamon_lhaaso_2022_2026_flux_v2/mkn421_telamon_lhaaso_2022_2025_weekly_flux.png" alt="Mrk 421 TELAMON-LHAASO weekly flux alignment"><figcaption>Mrk 421 TELAMON 14 mm / 7 mm 与 LHAASO-WCDA weekly N0 flux 对齐。</figcaption></figure>
+  </section>
+
+  <section data-lang-panel="en">
+    <section class="panel"><strong>Scope.</strong> v2 replaces the WCDA photon-count / excess-rate proxy used in v1 with strict-batch forward-folded <code>N0</code> flux at <code>E0=3 TeV</code> with fixed <code>gamma=2.6</code>. It includes Mrk 421/501 daily and weekly WCDA flux, Mrk 421 Fermi weekly realigned to the v2 WCDA weekly flux axis, TELAMON-LHAASO flux alignment, and a Mrk 421 MJD 59500-60500 fixed-window quick-look.</section>
+    <h2>Data and Methods</h2>
+    <p>The WCDA series uses <code>N0/N0_err</code>. It first keeps rows with <code>fit_status=OK</code>, finite <code>N0</code>, and finite positive <code>N0_err</code>. It then applies a per-source/per-cadence uncertainty-outlier QC cut: rows with <code>N0_err &gt; 5 × median(N0_err)</code> are excluded, and rejected rows are written beside the aligned CSVs as <code>qc_rejected</code> tables.</p>
+    <p>CWT uses a Morlet wavelet and WWZ uses <code>libwwz</code>; these are quick-look products.</p>
+    <p class="result-note"><strong>Significance scope.</strong> The main CWT/WWZ peaks remain quick-look candidates. This pass runs AR(1) surrogate significance only for the user-requested xgm MJD 60200-60700 CWT/WWZ targets, with no source/method/window-search/post-trial correction.</p>
+    <h2>Peak Summary</h2>
+    <table><thead><tr><th>Source</th><th>Series</th><th>N</th><th>MJD min</th><th>MJD max</th><th>dt [d]</th><th>CWT [d]</th><th>WWZ [d]</th></tr></thead><tbody><tr><td>Mrk 421</td><td>WCDA daily N0 flux</td><td>1570</td><td>59281.500</td><td>60887.500</td><td>1.000</td><td>132.23</td><td>128.17</td></tr>
+<tr><td>Mrk 421</td><td>WCDA weekly N0 flux</td><td>229</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>367.33</td><td>131.25</td></tr>
+<tr><td>Mrk 421</td><td>Fermi weekly on WCDA flux axis</td><td>224</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>583.10</td><td>600.00</td></tr>
+<tr><td>Mrk 501</td><td>WCDA daily N0 flux</td><td>1560</td><td>59282.500</td><td>60887.500</td><td>1.000</td><td>157.25</td><td>152.49</td></tr>
+<tr><td>Mrk 501</td><td>WCDA weekly N0 flux</td><td>229</td><td>59284.500</td><td>60880.500</td><td>7.000</td><td>462.80</td><td>436.07</td></tr></tbody></table>
+    <h2>Coverage Notes</h2>
+    <ul><li>WCDA daily flux currently reaches 2025-07-31.</li><li>WCDA weekly flux currently reaches 2025-07-27.</li><li>v2 is therefore shorter than the v1 counts/proxy coverage and does not reproduce late-2025/2026 WCDA-only sections.</li></ul>
+    <h2>WCDA Flux QC Summary</h2>
+    <table><thead><tr><th>Source</th><th>Cadence</th><th>OK rows</th><th>Kept</th><th>Rejected</th><th>N0_err limit</th></tr></thead><tbody><tr><td>Mkn421</td><td>day</td><td>1588</td><td>1570</td><td>18</td><td>8.206e-13</td></tr>
+<tr><td>Mkn421</td><td>week</td><td>229</td><td>229</td><td>0</td><td>3.142e-13</td></tr>
+<tr><td>Mkn501</td><td>day</td><td>1591</td><td>1560</td><td>31</td><td>6.963e-13</td></tr>
+<tr><td>Mkn501</td><td>week</td><td>229</td><td>229</td><td>0</td><td>2.571e-13</td></tr></tbody></table>
+    <h2>Main Figures</h2>
+    <h3>Mrk 421 WCDA daily N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/wcda_daily_flux_periodicity.png" alt="Mrk 421 WCDA daily flux"><figcaption>N=1570, MJD 59281.500-60887.500; CWT peak 132.23 d, WWZ peak 128.17 d. Significance deferred.</figcaption></figure>
+<h3>Mrk 421 WCDA weekly N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/wcda_weekly_flux_periodicity.png" alt="Mrk 421 WCDA weekly flux"><figcaption>N=229, MJD 59284.500-60880.500; CWT peak 367.33 d, WWZ peak 131.25 d. Significance deferred.</figcaption></figure>
+<h3>Mrk 421 Fermi weekly on WCDA flux axis</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/fermi_weekly_on_wcda_flux_axis_periodicity.png" alt="Mrk 421 Fermi weekly on WCDA flux axis"><figcaption>N=224, MJD 59284.500-60880.500; CWT peak 583.10 d, WWZ peak 600.00 d. Significance deferred.</figcaption></figure>
+<h3>Mrk 501 WCDA daily N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn501/wcda_daily_flux_periodicity.png" alt="Mrk 501 WCDA daily flux"><figcaption>N=1560, MJD 59282.500-60887.500; CWT peak 157.25 d, WWZ peak 152.49 d. Significance deferred.</figcaption></figure>
+<h3>Mrk 501 WCDA weekly N0 flux</h3><figure><img src="../data/processed/periodicity/periodicity_v2/mkn501/wcda_weekly_flux_periodicity.png" alt="Mrk 501 WCDA weekly flux"><figcaption>N=229, MJD 59284.500-60880.500; CWT peak 462.80 d, WWZ peak 436.07 d. Significance deferred.</figcaption></figure>
+    <h2>Mrk 421 MJD 59500-60500 Fixed-Window Quick-Look</h2>
+    <p>This section reruns the fixed window with weekly <code>N0</code> flux and preserves the 140 d ±10% target-band peak localization. It does not compute FAP or significance references.</p>
+    <table><thead><tr><th>Method</th><th>Period [d]</th><th>Cycles</th><th>Observed</th><th>Significance</th></tr></thead><tbody><tr><td>CWT strongest</td><td>137.59</td><td>7.22</td><td>3.669</td><td>deferred</td></tr>
+<tr><td>WWZ strongest</td><td>138.89</td><td>7.16</td><td>4.776</td><td>deferred</td></tr>
+<tr><td>CWT targeted 140 d band</td><td>137.59</td><td>7.22</td><td>3.669</td><td>deferred</td></tr>
+<tr><td>WWZ targeted 140 d band</td><td>138.89</td><td>7.16</td><td>4.776</td><td>deferred</td></tr></tbody></table>
+    <figure><img src="../data/processed/periodicity/periodicity_v2/mkn421/windows/59500_60500/wcda_weekly_flux_window_periodicity.png" alt="Mrk 421 fixed-window flux quick-look"><figcaption>Mrk 421 WCDA weekly N0 fixed-window quick-look; the orange band marks 140 d ±10%.</figcaption></figure>
+    <h2>xgm Poster Flux Quick-Look</h2>
+    <p>Only MJD 60200-60700 is rerun with daily <code>N0</code> flux. MJD 61020-61098 is outside the current flux coverage and remains pending.</p>
+    <p class="result-note">This is not an apples-to-apples comparison with xgm poster page 5: the poster panel uses WCDA counts and a PSD reference-curve display, whereas v2 uses strict-batch daily <code>N0</code> flux and reports AR(1) surrogate local/global FAP on the same sampling. The poster's visual &gt;99% reading is therefore not equivalent to a v2 flux &gt;99% claim.</p><table><thead><tr><th>Case</th><th>Input</th><th>Method</th><th>N</th><th>alpha</th><th>Local peak [d]</th><th>Power</th><th>Local FAP</th><th>Global FAP</th><th>99%</th></tr></thead><tbody><tr><td>xgm poster page 5</td><td>WCDA counts</td><td>WWZ/PSD visual reference</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>claimed on poster</td></tr>
+<tr><td>local v1 counts/proxy reproduction</td><td>excess counts proxy</td><td>WWZ AR(1) local-window</td><td>493</td><td>0.722</td><td>49.92</td><td>12.330</td><td>0.0619</td><td>-</td><td>no</td></tr>
+<tr><td>v2 strict-flux WWZ</td><td>daily N0 flux</td><td>WWZ AR(1) local/global</td><td>491</td><td>0.828</td><td>49.92</td><td>16.697</td><td>0.1009</td><td>0.7463</td><td>no</td></tr>
+<tr><td>v2 strict-flux CWT</td><td>daily N0 flux</td><td>CWT AR(1) local/global</td><td>491</td><td>0.828</td><td>49.53</td><td>9.781</td><td>0.3317</td><td>0.9540</td><td>no</td></tr></tbody></table>
+    <table><thead><tr><th>Target</th><th>Period [d]</th><th>WWZ power</th><th>Cycles</th><th>Significance</th></tr></thead><tbody><tr><td>v2 flux global peak</td><td>111.01</td><td>17.175</td><td>4.50</td><td>see targeted AR(1) below</td></tr>
+<tr><td>xgm poster reference 51.05 d nearest grid</td><td>49.92</td><td>16.697</td><td>10.00</td><td>see targeted AR(1) below</td></tr></tbody></table>
+    <figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_quicklook.png" alt="Mrk 421 xgm 60200-60700 flux WWZ quick-look"><figcaption>MJD 60200-60700 daily N0 WWZ quick-look; the red line marks the xgm poster 51.05 d reference.</figcaption></figure>
+    <details class="foldout"><summary>Show previous counts/proxy version</summary><div class="foldout-body"><p>These are the v1 counts/proxy products for the same MJD 60200-60700 window. They are included only for input/method comparison and are not v2 strict-flux results.</p><figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_poster_style.png" alt="Mrk 421 xgm counts/proxy WWZ quick-look"><figcaption>v1 counts/proxy WWZ poster-style quick-look.</figcaption></figure><figure><img src="../data/processed/periodicity/xgm_poster_repro/mkn421/mkn421_daily_60200_60700_wwz_local_significance.png" alt="Mrk 421 xgm counts/proxy WWZ significance"><figcaption>v1 counts/proxy AR(1) local-window WWZ significance comparison.</figcaption></figure></div></details>
+    <h3>xgm Window WWZ Significance</h3><p>AR(1) Gaussian surrogates use the same v2 daily flux sampling. Local FAP tests the maximum global WWZ inside target period ±10%; global FAP references the maximum across the same 2-200 d search range. No source/method/window-search/post-trial correction is included.</p><table><thead><tr><th>Target</th><th>Target period [d]</th><th>Local peak [d]</th><th>WWZ</th><th>local FAP</th><th>global FAP</th><th>Above 99%</th><th>Nsim</th></tr></thead><tbody><tr><td>v2 flux global peak</td><td>111.01</td><td>111.01</td><td>17.175</td><td>0.1728</td><td>0.7233</td><td>no</td><td>1000</td></tr>
+<tr><td>xgm poster reference 51.05 d</td><td>51.05</td><td>49.92</td><td>16.697</td><td>0.1009</td><td>0.7463</td><td>no</td><td>1000</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_significance.png" alt="Mrk 421 xgm flux WWZ significance"><figcaption>MJD 60200-60700 daily N0 WWZ significance; dashed curves are AR(1) surrogate pointwise 95%/99% references.</figcaption></figure>
+    <h3>xgm Window CWT Quick-Look</h3><table><thead><tr><th>Target</th><th>Period [d]</th><th>CWT power</th><th>Cycles</th><th>Significance</th></tr></thead><tbody><tr><td>v2 flux CWT global peak</td><td>124.81</td><td>15.424</td><td>4.00</td><td>see CWT AR(1) below</td></tr>
+<tr><td>xgm poster reference 51.05 d nearest grid</td><td>52.48</td><td>8.829</td><td>9.51</td><td>see CWT AR(1) below</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_quicklook.png" alt="Mrk 421 xgm flux CWT quick-look"><figcaption>MJD 60200-60700 daily N0 CWT quick-look; the red line marks the xgm poster 51.05 d reference.</figcaption></figure><h3>xgm Window CWT Significance</h3><p>CWT uses AR(1) Gaussian surrogates on the same v2 daily flux sampling. Local FAP tests the maximum global CWT inside target period ±10%; global FAP references the maximum across the same 2-200 d search range. No source/method/window-search/post-trial correction is included.</p><table><thead><tr><th>Target</th><th>Target period [d]</th><th>Local peak [d]</th><th>CWT</th><th>local FAP</th><th>global FAP</th><th>Above 99%</th><th>Nsim</th></tr></thead><tbody><tr><td>v2 flux CWT global peak</td><td>124.81</td><td>124.81</td><td>15.424</td><td>0.2148</td><td>0.6394</td><td>no</td><td>1000</td></tr>
+<tr><td>xgm poster reference 51.05 d</td><td>51.05</td><td>49.53</td><td>9.781</td><td>0.3317</td><td>0.9540</td><td>no</td><td>1000</td></tr></tbody></table><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_significance.png" alt="Mrk 421 xgm flux CWT significance"><figcaption>MJD 60200-60700 daily N0 CWT significance; dashed curves are AR(1) surrogate pointwise 95%/99% references.</figcaption></figure>
+    <h2>TELAMON-LHAASO Flux Alignment</h2>
+    <p>The gamma-ray panel is redrawn with WCDA weekly <code>N0</code>. The overlap window is MJD 59580.000-60880.500: WCDA 186 points, TELAMON 14 mm 31 points, and 7 mm 23 points. This is visual timing context only; no correlation, lag, FAP, or QPO significance is reported.</p>
+    <figure><img src="../data/processed/multiwavelength/mkn421/telamon_lhaaso_2022_2026_flux_v2/mkn421_telamon_lhaaso_2022_2025_weekly_flux.png" alt="Mrk 421 TELAMON-LHAASO weekly flux alignment"><figcaption>Mrk 421 TELAMON 14 mm / 7 mm aligned with LHAASO-WCDA weekly N0 flux.</figcaption></figure>
+  </section>
+</main>
+<script>
+  (function () {
+    const buttons = document.querySelectorAll("[data-lang-button]");
+    const panels = document.querySelectorAll("[data-lang-panel]");
+    function setLang(lang) {
+      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+      buttons.forEach((button) => button.classList.toggle("active", button.dataset.langButton === lang));
+      panels.forEach((panel) => panel.classList.toggle("active", panel.dataset.langPanel === lang));
+      try { localStorage.setItem("qpo-periodicity-v2-lang", lang); } catch (_err) {}
+    }
+    buttons.forEach((button) => button.addEventListener("click", () => setLang(button.dataset.langButton)));
+    let preferred = "zh";
+    try { preferred = localStorage.getItem("qpo-periodicity-v2-lang") || preferred; } catch (_err) {}
+    if (!["zh", "en"].includes(preferred)) preferred = "zh";
+    setLang(preferred);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,2645 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fermi-LAT γ-ray QPO 检测调研 (2020–2025) · any-reports</title>
+<meta name="description" content="Fermi-LAT γ-ray QPO 检测调研 (2020–2025)">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/highlight.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3E%F0%9F%93%A6%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="topbar-toggle" aria-label="目录" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰ 目录</button>
+  <a class="topbar-brand" href="index.html">any-reports</a>
+  <nav class="topbar-nav">
+    <a href="index.html">Home</a>
+    <a href="https://github.com/Pluto235/any-reports" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar" id="sidebar">
+    <p class="sidebar-title">📑 目录</p>
+    <nav class="sidebar-nav">
+      <ol><li><a href="#tldr">TL;DR</a></li><li><a href="#主表--每篇论文一览">主表 — 每篇论文一览</a></li><li><a href="#完整-qpo-候选列表每行--一个源--一个-qpo-信号">完整 QPO 候选列表（每行 = 一个源 × 一个 QPO 信号）</a></li><li><a href="#peñil-系列三篇大样本扩样2026-05-14b-加入">Peñil 系列三篇大样本扩样（2026-05-14b 加入）</a><ol><li><a href="#peñil22-新源18-个按-global-σ-降序最高-18σ">Peñil+22 新源（18 个，按 global σ 降序，最高 1.8σ）</a></li><li><a href="#rico24-新源22-个-starrednew-γ-ray-candidates去-3-个与现有重叠">Rico+24 新源（22 个 starred「new γ-ray candidates」，去 3 个与现有重叠）</a></li><li><a href="#peñil25-新源5-个-local-2σ-hint全部-global-0σ">Peñil+25 新源（5 个 local ≥2σ hint，全部 global ≈0σ）</a></li></ol></li><li><a href="#逐篇细读">逐篇细读</a><ol><li><a href="#1-kushwaha-2020--oj-287-arxiv200913754">1. Kushwaha+ 2020 — OJ 287 [arXiv:2009.13754]</a></li><li><a href="#2-zhang-2021--pks-0521-36-arxiv210610040">2. Zhang+ 2021 — PKS 0521-36 [arXiv:2106.10040]</a></li><li><a href="#3-ren-cerruti--sahakyan-2022--35-brightest-agn-arxiv220413051">3. Ren, Cerruti &amp; Sahakyan 2022 — 35 brightest AGN [arXiv:2204.13051]</a></li><li><a href="#5-gong-2023--s4-0954658-arxiv230403085">5. Gong+ 2023 — S4 0954+658 [arXiv:2304.03085]</a></li><li><a href="#6-zhang-2023--s2-010922-arxiv230611579">6. Zhang+ 2023 — S2 0109+22 [arXiv:2306.11579]</a></li><li><a href="#7-sharma-prince--bose-2023--pks-0521-36-arxiv231212623">7. Sharma, Prince &amp; Bose 2023 — PKS 0521-36 [arXiv:2312.12623]</a></li><li><a href="#8-chen-2024--134-blazars-systematic-search-arxiv240110658">8. Chen+ 2024 — 134 blazars systematic search [arXiv:2401.10658]</a></li><li><a href="#4-peñil-2022--24-selected-blazars-hint-sample-arxiv221101894">4. Peñil+ 2022 — 24 selected blazars hint sample [arXiv:2211.01894]</a></li><li><a href="#9-rico-2024--ssa--494-fermi-lat-源-arxiv241205812">9. Rico+ 2024 — SSA × 494 Fermi-LAT 源 [arXiv:2412.05812]</a></li><li><a href="#11-peñil-2025--1492-jetted-agn-9-method-ensemble-null-result-arxiv250914013">11. Peñil+ 2025 — 1492 jetted AGN, 9-method ensemble, NULL result [arXiv:2509.14013]</a></li><li><a href="#10-sharma-2025--7-blazars--smbbh-拟合-arxiv250523697">10. Sharma+ 2025 — 7 blazars + SMBBH 拟合 [arXiv:2505.23697]</a></li></ol></li><li><a href="#跨论文交叉">跨论文交叉</a><ol><li><a href="#同一源在多篇里出现">同一源在多篇里出现</a></li><li><a href="#方法使用频率">方法使用频率</a></li><li><a href="#物理解释优先级">物理解释优先级</a></li></ol></li><li><a href="#显著性-σ-分布">显著性 σ 分布</a></li><li><a href="#数据-binning-约定">数据 binning 约定</a></li><li><a href="#lhaaso-catalog-比对vhe-follow-up-候选评估">LHAASO catalog 比对（VHE follow-up 候选评估）</a><ol><li><a href="#lhaaso-观测窗与-1lhaaso-catalog">LHAASO 观测窗与 1LHAASO catalog</a></li><li><a href="#fermi-qpo-源--lhaaso-状态三档分类">Fermi QPO 源 × LHAASO 状态三档分类</a><ol><li><a href="#a-档在-1lhaaso-catalog-内2-源">A 档：在 1LHAASO catalog 内（2 源）</a></li><li><a href="#b-档lhaaso-视场内但未在-1lhaaso-catalog-检出20-源">B 档：LHAASO 视场内但未在 1LHAASO catalog 检出（20 源）</a></li><li><a href="#c-档超出-lhaaso-视场dec--2012-源">C 档：超出 LHAASO 视场（Dec &lt; −20°，12 源）</a></li></ol></li><li><a href="#重点候选mrk-421--mrk-501--fermi-qpo-周期-vs-lhaaso-预期可探性">重点候选：Mrk 421 / Mrk 501 — Fermi QPO 周期 vs LHAASO 预期可探性</a><ol><li><a href="#mrk-421首选候选">Mrk 421（首选候选）</a></li><li><a href="#mrk-501次选候选">Mrk 501（次选候选）</a></li><li><a href="#lhaaso-qpo-搜寻执行建议">LHAASO QPO 搜寻执行建议</a></li></ol></li><li><a href="#比对统计">比对统计</a></li><li><a href="#2026-05-14-全-catalog-位置交叉匹配复核">2026-05-14 全 catalog 位置交叉匹配复核</a><ol><li><a href="#方法">方法</a></li><li><a href="#表-1--forward-方向fov-内-22-个-fermi-qpo-源到最近-1lhaaso-源的角距">表 1 — Forward 方向：FoV 内 22 个 Fermi QPO 源到最近 1LHAASO 源的角距</a></li><li><a href="#表-2--reverse-方向1lhaaso-高-galactic-latitude-b10-源到最近-fermi-qpo-源的角距">表 2 — Reverse 方向：1LHAASO 高 Galactic latitude (|b|&gt;10°) 源到最近 Fermi QPO 源的角距</a></li><li><a href="#结论">结论</a></li></ol></li><li><a href="#2026-05-14b-81-源扩样本位置交叉匹配复核">2026-05-14b 81 源扩样本位置交叉匹配复核</a><ol><li><a href="#方法_1">方法</a></li><li><a href="#表--81-源扩样本-forward-match-角距分布">表 — 81 源扩样本 forward match 角距分布</a></li><li><a href="#最接近-mrk-421501-以外的近邻候选简评">「最接近 Mrk 421/501 以外」的近邻候选简评</a></li><li><a href="#结论_1">结论</a></li></ol></li></ol></li><li><a href="#参考文献">参考文献</a></li></ol>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <article>
+      <h1 id="fermi-lat-γ-ray-qpo-检测调研-20202025">Fermi-LAT γ-ray QPO 检测调研 (2020–2025)<a class="headerlink" href="#fermi-lat-γ-ray-qpo-检测调研-20202025" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>范围</strong>：2020–2025 年发表在 arXiv 上、利用 Fermi-LAT γ 射线光变曲线搜寻<br />
+blazar / AGN 准周期振荡 (quasi-periodic oscillation, QPO) 的 <strong>11 篇论文</strong><br />
+（其中 Peñil 系列 3 篇 2022/2024/2025）。不包含 TESS 光学和方法学性质论文。</p>
+<p><strong>数据生成日期</strong>：2026-05-13；<strong>最新修订 2026-05-14</strong>（补 Ren+22 13 源 +<br />
+全 catalog 位置交叉匹配复核）；<strong>2026-05-14b</strong> 集成 Peñil 系列三篇<br />
+（Peñil+22 / Rico+24 / Peñil+25），样本从 34 → 81 unique 源。</p>
+</blockquote>
+<h2 id="tldr">TL;DR<a class="headerlink" href="#tldr" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>论文数</strong>：11（其中 5 篇大样本：<strong>Peñil+25 扫 1492 jetted AGN</strong>、<strong>Rico+24 扫 494 源</strong>、Chen+24 扫 134 blazars、Ren+22 扫 35 brightest、<strong>Peñil+22 扫 24 selected hint 源</strong>；3 篇小样本：Sharma+25 7 源；其余 5 篇为单源研究）。</li>
+<li><strong>覆盖源</strong>：去重 <strong>81 个 unique AGN</strong>（Ren+22 24 + Peñil+22 18 new + Rico+24 22 new + Peñil+25 5 new hints + 其余 12）。</li>
+<li><strong>周期跨度</strong>：~35 d (PKS 2247-131 短周期) 至 ~5 yr (Rico+24 多个 FSRQ ~3–5 yr)，主体集中在 50 d–4 yr。</li>
+<li><strong>方法演化</strong>：LSP + REDFIT + WWZ → 加 CWT post-trial + Emmanoulopoulos PSD/PDF MC（Ren+22）→ 加 Gaussian Process (DRW / SHO) + MCMC 物理参数拟合（Sharma+25）→ <strong>Singular Spectrum Analysis (SSA)</strong> + 含 upper-limit 的 LC 处理（Peñil+22, Rico+24）→ <strong>9-method ensemble + 全局显著性 trial-factor 修正</strong>（Peñil+25）。</li>
+<li><strong>物理图像</strong>：短周期 (&lt; 1 yr) 偏好 helical jet / plasma blob helical motion；长周期 (&gt; 1 yr) 偏好 SMBBH 轨道进动 / Lense-Thirring；mildly beamed 与 non-blazar 系统讨论 accretion + lighthouse 效应。</li>
+<li><strong>发生率（最新校正）</strong>：Chen+24 ~3% (134 源, transient, ≥5 cycles)；Rico+24 SSA 给出 46/494 ≈ 9% 本地 ≥2σ，33/494 ≈ 7% 局域 ≥4σ → 全局 ≥2.2σ；<strong>Peñil+25 在 1492 源（排除 24 hint 源）严格 trial-factor 修正后 0% 全局显著检出</strong> —— 三者一致指向 QPO 几乎完全集中在已识别 hint 源 + 长 baseline 才显现。</li>
+<li><strong>LHAASO follow-up 候选</strong>：扩样 81 源后仍<strong>仅 Mrk 421 / Mrk 501 与 1LHAASO catalog 直接对应</strong>（角距 0.04°）；新近 hint 中<strong>最接近的非匹配</strong>是 Rico+24 引入的 <strong>3C 66A → 1LHAASO J0216+4237 = 1.22°</strong>（仍远超 PSF，但已是 Mrk 421/501 之外最近的一对）—— 详见末尾 <a href="#lhaaso-catalog-比对vhe-follow-up-候选评估">LHAASO catalog 比对</a> 节及 <a href="#2026-05-14b-81-源扩样本位置交叉匹配复核">2026-05-14b 81 源扩样本位置交叉匹配复核</a> 子节。</li>
+</ul>
+<h2 id="主表--每篇论文一览">主表 — 每篇论文一览<a class="headerlink" href="#主表--每篇论文一览" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>论文</th>
+<th>样本</th>
+<th>周期范围 / 数量</th>
+<th>最高 σ</th>
+<th>主要方法</th>
+<th>Fermi 数据</th>
+<th>物理解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kushwaha+ 2020</td>
+<td>OJ 287</td>
+<td>~314 d × 1</td>
+<td>~3σ</td>
+<td>LSP, REDFIT, WWZ</td>
+<td>2008-08 → 2018-02</td>
+<td>quasi-stationary radio knots / SMBBH</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Zhang+ 2021</td>
+<td>PKS 0521-36</td>
+<td>~1.1 yr × 1</td>
+<td>~5σ</td>
+<td>LSP, WWZ, REDFIT, GP</td>
+<td>2008-08 → 2021-03</td>
+<td>γ-ray outburst-driven (mildly beamed)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ren+ 2022</td>
+<td>35 brightest 4LAC (19 FSRQ + 15 BL Lac + 1 RDG)</td>
+<td>30 d – 1127 d，<strong>36 QPO 候选 in 24 源</strong></td>
+<td>&gt;5σ post-trial</td>
+<td>CWT (Morlet) + global wavelet + Emmanoulopoulos MC</td>
+<td>2008-08 → 2021-04</td>
+<td>SMBBH / jet precession / helical</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Peñil+ 2022</strong></td>
+<td><strong>24 selected blazars (hint sample)</strong></td>
+<td>1.0 – 4.7 yr</td>
+<td>PG 1553+113 <strong>~1.8σ global</strong> 唯一</td>
+<td>LSP + Phase Dispersion Min. + WWZ + ARIMA + Bayesian + 含 UL 点</td>
+<td>2008-08 → 2020-08 (12 yr)</td>
+<td>hint 重确认；trial-factor 后只 PG 1553+113 通过</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Gong+ 2023</td>
+<td>S4 0954+658</td>
+<td>66 d &amp; 210 d</td>
+<td>&gt;5σ (66d)</td>
+<td>LSP, WWZ, REDFIT, epoch fold</td>
+<td>2008 → 2022</td>
+<td>plasma blob helical motion</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Zhang+ 2023</td>
+<td>S2 0109+22</td>
+<td>~600 d</td>
+<td>3.5σ</td>
+<td>LSP, WWZ, REDFIT, phase fold</td>
+<td>2008-08 → 2023-01</td>
+<td>binary BH + lighthouse</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sharma+ 2023</td>
+<td>PKS 0521-36</td>
+<td>268 d, 295 d, 806 d</td>
+<td>&gt;3σ</td>
+<td>LSP, WWZ, GP (SHO + DRW)</td>
+<td>2008-08 → 2023 (15 yr)</td>
+<td>first long-term QPO in non-blazar AGN</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Chen+ 2024</td>
+<td>134 blazars (flux-limited) → 6 源 8 QPO</td>
+<td>54 d – 341 d</td>
+<td>~4.3σ (PKS 1510-089)</td>
+<td>WWZ + LSP + Emmanoulopoulos MC, 严格 5+ cycles</td>
+<td>2008-08 → ~2021-04</td>
+<td>helical jet (favored)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Rico+ 2024</strong></td>
+<td><strong>494 Fermi-LAT 源 (4LAC)</strong></td>
+<td>1.0 – 4.7 yr，<strong>46 候选, 33 局域 ≥4σ ⇒ 全局 ≥2.2σ, 25 新 γ-ray candidates</strong></td>
+<td>4.8σ local / 3.3σ global (top)</td>
+<td><strong>Singular Spectrum Analysis (SSA)</strong> + LSP + EM MC</td>
+<td>2008 → ~2020-08 (12 yr)</td>
+<td>SSA 隔离趋势 + 噪声后筛大批长周期候选</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sharma+ 2025</td>
+<td>7 blazars</td>
+<td>~225 d – ~1449 d</td>
+<td>4σ (PKS 0736+01)</td>
+<td>LSP + REDFIT + DRW MC (30k LC) + MCMC SMBBH 拟合</td>
+<td>2008-08 → 2025-04 (15+ yr)</td>
+<td>SMBBH 主导 + jet precession</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Peñil+ 2025</strong></td>
+<td><strong>1492 jetted AGN (4FGL, 排除 24 hint 源)</strong></td>
+<td><strong>— (null result：trial-factor 后全局 ≈0σ)</strong></td>
+<td>10 源局域 ≥2σ → 全局 0σ</td>
+<td><strong>9 种方法 ensemble</strong> (LSP + PDM + WWZ + Wavelet + ARIMA/ARFIMA + CARMA + Bayesian + z-DCF + autoregressive)</td>
+<td>2008-08 → 2020-08 (12 yr)</td>
+<td>QPO 不是 jetted AGN 普适特征</td>
+</tr>
+</tbody>
+</table>
+<h2 id="完整-qpo-候选列表每行--一个源--一个-qpo-信号">完整 QPO 候选列表（每行 = 一个源 × 一个 QPO 信号）<a class="headerlink" href="#完整-qpo-候选列表每行--一个源--一个-qpo-信号" title="Permanent link">&para;</a></h2>
+<p>按发表年份-论文-显著性排序。同一源出现在不同论文里时多次列出，便于对比。</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Source</th>
+<th>4FGL / 类型</th>
+<th>周期 (d)</th>
+<th>Cycles</th>
+<th>σ</th>
+<th>方法</th>
+<th>论文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>OJ 287</td>
+<td>J0854.8+2006 / BL Lac</td>
+<td>314</td>
+<td>—</td>
+<td>~3σ</td>
+<td>LSP+REDFIT+WWZ</td>
+<td>Kushwaha+ 2020</td>
+</tr>
+<tr>
+<td>2</td>
+<td>PKS 0521-36</td>
+<td>J0522.9-3628 / non-blazar AGN</td>
+<td>~400 (~1.1 yr)</td>
+<td>—</td>
+<td>~5σ</td>
+<td>LSP+WWZ+REDFIT+GP</td>
+<td>Zhang+ 2021</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4C +01.02</td>
+<td>J0108.6+0134 / FSRQ</td>
+<td>268±55</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT 30d</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4C +01.02</td>
+<td>FSRQ</td>
+<td>123±26 (∼122±26 7d)</td>
+<td>5</td>
+<td>4.7σ / &gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>5</td>
+<td>PKS 0537-441</td>
+<td>J0538.8-4405 / BL Lac</td>
+<td>285±67 (∼286±73 7d)</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>S5 1044+71</strong></td>
+<td>J1048.4+7143 / FSRQ</td>
+<td><strong>1127±226</strong> (~3 yr)</td>
+<td>3</td>
+<td>4.6σ post-trial（首报）</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>7</td>
+<td>S5 1044+71</td>
+<td>FSRQ</td>
+<td>117±38</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>8</td>
+<td>B2 1520+31</td>
+<td>J1522.1+3144 / FSRQ</td>
+<td>179±42</td>
+<td>6</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>9</td>
+<td>B2 1520+31</td>
+<td>FSRQ</td>
+<td>71±15</td>
+<td>14</td>
+<td>&gt;5σ</td>
+<td>CWT 7d</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>10</td>
+<td>B2 1520+31</td>
+<td>FSRQ</td>
+<td>39±11</td>
+<td>17</td>
+<td>&gt;5σ</td>
+<td>CWT 7d</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>11</td>
+<td>PKS 2247-131</td>
+<td>J2250.0-1250 / BL Lac</td>
+<td>214±43</td>
+<td>6</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>12</td>
+<td>PKS 2247-131</td>
+<td>BL Lac</td>
+<td><strong>34±13</strong> (~1 month)</td>
+<td>10</td>
+<td>&gt;5σ</td>
+<td>CWT 7d</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>13</td>
+<td>NGC 1275</td>
+<td>J0319.8+4130 / RDG</td>
+<td>92±33 (7d)</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14</td>
+<td>4C +28.07</td>
+<td>J0237.8+2848 / FSRQ</td>
+<td>244±88 (7d)</td>
+<td>3</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14a</td>
+<td>PKS 0426-380</td>
+<td>J0428.6-3756 / BL Lac</td>
+<td>85±26 (7d)</td>
+<td>8</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14b</td>
+<td>PKS 0447-439</td>
+<td>J0449.4-4350 / BL Lac</td>
+<td>111±42 (7d)</td>
+<td>7</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14c</td>
+<td>PKS 0454-234</td>
+<td>J0457.0-2324 / FSRQ</td>
+<td>69±21 (7d)</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14d</td>
+<td>S5 0716+714</td>
+<td>J0721.9+7120 / BL Lac</td>
+<td>324±77 (7d)</td>
+<td>5</td>
+<td>3.2σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14e</td>
+<td>Mrk 421</td>
+<td>J1104.4+3812 / BL Lac</td>
+<td>300±65 (7d)</td>
+<td>3</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14f</td>
+<td>1H 1013+498</td>
+<td>J1015.0+4926 / BL Lac</td>
+<td>264±59 / 100±25 / 52±15</td>
+<td>4 / 4 / 12</td>
+<td>4.9σ / &gt;5σ / &gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14g</td>
+<td>4C +21.35</td>
+<td>J1224.9+2122 / FSRQ</td>
+<td>66±17 (7d)</td>
+<td>6</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14h</td>
+<td>3C 273</td>
+<td>J1229.0+0202 / FSRQ</td>
+<td>177±38 / 97±25 (7d)</td>
+<td>4 / 3</td>
+<td>&gt;5σ / &gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14i</td>
+<td>3C 279</td>
+<td>J1256.1-0547 / FSRQ</td>
+<td>101±27 / 40±8 (7d)</td>
+<td>6 / 4</td>
+<td>&gt;5σ / &gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14j</td>
+<td>Mrk 501</td>
+<td>J1653.8+3945 / BL Lac</td>
+<td>326±76 (7d)</td>
+<td>7</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14k</td>
+<td>PKS 2155-304</td>
+<td>J2158.8-3013 / BL Lac</td>
+<td>341±106 (7d)</td>
+<td>4</td>
+<td>3.5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14l</td>
+<td>CTA 102</td>
+<td>J2232.6+1143 / FSRQ</td>
+<td>366±81 / 178±40 (7d)</td>
+<td>3 / 5</td>
+<td>&gt;5σ / &gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14m</td>
+<td>3C 454.3</td>
+<td>J2253.9+1609 / FSRQ</td>
+<td>120±27 (7d)</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>14n</td>
+<td>PMN J2345-1555</td>
+<td>J2345.2-1555 / FSRQ</td>
+<td>191±44 (7d)</td>
+<td>4</td>
+<td>&gt;5σ</td>
+<td>CWT</td>
+<td>Ren+ 2022</td>
+</tr>
+<tr>
+<td>15</td>
+<td>S4 0954+658</td>
+<td>/ BL Lac</td>
+<td>66 ± 4.8</td>
+<td>9</td>
+<td>&gt;5σ</td>
+<td>LSP+WWZ+REDFIT+epoch fold</td>
+<td>Gong+ 2023</td>
+</tr>
+<tr>
+<td>16</td>
+<td>S4 0954+658</td>
+<td>BL Lac</td>
+<td>210 ± 43</td>
+<td>4</td>
+<td>~3.5σ</td>
+<td>同上</td>
+<td>Gong+ 2023</td>
+</tr>
+<tr>
+<td>17</td>
+<td>S2 0109+22</td>
+<td>J0112.1+2245 / BL Lac</td>
+<td>~600</td>
+<td>5.6</td>
+<td>~3.5σ</td>
+<td>LSP+WWZ+REDFIT+phase fold</td>
+<td>Zhang+ 2023</td>
+</tr>
+<tr>
+<td>18</td>
+<td>PKS 0521-36</td>
+<td>non-blazar AGN</td>
+<td>268</td>
+<td>—</td>
+<td>&gt;3σ</td>
+<td>LSP+WWZ+GP(SHO+DRW)</td>
+<td>Sharma+ 2023</td>
+</tr>
+<tr>
+<td>19</td>
+<td>PKS 0521-36</td>
+<td>non-blazar AGN</td>
+<td>295 / 283 (PSD)</td>
+<td>—</td>
+<td>&gt;3σ</td>
+<td>同上</td>
+<td>Sharma+ 2023</td>
+</tr>
+<tr>
+<td>20</td>
+<td>PKS 0521-36</td>
+<td>non-blazar AGN</td>
+<td><strong>806 / 886 (PSD)</strong> — 268 d 的第三谐波</td>
+<td>—</td>
+<td>&gt;3σ</td>
+<td>同上</td>
+<td>Sharma+ 2023</td>
+</tr>
+<tr>
+<td>21</td>
+<td>4C +01.02</td>
+<td>FSRQ</td>
+<td>253.2 ± 20.0</td>
+<td>6</td>
+<td>~2.7σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>PKS 0336-01</strong></td>
+<td>/ FSRQ</td>
+<td><strong>94.6 ± 6.8</strong> ★新发现</td>
+<td>6</td>
+<td>~3.4σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>23</td>
+<td>PKS 0402-362</td>
+<td>FSRQ</td>
+<td>103.9 ± 6.7</td>
+<td>5</td>
+<td>~2.6σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>24</td>
+<td><strong>PKS 0537-441</strong></td>
+<td>BL Lac</td>
+<td><strong>55.0 ± 3.3 (QPO I)</strong> ★新</td>
+<td>7</td>
+<td>~4.1σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>25</td>
+<td><strong>PKS 0537-441</strong></td>
+<td>BL Lac</td>
+<td><strong>54.7 ± 3.3 (QPO II)</strong> ★新（重复 transient）</td>
+<td>7</td>
+<td>~4.0σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>26</td>
+<td><strong>PKS 1424-41</strong></td>
+<td>FSRQ</td>
+<td><strong>57.1 ± 4.5 (QPO I)</strong> ★新（嵌套）</td>
+<td>6</td>
+<td>~3.2σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>27</td>
+<td>PKS 1424-41</td>
+<td>FSRQ</td>
+<td>341 ± 25.8 (QPO II)</td>
+<td>6</td>
+<td>~3.7σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>28</td>
+<td>PKS 1510-089</td>
+<td>J1512.8-0906 / FSRQ</td>
+<td>92.3 ± 5.2</td>
+<td>8</td>
+<td>~4.3σ</td>
+<td>WWZ+LSP</td>
+<td>Chen+ 2024</td>
+</tr>
+<tr>
+<td>29</td>
+<td>PKS 0736+01</td>
+<td>J0739.2+0137 / FSRQ</td>
+<td>~1449 (~4 yr)</td>
+<td>—</td>
+<td>4σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>30</td>
+<td>PKS 1424-41</td>
+<td>FSRQ</td>
+<td>~357</td>
+<td>—</td>
+<td>3σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>31</td>
+<td>S2 0109+22</td>
+<td>BL Lac</td>
+<td>~667</td>
+<td>—</td>
+<td>3σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>32</td>
+<td>PKS 0244-470</td>
+<td>FSRQ</td>
+<td>~227</td>
+<td>—</td>
+<td>3σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>33</td>
+<td>PKS 0405-385</td>
+<td>FSRQ</td>
+<td>~1000</td>
+<td>—</td>
+<td>2.9σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>34</td>
+<td>PKS 0208-512</td>
+<td>FSRQ</td>
+<td>~909</td>
+<td>—</td>
+<td>2.85σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+<tr>
+<td>35</td>
+<td>PKS 0035-252</td>
+<td>FSRQ</td>
+<td>~357</td>
+<td>—</td>
+<td>2.8σ</td>
+<td>LSP+REDFIT+DRW</td>
+<td>Sharma+ 2025</td>
+</tr>
+</tbody>
+</table>
+<p>★ = 该源在该周期/方法下的首次报告。<br />
+注：Ren+ 2022 共给 24 源 36 候选；本表展开列入主要单候选（同源多周期保留首选/示例值），完整列表见原文 Table 2。</p>
+<h2 id="peñil-系列三篇大样本扩样2026-05-14b-加入">Peñil 系列三篇大样本扩样（2026-05-14b 加入）<a class="headerlink" href="#peñil-系列三篇大样本扩样2026-05-14b-加入" title="Permanent link">&para;</a></h2>
+<p>Peñil 课题组 2022–2025 跨度的三篇系统性扫描带来 <strong>45 个本报告原先未列出的<br />
+新 QPO/hint 源</strong>（去重；与已有 34 源相加 → <strong>81 unique 源</strong>）。三篇在<br />
+"候选 vs 显著" 这条轴上代表三种态度：</p>
+<ul>
+<li><strong>Peñil+22</strong>（24 hint 源精挑）：保守，只 PG 1553+113 一个全局 1.8σ</li>
+<li><strong>Rico+24</strong>（494 源 + SSA）：相对宽松的方法学（SSA），出 46 candidates，<br />
+  33 个 local ≥4σ ↔ global ≥2.2σ，<strong>25 个标记为「新 γ-ray candidate」</strong></li>
+<li><strong>Peñil+25</strong>（1492 源 9-method ensemble）：最严格，trial-factor 修正后<br />
+<strong>0 个 globally significant</strong> QPO；10 源 ≥2σ local 但 global ≈ 0σ</li>
+</ul>
+<h3 id="peñil22-新源18-个按-global-σ-降序最高-18σ">Peñil+22 新源（18 个，按 global σ 降序，最高 1.8σ）<a class="headerlink" href="#peñil22-新源18-个按-global-σ-降序最高-18σ" title="Permanent link">&para;</a></h3>
+<p>PG 1553+113 是 Peñil 系列中迄今<strong>唯一通过全局显著性 ≥1σ 的源</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>4FGL</th>
+<th>Type</th>
+<th>z</th>
+<th>周期 (yr)</th>
+<th>Global σ</th>
+<th>Dec</th>
+<th>FoV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PG 1553+113</strong> ★</td>
+<td>J1555.7+1111</td>
+<td>BL Lac</td>
+<td>0.433</td>
+<td>2.2±0.2</td>
+<td><strong>≈1.8σ</strong></td>
+<td>+11.19°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>OJ 014</td>
+<td>J0811.3+0146</td>
+<td>BL Lac</td>
+<td>1.148</td>
+<td>4.1</td>
+<td>≈0σ</td>
+<td>+1.77°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>GB6 J0043+3426</td>
+<td>J0043.8+3425</td>
+<td>FSRQ</td>
+<td>0.966</td>
+<td>1.9</td>
+<td>≈0σ</td>
+<td>+34.43°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TXS 0518+211</td>
+<td>J0521.7+2113</td>
+<td>BL Lac</td>
+<td>0.108</td>
+<td>3.1</td>
+<td>≈0σ</td>
+<td>+21.21°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>87GB 164812.2+524023</td>
+<td>J1649.4+5238</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>2.8</td>
+<td>≈0σ</td>
+<td>+52.58°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 0301-243</td>
+<td>J0303.4-2407</td>
+<td>BL Lac</td>
+<td>0.266</td>
+<td>2.1</td>
+<td>≈0σ</td>
+<td>−24.12°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>S4 1144+40</td>
+<td>J1146.8+3958</td>
+<td>FSRQ</td>
+<td>1.089</td>
+<td>3.3</td>
+<td>≈0σ</td>
+<td>+39.97°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PG 1246+586</td>
+<td>J1248.2+5820</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>2.1</td>
+<td>≈0σ</td>
+<td>+58.35°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 0250-225</td>
+<td>J0252.8-2218</td>
+<td>FSRQ</td>
+<td>1.419</td>
+<td>1.2</td>
+<td>≈0σ</td>
+<td>−22.32°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>PKS 2255-282</td>
+<td>J2258.0-2759</td>
+<td>FSRQ</td>
+<td>0.926</td>
+<td>1.4</td>
+<td>≈0σ</td>
+<td>−27.98°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>TXS 1902+556</td>
+<td>J1903.2+5541</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>3.3</td>
+<td>≈0σ</td>
+<td>+55.68°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>S3 0458-02</td>
+<td>J0501.2-0157</td>
+<td>FSRQ</td>
+<td>2.291</td>
+<td>3.8</td>
+<td>≈0σ</td>
+<td>−1.98°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>MG2 J130304+2434</td>
+<td>J1303.0+2435</td>
+<td>BL Lac</td>
+<td>0.993</td>
+<td>2.1</td>
+<td>≈0σ</td>
+<td>+24.57°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 2052-47</td>
+<td>J2056.2-4714</td>
+<td>FSRQ</td>
+<td>1.489</td>
+<td>1.7</td>
+<td>≈0σ</td>
+<td>−47.23°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>S4 0814+42</td>
+<td>J0818.2+4223</td>
+<td>BL Lac</td>
+<td>0.530</td>
+<td>2.2</td>
+<td>≈0σ</td>
+<td>+42.38°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>MG1 J021114+1051</td>
+<td>J0211.2+1051</td>
+<td>BL Lac</td>
+<td>0.2</td>
+<td>2.9</td>
+<td>≈0σ</td>
+<td>+10.86°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TXS 0059+581</td>
+<td>J0102.8+5825</td>
+<td>FSRQ</td>
+<td>0.644</td>
+<td>4.0</td>
+<td>≈0σ</td>
+<td>+58.42°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TXS 1452+516</td>
+<td>J1454.5+5124</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>2.1</td>
+<td>≈0σ</td>
+<td>+51.41°</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>★ = 唯一全局 ≥1σ。FoV = 是否在 LHAASO 视场（Dec &gt; −20°）。</p>
+<h3 id="rico24-新源22-个-starrednew-γ-ray-candidates去-3-个与现有重叠">Rico+24 新源（22 个 starred「new γ-ray candidates」，去 3 个与现有重叠）<a class="headerlink" href="#rico24-新源22-个-starrednew-γ-ray-candidates去-3-个与现有重叠" title="Permanent link">&para;</a></h3>
+<p>按 local σ 降序排列。<code>*</code> 表 Rico+24 原表标的 "无既有 γ-ray QPO 证据"。</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>4FGL</th>
+<th>Type</th>
+<th>z</th>
+<th>周期 (yr)</th>
+<th>Local σ</th>
+<th>Global σ</th>
+<th>Dec</th>
+<th>FoV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OC 457</td>
+<td>J0137.0+4751</td>
+<td>FSRQ</td>
+<td>0.859</td>
+<td>1.79±0.22</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>+47.86°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4C +47.44</td>
+<td>J1637.7+4717</td>
+<td>FSRQ</td>
+<td>0.735</td>
+<td>3.17±0.58</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>+47.29°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4C +48.41</td>
+<td>J1657.7+4808</td>
+<td>FSRQ</td>
+<td>1.669</td>
+<td>1.47±0.08</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>+48.14°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><strong>3C 66A</strong></td>
+<td>J0222.6+4302</td>
+<td>BL Lac</td>
+<td>0.444</td>
+<td>2.31±0.20</td>
+<td>4.6σ</td>
+<td>3.1σ</td>
+<td>+43.04°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS B1310-041</td>
+<td>J1312.8-0425</td>
+<td>FSRQ</td>
+<td>0.825</td>
+<td>2.37±0.22</td>
+<td>4.6σ</td>
+<td>3.1σ</td>
+<td>−4.42°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 0524-485</td>
+<td>J0526.2-4830</td>
+<td>FSRQ</td>
+<td>1.300</td>
+<td>2.07±0.20</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−48.52°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>PKS 1005-333</td>
+<td>J1007.6-3332</td>
+<td>FSRQ</td>
+<td>1.837</td>
+<td>2.61±0.34</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−33.54°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>TXS 1530-131</td>
+<td>J1532.7-1319</td>
+<td>BCU</td>
+<td>—</td>
+<td>1.37±0.07</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−13.33°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 1903-80</td>
+<td>J1913.0-8009</td>
+<td>FSRQ</td>
+<td>1.756</td>
+<td>2.41±0.22</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−80.16°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>PKS 2155-83</td>
+<td>J2201.5-8339</td>
+<td>FSRQ</td>
+<td>1.865</td>
+<td>4.73±0.94</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−83.66°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>MH 2136-428</td>
+<td>J2139.4-4235</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>1.81±0.18</td>
+<td>4.8σ</td>
+<td>3.3σ</td>
+<td>−42.59°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>7C 2010+4619</td>
+<td>J2012.0+4629</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>3.23±0.46</td>
+<td>4.2σ</td>
+<td>2.5σ</td>
+<td>+46.49°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>B2 2234+28A</td>
+<td>J2236.3+2828</td>
+<td>FSRQ</td>
+<td>0.790</td>
+<td>2.19±0.15</td>
+<td>4.1σ</td>
+<td>2.3σ</td>
+<td>+28.48°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>TXS 1318+225</td>
+<td>J1321.1+2216</td>
+<td>FSRQ</td>
+<td>0.943</td>
+<td>1.21±0.06</td>
+<td>3.8σ</td>
+<td>1.8σ</td>
+<td>+22.28°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>S5 1221+80</td>
+<td>J1223.8+8039</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>2.67±0.27</td>
+<td>3.5σ</td>
+<td>1.2σ</td>
+<td>+80.66°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 1424-328</td>
+<td>J1427.6-3305</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>1.27±0.08</td>
+<td>2.9σ</td>
+<td>&lt;1.0σ</td>
+<td>−33.09°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>4C +04.42</td>
+<td>J1222.5+0414</td>
+<td>FSRQ</td>
+<td>0.964</td>
+<td>2.21±0.19</td>
+<td>2.7σ</td>
+<td>&lt;1.0σ</td>
+<td>+4.24°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 1716-771</td>
+<td>J1723.6-7714</td>
+<td>BCU</td>
+<td>—</td>
+<td>2.27±0.20</td>
+<td>2.9σ</td>
+<td>&lt;1.0σ</td>
+<td>−77.24°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>S4 1250+53</td>
+<td>J1253.2+5301</td>
+<td>BL Lac</td>
+<td>—</td>
+<td>2.31±0.21</td>
+<td>2.6σ</td>
+<td>&lt;1.0σ</td>
+<td>+53.02°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PKS 0403-13</td>
+<td>J0405.6-1308</td>
+<td>FSRQ</td>
+<td>0.571</td>
+<td>1.69±0.12</td>
+<td>2.3σ</td>
+<td>&lt;1.0σ</td>
+<td>−13.14°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>B2 0716+33</td>
+<td>J0719.3+3307</td>
+<td>FSRQ</td>
+<td>0.779</td>
+<td>2.29±0.18</td>
+<td>2.2σ</td>
+<td>&lt;1.0σ</td>
+<td>+33.12°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>S4 1030+41</td>
+<td>J1033.1+4115</td>
+<td>FSRQ</td>
+<td>1.117</td>
+<td>2.29±0.21</td>
+<td>2.0σ</td>
+<td>&lt;1.0σ</td>
+<td>+41.26°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PMN J0427-3900</td>
+<td>J0427.3-3900</td>
+<td>BCU</td>
+<td>—</td>
+<td>2.79±0.31</td>
+<td>3.9σ</td>
+<td>2.0σ</td>
+<td>−39.01°</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<p>注：原文 Table A.1 共 46 行，其中 25 行带 <code>*</code> (= 新 γ-ray 候选)；本表只列<br />
+22 个不与现有 34 源重叠的（另 3 个 *-标记的 3C 66A、PKS 1424+240、S2 0109+22<br />
+属于「之前在他文 sample 内但 Rico+24 视为首次 SSA 检出」）。</p>
+<h3 id="peñil25-新源5-个-local-2σ-hint全部-global-0σ">Peñil+25 新源（5 个 local ≥2σ hint，<strong>全部 global ≈0σ</strong>）<a class="headerlink" href="#peñil25-新源5-个-local-2σ-hint全部-global-0σ" title="Permanent link">&para;</a></h3>
+<p>Peñil+25 主样本 1492，扫完后没有全局显著源；下列 5 个仅作 hint（local σ 在<br />
+trial-factor 修正后归零）。其余 5 个表 1 源（S5 1044+71, S2 0109+22, PG 1553+113,<br />
+OJ 014, S5 0716+714, GB6 J0043+3426, TXS 0518+211, 87GB 164812.2+524023）<br />
+已出现在 Peñil+22 / Ren+22 中，本表略。</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>4FGL</th>
+<th>Type</th>
+<th>z</th>
+<th>周期 (yr)</th>
+<th>Local σ</th>
+<th>Global σ</th>
+<th>Dec</th>
+<th>FoV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PKS 0215+015</td>
+<td>J0217.8+0144</td>
+<td>FSRQ</td>
+<td>1.715</td>
+<td>3.4±0.4</td>
+<td>2.2σ</td>
+<td>≈0σ</td>
+<td>+1.73°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>PMN J0533-5549</td>
+<td>J0533.3+4823</td>
+<td>BCU</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>≈0σ</td>
+<td>−55.82°</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>OP 313</td>
+<td>J1310.5+3221</td>
+<td>FSRQ</td>
+<td>0.997</td>
+<td>5.7±0.8</td>
+<td>2.0σ</td>
+<td>≈0σ</td>
+<td>+32.35°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>S4 1030+61</td>
+<td>J1033.9+6050</td>
+<td>FSRQ</td>
+<td>1.401</td>
+<td>2.9±0.4</td>
+<td>2.0σ</td>
+<td>≈0σ</td>
+<td>+60.85°</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>S5 1039+81</td>
+<td>J1044.6+8053</td>
+<td>FSRQ</td>
+<td>1.254</td>
+<td>3.5±0.4</td>
+<td>2.0σ</td>
+<td>≈0σ</td>
+<td>+80.89°</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p>PKS 0405-385 与 MH 2136-428 在 Peñil+25 表 1 中 local σ 最高 (2.5σ) 但<br />
+分别已在 Sharma+25 / Rico+24 列入，故不重复。</p>
+<h2 id="逐篇细读">逐篇细读<a class="headerlink" href="#逐篇细读" title="Permanent link">&para;</a></h2>
+<h3 id="1-kushwaha-2020--oj-287-arxiv200913754">1. Kushwaha+ 2020 — OJ 287 [arXiv:2009.13754]<a class="headerlink" href="#1-kushwaha-2020--oj-287-arxiv200913754" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>源</strong>：OJ 287 (BL Lac，z=0.306)，最经典的 SMBBH 候选体（光学 12-yr QPO）。</li>
+<li><strong>检测</strong>：γ-ray 月度 binned 光变曲线中识别 ~314 d 周期 (~3σ)。</li>
+<li><strong>方法</strong>：LSP、REDFIT、WWZ 三件套，无 GP。</li>
+<li><strong>解释</strong>：与 quasi-stationary radio knot 位置漂移和 γ-ray–mm radio 强相关一致 — 信号可能与喷流内静止结节相关，而非 SMBBH 12-yr 主周期。</li>
+<li><strong>数据</strong>：Fermi-LAT 2008-08 → ~2018-02 (约 9.5 yr)。</li>
+</ul>
+<h3 id="2-zhang-2021--pks-0521-36-arxiv210610040">2. Zhang+ 2021 — PKS 0521-36 [arXiv:2106.10040]<a class="headerlink" href="#2-zhang-2021--pks-0521-36-arxiv210610040" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>源</strong>：PKS 0521-36 — 4LAC 中分类为 BL Lac / 中间态非典型 blazar，<strong>mildly beamed jet</strong>。</li>
+<li><strong>检测</strong>：在两次 outburst（2012-10 和 2019-05）之间的 ~5.8 yr 窗口（MJD 56317–58447）内识别 <strong>~1.1 yr 周期 (~5σ)</strong>。</li>
+<li><strong>方法</strong>：LSP + WWZ + REDFIT 三种 + Gaussian Process 模型四种独立验证。</li>
+<li><strong>解释</strong>：首例 γ-ray QPO in mildly beamed jet；推测 γ-ray outburst 在 QPO 形成中起关键作用。</li>
+<li><strong>数据</strong>：~12.6 yr LAT 全数据，但 QPO 仅在 5.8 yr 窗口内。</li>
+</ul>
+<h3 id="3-ren-cerruti--sahakyan-2022--35-brightest-agn-arxiv220413051">3. Ren, Cerruti &amp; Sahakyan 2022 — 35 brightest AGN [arXiv:2204.13051]<a class="headerlink" href="#3-ren-cerruti--sahakyan-2022--35-brightest-agn-arxiv220413051" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>样本</strong>：4LAC 中最亮 34 个 + 手工加入 PKS 2247-131，共 35 个（19 FSRQ + 15 BL Lac + 1 radio galaxy NGC 1275）。</li>
+<li><strong>方法</strong>：Continuous Wavelet Transform (Morlet, via <code>PyCWT</code>) + global wavelet spectrum + <strong>post-trial look-elsewhere correction</strong> (Auchère 2016) + Emmanoulopoulos PSD/PDF Monte Carlo（10⁴ artificial LC × 每源 × 每 binning）。</li>
+<li><strong>时间 binning</strong>：30 d 与 7 d 两套，独立比对。</li>
+<li><strong>能段</strong>：100 MeV – 500 GeV。<strong>数据跨度</strong> Aug 2008 → Apr 2021 (MJD 54686-59308)。</li>
+<li><strong>结果</strong>：<strong>36 QPO 候选 in 24/35 源</strong>（post-trial σ &gt; 3，至少 3 cycles）。</li>
+<li>长周期 (&gt;1 yr) 出现在 5 源：<strong>S5 0716+714, S5 1044+71, Mrk 421, PKS 2155-304, CTA 102</strong>。</li>
+<li>月周期 (&lt;300 d) 出现在 20 源。</li>
+<li>摘要 5 个最显著：4C +01.02, PKS 0537-441, <strong>S5 1044+71</strong> (1127 d 首报), B2 1520+31, PKS 2247-131。</li>
+<li><strong>结论</strong>：<strong>所有候选均为 transient</strong>（在分析窗口内出现/消失）。S5 1044+71 ~3 yr 周期作为最长多年 QPO 首次报告。</li>
+<li><strong>解释</strong>：与 SMBBH 在 SMBH 演化中的存在关联，但保持开放，认为 jet 内/外多种几何机制都可解释。</li>
+</ul>
+<h3 id="5-gong-2023--s4-0954658-arxiv230403085">5. Gong+ 2023 — S4 0954+658 [arXiv:2304.03085]<a class="headerlink" href="#5-gong-2023--s4-0954658-arxiv230403085" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>源</strong>：S4 0954+658 (BL Lac, z=0.367)。</li>
+<li><strong>检测</strong>：两个分段 transient QPO：</li>
+<li><strong>66 ± 4.8 d (&gt;5σ)</strong>，MJD 57145–57745（2015–2016），<strong>9 cycles</strong> — blazar γ-ray QPO 中观测到的最多 cycle 之一。</li>
+<li><strong>210 ± 43 d (~3.5σ)</strong>，MJD 59035–59915（2020–2022），4 cycles。</li>
+<li><strong>方法</strong>：LSP + WWZ + REDFIT + epoch folding。</li>
+<li><strong>解释</strong>：plasma blob 沿 helical 路径运动 + jet 几何模型 — 与短周期一致。</li>
+</ul>
+<h3 id="6-zhang-2023--s2-010922-arxiv230611579">6. Zhang+ 2023 — S2 0109+22 [arXiv:2306.11579]<a class="headerlink" href="#6-zhang-2023--s2-010922-arxiv230611579" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>源</strong>：S2 0109+22 (BL Lac, z~0.36)。射电、毫米波已知 ~657 d 周期。</li>
+<li><strong>检测</strong>：<strong>~600 d (3.5σ)</strong>，2013-11 至 2023-01，~9 yr / <strong>5.6 cycles</strong>。</li>
+<li><strong>方法</strong>：WWZ + LSP + REDFIT + phase-folded LC。Baluev 假警报修正 + Emmanoulopoulos MC (10⁵ LCs)。</li>
+<li><strong>数据</strong>：Fermi-LAT 2008-08-04 → 2023-01-16，7-day binned, TS&gt;9。</li>
+<li><strong>解释</strong>：与已知 radio 周期一致 → binary BH 系统的 accretion + lighthouse 效应。</li>
+</ul>
+<h3 id="7-sharma-prince--bose-2023--pks-0521-36-arxiv231212623">7. Sharma, Prince &amp; Bose 2023 — PKS 0521-36 [arXiv:2312.12623]<a class="headerlink" href="#7-sharma-prince--bose-2023--pks-0521-36-arxiv231212623" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>源</strong>：PKS 0521-36（与 Zhang+ 2021 同源）。<strong>non-blazar AGN</strong>，弱 beamed jet。</li>
+<li><strong>检测</strong>：3 个周期：<strong>268 d, 295 d, 806 d (&gt;3σ)</strong>；其中 806 d 是 268 d 的 <strong>第三谐波</strong>。GP（SHO + DRW）模型 PSD 显示 ~283 d 和 ~886 d 两个峰。</li>
+<li><strong>方法</strong>：LSP + WWZ + GP（SHO/DRW）。</li>
+<li><strong>数据</strong>：Fermi-LAT 15 yr 全数据。</li>
+<li><strong>意义</strong>：首例长周期 (&gt;800 d) γ-ray QPO in non-blazar AGN。</li>
+<li><strong>与 Zhang+ 2021 对比</strong>：Zhang+ 2021 在更短窗口给出 ~1.1 yr (~400 d)；Sharma+ 2023 在 15 yr 全数据给出多个周期且都更短/更长。说明在 5.8 yr vs 15 yr 窗口内，主导信号不同。</li>
+</ul>
+<h3 id="8-chen-2024--134-blazars-systematic-search-arxiv240110658">8. Chen+ 2024 — 134 blazars systematic search [arXiv:2401.10658]<a class="headerlink" href="#8-chen-2024--134-blazars-systematic-search-arxiv240110658" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>样本</strong>：134 blazars（Monitored Source List 中 peak flux &gt; 1×10⁻⁶ ph cm⁻²s⁻¹，7 BCU + 31 BL Lac + 95 FSRQ）。</li>
+<li><strong>方法</strong>：WWZ 全光变曲线扫描 → LSP 独立验证 → Emmanoulopoulos PSD/PDF MC 给出 σ。</li>
+<li><strong>筛选标准</strong>（比 Ren+ 2022 严格）：<br />
+  1. cycles ≥ 5<br />
+  2. 缺数据 &lt; 60%<br />
+  3. 肉眼可识 QPO</li>
+<li><strong>结果</strong>：8 个 transient QPOs in 6 sources，全为 FSRQ 或 BL Lac：</li>
+<li>PKS 0537-441 (2 个 QPO，重复 transient)</li>
+<li>PKS 1424-41 (2 个 QPO，嵌套 — 短周期叠在长周期上)</li>
+<li>4C +01.02, PKS 0336-01, PKS 0402-362, PKS 1510-089 各 1 个</li>
+<li><strong>新发现 4 个</strong>（首报）：PKS 0336-01 94 d、PKS 0537-441 55 d &amp; 54 d、PKS 1424-41 57 d。</li>
+<li><strong>发生率估算</strong>：~3%。</li>
+<li><strong>解释</strong>：helical jet motion 模型 best fit；同时讨论磁岛 / 磁重联，但 helical jet 仍最优。</li>
+</ul>
+<h3 id="4-peñil-2022--24-selected-blazars-hint-sample-arxiv221101894">4. Peñil+ 2022 — 24 selected blazars hint sample [arXiv:2211.01894]<a class="headerlink" href="#4-peñil-2022--24-selected-blazars-hint-sample-arxiv221101894" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>注：按时间顺序此节应放在 §3 (Ren+22) 后、§5 (Gong+23) 前；本文档为简化<br />
+编辑，把 Peñil 系列三篇 (§4/§9/§11) 集中在 §3-§8 后阅读，主表已按时间排序。</p>
+</blockquote>
+<ul>
+<li><strong>作者</strong>：P. Peñil, M. Ajello, S. Buson, A. Domínguez, J. R. Westernacher-Schneider, A. Rico, S. Adhikari, J. Zrake；2022-11-03。</li>
+<li><strong>样本</strong>：24 个 γ-ray blazars，来自 Peñil+2020 的更早期 hint 列表，扩展时长。</li>
+<li><strong>数据</strong>：Fermi-LAT 12 yr (≈2008-08 → 2020-08)，能段 &gt;0.1 GeV，28 d binning。</li>
+<li><strong>方法链条</strong>：<br />
+  1. <strong>保留 upper-limit (UL) 点</strong>：把 UL 数据作为信号下限纳入分析（&gt;0% blazars 有 UL；过去常 discard）—— 防止 LC 出现假 gap<br />
+  2. LSP + Phase Dispersion Min. (PDM) + WWZ + ARIMA + Bayesian periodicity 5 种独立验证<br />
+  3. <strong>Trial-factor 全局显著性修正</strong>：local σ 经 ≥4σ 时配 P × B 试验 → global σ ≈ local 经验函数。这是 Peñil 系列方法学的核心创新。</li>
+<li><strong>结果</strong>：</li>
+<li><strong>PG 1553+113</strong> 给出 2.2±0.2 yr，local 4.5σ → <strong>global ≈1.8σ</strong> —— 唯一通过 ≥1σ 全局门槛的</li>
+<li>其余 23 源 global ≈ 0σ（包含 PKS 2155−304、OJ 014、PKS 0454−234、S5 0716+714 等知名 VHE 源）</li>
+<li><strong>意义</strong>：在 hint 重分析中只有 PG 1553+113 保留为 robust QPO 候选 —— 与 Ait Benkhali+20、HESS 等独立分析一致。</li>
+<li><strong>后续</strong>：直接对接 Rico+24（SSA 重测得 PG 1553+113 local 4.8σ）和 Peñil+25 全 sample 大扫描。</li>
+</ul>
+<h3 id="9-rico-2024--ssa--494-fermi-lat-源-arxiv241205812">9. Rico+ 2024 — SSA × 494 Fermi-LAT 源 [arXiv:2412.05812]<a class="headerlink" href="#9-rico-2024--ssa--494-fermi-lat-源-arxiv241205812" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>作者</strong>：A. Rico, A. Domínguez, P. Peñil, M. Ajello, S. Buson, S. Adhikari, M. Movahedifar；2024-12-08，DOI 10.1051/0004-6361/202452495。</li>
+<li><strong>样本</strong>：4LAC 中 494 个 Fermi-LAT 源（jetted AGN + Sy1，含 nlSy1）。</li>
+<li><strong>数据</strong>：Fermi-LAT ~12 yr，28 d binning，&gt;0.1 GeV。</li>
+<li><strong>方法</strong>：<strong>Singular Spectrum Analysis (SSA)</strong> —— 把时间序列分解为 oscillatory + trend + noise 三个 component，<strong>剥离趋势和噪声后单独做 LSP</strong>。优势：长 baseline 下红噪声不再压死信号。</li>
+<li><strong>统计</strong>：</li>
+<li>Local σ：Emmanoulopoulos PSD/PDF MC + Vaughan red-noise 模型，从 4σ 到 4.8σ 离散级</li>
+<li>Global σ：用 Gross &amp; Vitells 2010 trial-factor 公式，4.8σ local → 3.3σ global</li>
+<li><strong>结果</strong>：</li>
+<li><strong>46 candidates</strong> with local ≥2σ；其中</li>
+<li><strong>33 candidates</strong> local ≥4σ ⇒ global ≥2.2σ（<strong>8 个 global ≥3.0σ</strong>）</li>
+<li><strong>25 个 <code>*</code> 标 "new γ-ray candidates"</strong>（无既有 γ-ray QPO 文献）—— Mass-add 到 LHAASO 比对样本</li>
+<li><strong>代表性新源</strong>：</li>
+<li>OC 457 (FSRQ, z=0.859, 1.79 yr, global 3.3σ)</li>
+<li>4C +47.44, 4C +48.41（高纬 FSRQ, &gt; 4σ local）</li>
+<li><strong>3C 66A</strong> (BL Lac, z=0.444, 2.31 yr, local 4.6σ / global 3.1σ) —— 已知 VHE 源 + 长期 γ-ray hint，首次有 SSA QPO 显著性</li>
+<li><strong>方法学贡献</strong>：把 SSA 从原本生物/经济学时间序列工具引入 blazar 周期搜寻，<strong>与 Ren+22 CWT 形成互补</strong>。后续 Peñil+25 把 SSA 集成进 9-method ensemble。</li>
+</ul>
+<h3 id="11-peñil-2025--1492-jetted-agn-9-method-ensemble-null-result-arxiv250914013">11. Peñil+ 2025 — 1492 jetted AGN, 9-method ensemble, NULL result [arXiv:2509.14013]<a class="headerlink" href="#11-peñil-2025--1492-jetted-agn-9-method-ensemble-null-result-arxiv250914013" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>作者</strong>：P. Peñil, A. Domínguez, S. Buson, M. Ajello, S. Adhikari, A. Rico；2025-09-17 (v1) / 2025-10-22 (v2)。</li>
+<li><strong>样本</strong>：从 4FGL DR2 选 <strong>1492 个 jetted AGN</strong>（占 catalog 45.1%）；<strong>显式排除 24 个 hint 源</strong>（已在 Peñil+22 单独再分析）。这是迄今为止最大的 GeV blazar QPO 搜寻样本。</li>
+<li><strong>数据</strong>：Fermi-LAT 12 yr (2008-08 → 2020-08)，28 d binning，&gt;0.1 GeV，含 UL 点。</li>
+<li><strong>流水线</strong>：四阶段<br />
+  1. <strong>变量性筛</strong>：1492 → 453（30.6%）保留 &lt;50% upper-limit<br />
+  2. <strong>10 established methods</strong>（LSP, PDM, WWZ, CWT, ARIMA, ARFIMA, CARMA, Bayesian QPO, Markov Chain Monte Carlo sine fits, …），<strong>REDFIT 已剔除</strong>（AR(1) 不当模型）<br />
+  3. <strong>2 new methods</strong> (§3.5)：z-DCF (autocorrelation) + autoregressive 模型 → 算 <strong>9-method ensemble</strong><br />
+  4. <strong>同一 period 必须 ≥3 method 检出，最少 4 个 method ≥4σ</strong> —— 极严标准</li>
+<li><strong>统计</strong>：</li>
+<li>local σ：Timmer &amp; Koenig (TK) artificial LC + Emmanoulopoulos MC 修正</li>
+<li>global σ：<strong>look-elsewhere</strong> trial factor P × B = 24 × 1492 = 35,808 → 把 local 4.5σ 压到 global ≈0σ</li>
+<li><strong>结果</strong>：</li>
+<li><strong>0 sources with global σ &gt; 0</strong></li>
+<li><strong>10 sources</strong> 给 local ≥2σ hint（<strong>全部 global ≈0σ</strong>）—— Table 1：S5 1044+71 (2.5σ local, top), S2 0109+22, PKS 0215+015, PMN J0533-5549, OP 313, S4 1030+61, S5 1039+81 + 重叠的 PG 1553+113 等</li>
+<li><strong>PKS 0405-385</strong> local 2.5σ 与 S5 1044+71 并列；但都被全局修正掉</li>
+<li><strong>核心物理结论</strong>：</li>
+<li><strong>QPO 不是 jetted AGN 的普适特征</strong> —— 否则 1492 源里应至少出几十个 global ≥3σ</li>
+<li>现有所有 robust γ-ray QPO（Mrk 421/501 周期、PG 1553+113 2.2 yr、Ren+22 CTA 102/CB2 1520+31 等）应被视为<strong>少数特殊源的几何/动力学产物</strong>，不能外推</li>
+<li>把 Chen+24 ~3% 发生率上限进一步压到 &lt; 0.5%（在排除 hint 源后）</li>
+<li><strong>方法学意义</strong>：这是目前最严格 trial-factor 修正后的 null result —— <strong>后续任何 γ-ray QPO 论文必须通过这套 9-method ensemble + 全局修正才算 robust</strong>。</li>
+</ul>
+<h3 id="10-sharma-2025--7-blazars--smbbh-拟合-arxiv250523697">10. Sharma+ 2025 — 7 blazars + SMBBH 拟合 [arXiv:2505.23697]<a class="headerlink" href="#10-sharma-2025--7-blazars--smbbh-拟合-arxiv250523697" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>样本</strong>：7 blazars (PKS 1424-41, PKS 0736+01, S2 0109+22, PKS 0244-470, PKS 0405-385, PKS 0208-512, PKS 0035-252)。</li>
+<li><strong>数据</strong>：Fermi-LAT 2008-08-05 → 2025-04-01 (MJD 54683–60766)，weekly binned，TS ≥ 9。</li>
+<li><strong>方法链条</strong>：<br />
+  1. LSP + REDFIT 找候选峰<br />
+  2. DRW (Damped Random Walk) 模型 + <strong>30,000 个 synthetic LC</strong> 评估显著性<br />
+  3. MCMC 拟合 SMBBH 物理参数（Lorentz factor Γ、视角 ψ）</li>
+<li><strong>检测</strong>（7 源全部检出，σ 不同）：</li>
+<li>PKS 0736+01 ~1449 d / 4σ（<strong>首次报告</strong>该源 QPO）</li>
+<li>PKS 1424-41 ~357 d / 3σ</li>
+<li>S2 0109+22 ~667 d / 3σ</li>
+<li>PKS 0244-470 ~227 d / 3σ</li>
+<li>PKS 0405-385 ~1000 d / 2.9σ</li>
+<li>PKS 0208-512 ~909 d / 2.85σ</li>
+<li>PKS 0035-252 ~357 d / 2.8σ</li>
+<li><strong>物理解释</strong>：长周期 (&gt;1 yr) 在 SMBBH 框架下 — 约束 Γ ~ 10–20，ψ 几度量级；助攻 SMBBH + 喷流方向相关性研究。</li>
+</ul>
+<h2 id="跨论文交叉">跨论文交叉<a class="headerlink" href="#跨论文交叉" title="Permanent link">&para;</a></h2>
+<h3 id="同一源在多篇里出现">同一源在多篇里出现<a class="headerlink" href="#同一源在多篇里出现" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>源</th>
+<th>论文</th>
+<th>周期 / σ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PKS 0521-36 (non-blazar AGN)</td>
+<td>Zhang+ 2021</td>
+<td>~1.1 yr / ~5σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Sharma+ 2023</td>
+<td>268 / 295 / 806 d / &gt;3σ</td>
+</tr>
+<tr>
+<td>PKS 1424-41 (FSRQ)</td>
+<td>Ren+ 2022</td>
+<td>90±22, 92±25 d, &gt;5σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen+ 2024</td>
+<td>57 / 341 d / 3.2σ / 3.7σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Sharma+ 2025</td>
+<td>~357 d / 3σ</td>
+</tr>
+<tr>
+<td>S2 0109+22 (BL Lac)</td>
+<td>Zhang+ 2023</td>
+<td>~600 d / 3.5σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Sharma+ 2025</td>
+<td>~667 d / 3σ</td>
+</tr>
+<tr>
+<td>PKS 0537-441 (BL Lac)</td>
+<td>Ren+ 2022</td>
+<td>285 d (~5σ)</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen+ 2024</td>
+<td>55 / 54 d (~4σ) — 双 transient</td>
+</tr>
+<tr>
+<td>PKS 0402-362 (FSRQ)</td>
+<td>Ren+ 2022</td>
+<td>221±56 d, 122±42 d</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen+ 2024</td>
+<td>103.9 d / 2.6σ</td>
+</tr>
+<tr>
+<td>4C +01.02 (FSRQ, z=2.099)</td>
+<td>Ren+ 2022</td>
+<td>268, 123 d / &gt;5σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen+ 2024</td>
+<td>253 d / 2.7σ</td>
+</tr>
+<tr>
+<td>PKS 1510-089 (FSRQ)</td>
+<td>Ren+ 2022</td>
+<td>119±31, 120±36 d</td>
+</tr>
+<tr>
+<td></td>
+<td>Chen+ 2024</td>
+<td>92.3 d / 4.3σ</td>
+</tr>
+<tr>
+<td>OJ 287 (BL Lac)</td>
+<td>Kushwaha+ 2020</td>
+<td>314 d / ~3σ</td>
+</tr>
+<tr>
+<td></td>
+<td>Ren+ 2022</td>
+<td>∼300 d 量级（未在最显著 5 名内）</td>
+</tr>
+</tbody>
+</table>
+<p>观察：<br />
+- <strong>方法越严格、周期估计往往越短</strong>：Chen+ 2024 用严格 ≥5 cycles 筛选，发现的周期 (54–341 d) 比 Ren+ 2022 (含 long-period) 更窄。<br />
+- <strong>数据窗口决定主导信号</strong>：PKS 0521-36 在 5.8 yr vs 15 yr 给出不同周期组（说明 transient QPO 在不同时段切换）。</p>
+<h3 id="方法使用频率">方法使用频率<a class="headerlink" href="#方法使用频率" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>使用论文数 / 11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LSP (Lomb-Scargle)</td>
+<td>11</td>
+</tr>
+<tr>
+<td>WWZ (Weighted Wavelet Z-transform)</td>
+<td>9</td>
+</tr>
+<tr>
+<td>REDFIT</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Emmanoulopoulos PSD/PDF MC</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Gaussian Process (DRW / SHO)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Phase fold / epoch fold</td>
+<td>3</td>
+</tr>
+<tr>
+<td>CWT (Morlet, post-trial corrected)</td>
+<td>2 (Ren+ 2022, Peñil+ 2025)</td>
+</tr>
+<tr>
+<td>MCMC 物理参数拟合</td>
+<td>1 (Sharma+ 2025)</td>
+</tr>
+<tr>
+<td><strong>SSA (Singular Spectrum Analysis)</strong></td>
+<td><strong>2 (Rico+ 2024, Peñil+ 2025)</strong></td>
+</tr>
+<tr>
+<td><strong>z-DCF (autocorrelation)</strong></td>
+<td><strong>1 (Peñil+ 2025)</strong></td>
+</tr>
+<tr>
+<td><strong>ARIMA / ARFIMA / CARMA</strong></td>
+<td><strong>3 (Peñil+ 2022/2025, Rico+ 2024)</strong></td>
+</tr>
+<tr>
+<td><strong>Bayesian QPO / MCMC sine fits</strong></td>
+<td><strong>2 (Peñil+ 2022, Peñil+ 2025)</strong></td>
+</tr>
+<tr>
+<td><strong>Trial-factor 全局显著性修正</strong></td>
+<td><strong>3 (Peñil+ 2022, Rico+ 2024, Peñil+ 2025)</strong></td>
+</tr>
+<tr>
+<td><strong>保留 upper-limit (UL) 点</strong></td>
+<td><strong>3 (Peñil 系列)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="物理解释优先级">物理解释优先级<a class="headerlink" href="#物理解释优先级" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>解释模型</th>
+<th>用于哪类周期</th>
+<th>出现频次</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Helical jet / plasma blob helical motion</td>
+<td>短周期 (&lt; 1 yr)</td>
+<td>5 篇</td>
+</tr>
+<tr>
+<td>SMBBH orbital / precession</td>
+<td>长周期 (&gt; 1 yr)</td>
+<td>4 篇</td>
+</tr>
+<tr>
+<td>Lense-Thirring precession</td>
+<td>长周期</td>
+<td>2 篇</td>
+</tr>
+<tr>
+<td>Accretion disk instability + lighthouse</td>
+<td>non-blazar / mildly beamed</td>
+<td>3 篇</td>
+</tr>
+<tr>
+<td>Magnetic islands / reconnection</td>
+<td>短周期 alternative</td>
+<td>1 篇 (Chen+ 2024 讨论)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="显著性-σ-分布">显著性 σ 分布<a class="headerlink" href="#显著性-σ-分布" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>σ 范围</th>
+<th>候选数（含重复源）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; 5σ (post-trial)</td>
+<td>~20+（主要来自 Ren+ 2022）</td>
+</tr>
+<tr>
+<td>4–5σ</td>
+<td>~5</td>
+</tr>
+<tr>
+<td>3–4σ</td>
+<td>~10</td>
+</tr>
+<tr>
+<td>&lt; 3σ</td>
+<td>~3 (Chen+ 2024 中 4C +01.02 253-d 等)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据-binning-约定">数据 binning 约定<a class="headerlink" href="#数据-binning-约定" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>论文</th>
+<th>binning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kushwaha+ 2020</td>
+<td>monthly (~30 d)</td>
+</tr>
+<tr>
+<td>Zhang+ 2021</td>
+<td>30 d</td>
+</tr>
+<tr>
+<td>Ren+ 2022</td>
+<td>7 d + 30 d 并行</td>
+</tr>
+<tr>
+<td>Gong+ 2023</td>
+<td>7 d</td>
+</tr>
+<tr>
+<td>Zhang+ 2023</td>
+<td>7 d (+ 10/30 d 验证)</td>
+</tr>
+<tr>
+<td>Sharma+ 2023</td>
+<td>weekly</td>
+</tr>
+<tr>
+<td>Chen+ 2024</td>
+<td>weekly</td>
+</tr>
+<tr>
+<td>Sharma+ 2025</td>
+<td>weekly</td>
+</tr>
+</tbody>
+</table>
+<p>7-day binned 已成 2022 年后的实际标准（短周期 &lt; 1 yr 几乎必须）。</p>
+<h2 id="lhaaso-catalog-比对vhe-follow-up-候选评估">LHAASO catalog 比对（VHE follow-up 候选评估）<a class="headerlink" href="#lhaaso-catalog-比对vhe-follow-up-候选评估" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>本节面向<strong>下一步工作</strong>：用 LHAASO 数据搜寻上述 Fermi QPO 源在 VHE 段的<br />
+QPO 信号。比对依据为 1LHAASO catalog (Cao et al. 2024, <a href="https://arxiv.org/abs/2305.17030" target="_blank" rel="noopener">arXiv:2305.17030</a>)。</p>
+</blockquote>
+<h3 id="lhaaso-观测窗与-1lhaaso-catalog">LHAASO 观测窗与 1LHAASO catalog<a class="headerlink" href="#lhaaso-观测窗与-1lhaaso-catalog" title="Permanent link">&para;</a></h3>
+<ul>
+<li>海拔 4410 m（中国四川稻城）；WCDA 1–25 TeV (508 d, 2021-03 → 2022-09)、KM2A &gt;25 TeV (933 d, 2020-01 → 2022-09)</li>
+<li><strong>天区覆盖</strong>：Dec −20° 至 +80°</li>
+<li>1LHAASO 总数 ~90 源（绝大多数为 Galactic：SNR / PWN / pulsar / UNID）</li>
+<li><strong>Extragalactic 仅 3 源</strong>：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>1LHAASO ID</th>
+<th>对应天体</th>
+<th>类型</th>
+<th>RA, Dec</th>
+<th>TS (≈σ²)</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J1104+3810</td>
+<td><strong>Mrk 421</strong></td>
+<td>BL Lac (z=0.030)</td>
+<td>166.07°, +38.18°</td>
+<td>5343.6 (~73σ)</td>
+<td>WCDA only；KM2A 无 &gt;25 TeV (EBL 吸收)</td>
+</tr>
+<tr>
+<td>J1653+3943</td>
+<td><strong>Mrk 501</strong></td>
+<td>BL Lac (z=0.034)</td>
+<td>253.43°, +39.73°</td>
+<td>4121.6 (~64σ)</td>
+<td>WCDA only</td>
+</tr>
+<tr>
+<td>J1219+2915</td>
+<td>NGC 4278 (候选)</td>
+<td>LINER AGN (z=0.002)</td>
+<td>184.98°, +29.25°</td>
+<td>50.4 (~7σ)</td>
+<td>高 Galactic latitude，likely extragalactic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fermi-qpo-源--lhaaso-状态三档分类">Fermi QPO 源 × LHAASO 状态三档分类<a class="headerlink" href="#fermi-qpo-源--lhaaso-状态三档分类" title="Permanent link">&para;</a></h3>
+<p>把本报告 8 篇论文里出现的 <strong>34 个 unique Fermi QPO 源</strong> 按 LHAASO 视场/检出状态分三档（2026-05-14 修订：原 21 源扩为 34 源，补 Ren+22 Table 2 中前版未单列的 13 源）。</p>
+<h4 id="a-档在-1lhaaso-catalog-内2-源">A 档：在 1LHAASO catalog 内（2 源）<a class="headerlink" href="#a-档在-1lhaaso-catalog-内2-源" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Dec</th>
+<th>类型</th>
+<th>Fermi QPO（Ren+22 Table 2）</th>
+<th>1LHAASO ID</th>
+<th>LHAASO 显著性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mrk 421</strong></td>
+<td>+38.18°</td>
+<td>BL Lac (z=0.030)</td>
+<td>30d LC: 300±64 d (&gt;5σ, 3 cycles)；7d LC: 300±65 d (&gt;5σ)</td>
+<td>J1104+3810</td>
+<td>~73σ</td>
+</tr>
+<tr>
+<td><strong>Mrk 501</strong></td>
+<td>+39.73°</td>
+<td>BL Lac (z=0.034)</td>
+<td>30d LC: 315±98 d (2.9σ)；7d LC: 326±76 d (&gt;5σ, 7 cycles)</td>
+<td>J1653+3943</td>
+<td>~64σ</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ 上轮报告主表的「完整 QPO 候选列表」里这两个源被归入 Ren+22「其余 ~18 源」未单独列出 — 本节把它们提升为 LHAASO follow-up 关键目标。</p>
+<h4 id="b-档lhaaso-视场内但未在-1lhaaso-catalog-检出20-源">B 档：LHAASO 视场内但未在 1LHAASO catalog 检出（20 源）<a class="headerlink" href="#b-档lhaaso-视场内但未在-1lhaaso-catalog-检出20-源" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Dec</th>
+<th>类型</th>
+<th>Fermi QPO 来源</th>
+<th>VHE 现状 / 评注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OJ 287</td>
+<td>+20.10°</td>
+<td>BL Lac (z=0.306)</td>
+<td>Kushwaha+20 (314 d); Ren+22 (~300 d)</td>
+<td>MAGIC/VERITAS 偶检；VHE 流强弱</td>
+</tr>
+<tr>
+<td>S2 0109+22</td>
+<td>+22.74°</td>
+<td>BL Lac (z=0.36)</td>
+<td>Zhang+23 (~600 d); Sharma+25 (~667 d)</td>
+<td>VHE 暗源</td>
+</tr>
+<tr>
+<td>4C +01.02</td>
+<td>+01.58°</td>
+<td>FSRQ (z=2.099)</td>
+<td>Ren+22 (268, 123 d); Chen+24 (253 d)</td>
+<td>高 z FSRQ，VHE 段 EBL 吸收强</td>
+</tr>
+<tr>
+<td>4C +28.07</td>
+<td>+28.80°</td>
+<td>FSRQ (z=1.206)</td>
+<td>Ren+22 (244±88 d, 3 cycles &gt;5σ)</td>
+<td>高 z FSRQ</td>
+</tr>
+<tr>
+<td>NGC 1275</td>
+<td>+41.51°</td>
+<td>RDG (z=0.0176)</td>
+<td>Ren+22 (92 d, 4 cycles, &gt;5σ)</td>
+<td>MAGIC 在 ~50 GeV 检出但 TeV 弱</td>
+</tr>
+<tr>
+<td>PKS 0336-01</td>
+<td>−01.78°</td>
+<td>FSRQ (z=0.852)</td>
+<td>Chen+24 (<strong>94 d ★新发现</strong>)</td>
+<td>高 z FSRQ</td>
+</tr>
+<tr>
+<td>S5 0716+714</td>
+<td>+71.34°</td>
+<td>BL Lac (z=0.300)</td>
+<td>Ren+22 (324±77 d, 3.2σ)</td>
+<td>MAGIC 已检 VHE；高纬度低海拔可观测时间不长</td>
+</tr>
+<tr>
+<td>PKS 0736+01</td>
+<td>+01.62°</td>
+<td>FSRQ (z=0.189)</td>
+<td>Sharma+25 (~1449 d, 4σ ★首报)</td>
+<td>低 z FSRQ，VHE 候选潜在</td>
+</tr>
+<tr>
+<td>S4 0954+658</td>
+<td>+65.57°</td>
+<td>BL Lac (z=0.367)</td>
+<td>Gong+23 (<strong>66 d 9 cycles &gt;5σ</strong>; 210 d)</td>
+<td>已被 IACT 探到；LHAASO marginal</td>
+</tr>
+<tr>
+<td>1H 1013+498</td>
+<td>+49.43°</td>
+<td>BL Lac (z=0.212)</td>
+<td>Ren+22 (264 / 100 / 52 d, 多 cycles &gt;5σ)</td>
+<td>HBL，潜在 VHE 候选</td>
+</tr>
+<tr>
+<td>S5 1044+71</td>
+<td>+71.71°</td>
+<td>FSRQ (z=1.15)</td>
+<td>Ren+22 (<strong>1127 d ★首报</strong>, 117 d)</td>
+<td>高 z + 高纬度</td>
+</tr>
+<tr>
+<td>4C +21.35</td>
+<td>+21.38°</td>
+<td>FSRQ (z=0.434)</td>
+<td>Ren+22 (66±17 d, 6 cycles &gt;5σ)</td>
+<td>MAGIC 已检；VHE 偶发</td>
+</tr>
+<tr>
+<td>3C 273</td>
+<td>+02.05°</td>
+<td>FSRQ (z=0.158)</td>
+<td>Ren+22 (177 / 97 d, 多 cycles &gt;5σ)</td>
+<td>距 LHAASO 1LHAASO J1219+2915 27.3°；最近 quasar，VHE 段弱</td>
+</tr>
+<tr>
+<td>3C 279</td>
+<td>−05.79°</td>
+<td>FSRQ (z=0.536)</td>
+<td>Ren+22 (101 / 40 d, 多 cycles &gt;5σ)</td>
+<td>MAGIC 已检 VHE；强 BLR/EBL 吸收</td>
+</tr>
+<tr>
+<td>PKS 1510-089</td>
+<td>−09.10°</td>
+<td>FSRQ (z=0.36)</td>
+<td>Ren+22 (~120 d); Chen+24 (92 d, 4.3σ)</td>
+<td>HESS/MAGIC 偶检</td>
+</tr>
+<tr>
+<td>B2 1520+31</td>
+<td>+31.74°</td>
+<td>FSRQ (z=1.489)</td>
+<td>Ren+22 (179, 71, 39 d)</td>
+<td>高 z FSRQ</td>
+</tr>
+<tr>
+<td>CTA 102</td>
+<td>+11.73°</td>
+<td>FSRQ (z=1.037)</td>
+<td>Ren+22 (366 / 178 d, 多 cycles &gt;5σ)</td>
+<td>高 z FSRQ，VHE 段 EBL</td>
+</tr>
+<tr>
+<td>PKS 2247-131</td>
+<td>−12.81°</td>
+<td>BL Lac (z=0.22)</td>
+<td>Ren+22 (214, 34 d)</td>
+<td>视场内（Dec &gt; −20）；中等 z BL Lac，潜在 VHE 候选</td>
+</tr>
+<tr>
+<td>3C 454.3</td>
+<td>+16.15°</td>
+<td>FSRQ (z=0.859)</td>
+<td>Ren+22 (120±27 d, 4 cycles &gt;5σ)</td>
+<td>极亮 GeV，VHE 暂未确认</td>
+</tr>
+<tr>
+<td>PMN J2345-1555</td>
+<td>−15.92°</td>
+<td>FSRQ (z=0.621)</td>
+<td>Ren+22 (191±44 d, 4 cycles &gt;5σ)</td>
+<td>视场边缘，VHE 暗</td>
+</tr>
+</tbody>
+</table>
+<h4 id="c-档超出-lhaaso-视场dec--2012-源">C 档：超出 LHAASO 视场（Dec &lt; −20°，12 源）<a class="headerlink" href="#c-档超出-lhaaso-视场dec--2012-源" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Dec</th>
+<th>类型</th>
+<th>Fermi QPO 来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PKS 0521-36</td>
+<td>−36.55°</td>
+<td>non-blazar AGN (z=0.056)</td>
+<td>Zhang+21 (~1.1 yr); Sharma+23 (268, 295, <strong>806 d</strong>)</td>
+</tr>
+<tr>
+<td>PKS 0537-441</td>
+<td>−44.08°</td>
+<td>BL Lac (z=0.892)</td>
+<td>Ren+22 (~286 d); Chen+24 (<strong>55, 54 d ★新双 transient</strong>)</td>
+</tr>
+<tr>
+<td>PKS 0402-362</td>
+<td>−36.09°</td>
+<td>FSRQ (z=1.417)</td>
+<td>Chen+24 (103.9 d)</td>
+</tr>
+<tr>
+<td>PKS 0426-380</td>
+<td>−37.94°</td>
+<td>BL Lac (z=1.11)</td>
+<td>Ren+22 (85±26 d, 8 cycles &gt;5σ)</td>
+</tr>
+<tr>
+<td>PKS 0447-439</td>
+<td>−43.84°</td>
+<td>BL Lac (z=0.205)</td>
+<td>Ren+22 (111±42 d, 7 cycles &gt;5σ); HESS 已检 VHE</td>
+</tr>
+<tr>
+<td>PKS 0454-234</td>
+<td>−23.41°</td>
+<td>FSRQ (z=1.003)</td>
+<td>Ren+22 (69±21 d, 4 cycles &gt;5σ)</td>
+</tr>
+<tr>
+<td>PKS 1424-41</td>
+<td>−42.10°</td>
+<td>FSRQ (z=1.522)</td>
+<td>Chen+24 (<strong>57 d ★新</strong>, 341 d); Sharma+25 (~357 d)</td>
+</tr>
+<tr>
+<td>PKS 0244-470</td>
+<td>−46.84°</td>
+<td>FSRQ (z=1.385)</td>
+<td>Sharma+25 (~225 d)</td>
+</tr>
+<tr>
+<td>PKS 0405-385</td>
+<td>−38.43°</td>
+<td>FSRQ (z=1.285)</td>
+<td>Sharma+25 (~1000 d)</td>
+</tr>
+<tr>
+<td>PKS 0208-512</td>
+<td>−51.02°</td>
+<td>FSRQ (z=1.003)</td>
+<td>Sharma+25 (~909 d)</td>
+</tr>
+<tr>
+<td>PKS 0035-252</td>
+<td>−24.99°</td>
+<td>FSRQ (z=0.49)</td>
+<td>Sharma+25 (~357 d)</td>
+</tr>
+<tr>
+<td>PKS 2155-304</td>
+<td>−30.23°</td>
+<td>BL Lac (z=0.116)</td>
+<td>Ren+22 (341±106 d, 3.5σ); HESS 已检 VHE</td>
+</tr>
+</tbody>
+</table>
+<p>C 档多数为 z &gt; 1 的 FSRQ，VHE 段会被 BLR / EBL 吸收 — 即使在视场内也不必然探到。真正合适的后续阵列是规划中的南天高海拔 <strong>SWGO</strong>。</p>
+<h3 id="重点候选mrk-421--mrk-501--fermi-qpo-周期-vs-lhaaso-预期可探性">重点候选：Mrk 421 / Mrk 501 — Fermi QPO 周期 vs LHAASO 预期可探性<a class="headerlink" href="#重点候选mrk-421--mrk-501--fermi-qpo-周期-vs-lhaaso-预期可探性" title="Permanent link">&para;</a></h3>
+<h4 id="mrk-421首选候选">Mrk 421（首选候选）<a class="headerlink" href="#mrk-421首选候选" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fermi QPO 周期</td>
+<td>300 ± 64 d (Ren+22, 30d binning, &gt;5σ, <strong>3 fitted cycles</strong>)</td>
+</tr>
+<tr>
+<td></td>
+<td>300 ± 65 d (Ren+22, 7d binning, &gt;5σ) — 7d/30d 完全一致</td>
+</tr>
+<tr>
+<td>LHAASO 流强</td>
+<td>1LHAASO TS=5343.6 (~73σ)，flux ~3.68 Crab unit (WCDA) — <strong>最亮 extragalactic</strong></td>
+</tr>
+<tr>
+<td>LHAASO 数据时长</td>
+<td>~5 yr 已积累 (2021-03 → 2026 当前)，比 1LHAASO 公开版多 ~3 yr</td>
+</tr>
+<tr>
+<td>周期 vs 数据量</td>
+<td>300 d × 5 yr ≈ <strong>6 cycles 可期</strong></td>
+</tr>
+<tr>
+<td>binning 可行性</td>
+<td>WCDA 流强足以做 weekly LC（与 IACT 监测兼容）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：数据量、显著性、binning 三方面都最利好。LHAASO QPO 搜寻<strong>首选目标</strong>。</p>
+<h4 id="mrk-501次选候选">Mrk 501（次选候选）<a class="headerlink" href="#mrk-501次选候选" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fermi QPO 周期</td>
+<td>326 ± 76 d (Ren+22, 7d binning, &gt;5σ, <strong>7 fitted cycles</strong>)</td>
+</tr>
+<tr>
+<td></td>
+<td>315 ± 98 d (Ren+22, 30d binning, <strong>2.9σ</strong>) — ⚠️ binning 敏感</td>
+</tr>
+<tr>
+<td>LHAASO 流强</td>
+<td>1LHAASO TS=4121.6 (~64σ)，flux ~3.77 Crab unit</td>
+</tr>
+<tr>
+<td>LHAASO 数据时长</td>
+<td>~5 yr 已积累</td>
+</tr>
+<tr>
+<td>周期 vs 数据量</td>
+<td>326 d × 5 yr ≈ <strong>5–6 cycles</strong></td>
+</tr>
+<tr>
+<td>binning 可行性</td>
+<td>weekly LC 可行但 SNR 弱于 Mrk 421</td>
+</tr>
+</tbody>
+</table>
+<p><strong>结论</strong>：值得做，但<strong>marginal</strong>。Mrk 501 在 Fermi 数据里 30d vs 7d binning 显著性差异（2.9σ → &gt;5σ）警示 binning 选择对 QPO 显著性敏感 — 在 LHAASO 端也需多种 binning 验证。</p>
+<h4 id="lhaaso-qpo-搜寻执行建议">LHAASO QPO 搜寻执行建议<a class="headerlink" href="#lhaaso-qpo-搜寻执行建议" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>优先 Mrk 421</strong>：weekly + monthly 两种 binning 并行</li>
+<li><strong>Mrk 501 作为 binning 敏感性对照源</strong>同时跑</li>
+<li>NGC 4278 (1LHAASO 候选 extragalactic, z=0.002, ~7σ) 流强弱，仅作 stacked / long-term check</li>
+<li>B 档源待 LHAASO 公开数据扩展后再考虑 stacked analysis</li>
+</ol>
+<h3 id="比对统计">比对统计<a class="headerlink" href="#比对统计" title="Permanent link">&para;</a></h3>
+<p><strong>2026-05-14（前 Peñil 系列）—— 34 源</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>数量</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 档 (in 1LHAASO catalog)</td>
+<td>2 / 34</td>
+<td>~6%</td>
+</tr>
+<tr>
+<td>B 档 (视场内未检出)</td>
+<td>20 / 34</td>
+<td>~59%</td>
+</tr>
+<tr>
+<td>C 档 (超出视场)</td>
+<td>12 / 34</td>
+<td>~35%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2026-05-14b（含 Peñil 系列扩样）—— 81 源</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>档位</th>
+<th>数量</th>
+<th>占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 档 (in 1LHAASO catalog)</td>
+<td>2 / 81</td>
+<td>~2.5%</td>
+</tr>
+<tr>
+<td>B 档 (视场内未检出)</td>
+<td>54 / 81</td>
+<td>~67%</td>
+</tr>
+<tr>
+<td>C 档 (超出视场)</td>
+<td>25 / 81</td>
+<td>~31%</td>
+</tr>
+</tbody>
+</table>
+<p>A 档<strong>仍然只有 Mrk 421 / Mrk 501</strong>（其余 79 个源到任何 1LHAASO 源的最近角距均 &gt; 1.2°）。<br />
+B 档扩到 54 主要源于 Rico+24 22 新源 + Peñil+22 14 in-FoV 源 + Peñil+25 4 in-FoV 源。</p>
+<p>注：1LHAASO catalog 数据截至 2022-09；本节赤纬比对采用 4FGL DR4 J2000 坐标。</p>
+<h3 id="2026-05-14-全-catalog-位置交叉匹配复核">2026-05-14 全 catalog 位置交叉匹配复核<a class="headerlink" href="#2026-05-14-全-catalog-位置交叉匹配复核" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>复核动机</strong>：上一版只显式列了 Mrk 421 / Mrk 501 两个 1LHAASO 直接对应，<br />
+并把其余 in-FoV 源标为「未检出」，未给出实际角距，留下「是否有位置很接近、<br />
+还没被明确证认的近邻」的疑问。本节用 4FGL DR4 J2000 + 从 1LHAASO catalog<br />
+PDF 抽出的 90 源真实表列 RA/Dec，按 great-circle 角距做正反两向全量交叉<br />
+匹配，给出可复算的最近邻表。</p>
+</blockquote>
+<h4 id="方法">方法<a class="headerlink" href="#方法" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fermi QPO 源 34 个（21 原列 + Ren+22 Table 2 补 13），位置取 4FGL DR4，<br />
+  非 blazar 类源（NGC 1275, PKS 0521-36）补充 NED 主名解析。</li>
+<li>1LHAASO catalog 90 源全部加入（含 KM2A-only Galactic 源），位置取<br />
+<code>lhaaso_cao2024_1lhaaso_catalog.pdf</code> 公开 Table 表列 RA/Dec。</li>
+<li>角距用经典 great-circle 公式<br />
+  cos θ = sin δ₁ sin δ₂ + cos δ₁ cos δ₂ cos(α₁−α₂)。</li>
+</ul>
+<h4 id="表-1--forward-方向fov-内-22-个-fermi-qpo-源到最近-1lhaaso-源的角距">表 1 — Forward 方向：FoV 内 22 个 Fermi QPO 源到最近 1LHAASO 源的角距<a class="headerlink" href="#表-1--forward-方向fov-内-22-个-fermi-qpo-源到最近-1lhaaso-源的角距" title="Permanent link">&para;</a></h4>
+<p>按角距升序。<strong>完整列表</strong>，便于复算。</p>
+<table>
+<thead>
+<tr>
+<th>Fermi QPO</th>
+<th>4FGL RA / Dec (°)</th>
+<th>最近 1LHAASO</th>
+<th>角距 (°)</th>
+<th>该 1LHAASO 既有关联</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mrk 421</strong></td>
+<td>166.114 / +38.209</td>
+<td>J1104+3810</td>
+<td><strong>0.04</strong></td>
+<td>Mrk 421 (确认)</td>
+</tr>
+<tr>
+<td><strong>Mrk 501</strong></td>
+<td>253.468 / +39.760</td>
+<td>J1653+3943</td>
+<td><strong>0.04</strong></td>
+<td>Mrk 501 (确认)</td>
+</tr>
+<tr>
+<td>4C +21.35</td>
+<td>186.227 / +21.380</td>
+<td>J1219+2915</td>
+<td>7.95</td>
+<td>(无强关联；曾建议 NGC 4278)</td>
+</tr>
+<tr>
+<td>NGC 1275</td>
+<td>49.951 / +41.512</td>
+<td>J0216+4237</td>
+<td>11.80</td>
+<td>(Perseus 区 UNID)</td>
+</tr>
+<tr>
+<td>1H 1013+498</td>
+<td>153.767 / +49.434</td>
+<td>J1104+3810</td>
+<td>14.30</td>
+<td>Mrk 421</td>
+</tr>
+<tr>
+<td>4C +28.07</td>
+<td>39.463 / +28.806</td>
+<td>J0216+4237</td>
+<td>14.49</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>PKS 0736+01</td>
+<td>114.827 / +1.618</td>
+<td>J0703+1405</td>
+<td>15.33</td>
+<td>2HWC J0700+143</td>
+</tr>
+<tr>
+<td>B2 1520+31</td>
+<td>230.542 / +31.739</td>
+<td>J1653+3943</td>
+<td>20.15</td>
+<td>Mrk 501</td>
+</tr>
+<tr>
+<td>S2 0109+22</td>
+<td>18.024 / +22.744</td>
+<td>J0206+4302</td>
+<td>23.26</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>S5 0716+714</td>
+<td>110.473 / +71.340</td>
+<td>J0428+5531</td>
+<td>24.08</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>OJ 287</td>
+<td>133.704 / +20.109</td>
+<td>J0703+1405</td>
+<td>27.27</td>
+<td>2HWC J0700+143</td>
+</tr>
+<tr>
+<td>3C 273</td>
+<td>187.278 / +2.052</td>
+<td>J1219+2915</td>
+<td>27.29</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>S4 0954+658</td>
+<td>149.697 / +65.565</td>
+<td>J1104+3810</td>
+<td>28.99</td>
+<td>Mrk 421</td>
+</tr>
+<tr>
+<td>S5 1044+71</td>
+<td>162.119 / +71.712</td>
+<td>J1104+3810</td>
+<td>33.59</td>
+<td>Mrk 421</td>
+</tr>
+<tr>
+<td>CTA 102</td>
+<td>338.152 / +11.731</td>
+<td>J2028+3352</td>
+<td>35.85</td>
+<td>(Cygnus UNID)</td>
+</tr>
+<tr>
+<td>3C 279</td>
+<td>194.047 / −5.789</td>
+<td>J1219+2915</td>
+<td>36.11</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>PKS 0336-01</td>
+<td>54.879 / −1.776</td>
+<td>J0534+2200</td>
+<td>36.79</td>
+<td>Crab</td>
+</tr>
+<tr>
+<td>3C 454.3</td>
+<td>343.491 / +16.148</td>
+<td>J2346+5138</td>
+<td>37.02</td>
+<td>1ES 2344+514</td>
+</tr>
+<tr>
+<td>PKS 1510-089</td>
+<td>228.211 / −9.100</td>
+<td>J1740+0948</td>
+<td>41.24</td>
+<td>(Galactic)</td>
+</tr>
+<tr>
+<td>4C +01.02</td>
+<td>17.161 / +1.584</td>
+<td>J0206+4302</td>
+<td>43.45</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>PKS 2247-131</td>
+<td>342.516 / −12.834</td>
+<td>J1959+1129</td>
+<td>48.85</td>
+<td>(UNID)</td>
+</tr>
+<tr>
+<td>PMN J2345-1555</td>
+<td>356.302 / −15.918</td>
+<td>J1959+1129</td>
+<td>62.24</td>
+<td>(UNID)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="表-2--reverse-方向1lhaaso-高-galactic-latitude-b10-源到最近-fermi-qpo-源的角距">表 2 — Reverse 方向：1LHAASO 高 Galactic latitude (|b|&gt;10°) 源到最近 Fermi QPO 源的角距<a class="headerlink" href="#表-2--reverse-方向1lhaaso-高-galactic-latitude-b10-源到最近-fermi-qpo-源的角距" title="Permanent link">&para;</a></h4>
+<p>只列 |b| &gt; 10° 的 1LHAASO 源（VHE extragalactic 候选区），10 条。</p>
+<table>
+<thead>
+<tr>
+<th>1LHAASO</th>
+<th>RA / Dec (°)</th>
+<th>Gal. b (°)</th>
+<th>既有关联</th>
+<th>最近 Fermi QPO</th>
+<th>角距 (°)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>J1104+3810</td>
+<td>166.070 / +38.180</td>
+<td>+65.0</td>
+<td>Mrk 421</td>
+<td><strong>Mrk 421</strong></td>
+<td><strong>0.04</strong></td>
+</tr>
+<tr>
+<td>J1653+3943</td>
+<td>253.430 / +39.730</td>
+<td>+38.9</td>
+<td>Mrk 501</td>
+<td><strong>Mrk 501</strong></td>
+<td><strong>0.04</strong></td>
+</tr>
+<tr>
+<td>J1219+2915</td>
+<td>184.980 / +29.250</td>
+<td>+82.7</td>
+<td>(NGC 4278 弱候选)</td>
+<td>4C +21.35</td>
+<td>7.95</td>
+</tr>
+<tr>
+<td>J1727+5016</td>
+<td>261.890 / +50.280</td>
+<td>+33.7</td>
+<td>1ES 1727+502</td>
+<td>Mrk 501</td>
+<td>12.07</td>
+</tr>
+<tr>
+<td>J0216+4237</td>
+<td>34.100 / +42.630</td>
+<td>−17.5</td>
+<td>(UNID)</td>
+<td>NGC 1275</td>
+<td>11.80</td>
+</tr>
+<tr>
+<td>J0212+4254</td>
+<td>33.010 / +42.910</td>
+<td>−17.5</td>
+<td>(UNID)</td>
+<td>NGC 1275</td>
+<td>12.60</td>
+</tr>
+<tr>
+<td>J0206+4302</td>
+<td>31.700 / +43.050</td>
+<td>−17.7</td>
+<td>(UNID)</td>
+<td>NGC 1275</td>
+<td>13.56</td>
+</tr>
+<tr>
+<td>J0007+7303</td>
+<td>1.910 / +73.070</td>
+<td>+10.5</td>
+<td>CTA 1 (PWN/SNR)</td>
+<td>S5 0716+714</td>
+<td>28.75</td>
+</tr>
+<tr>
+<td>J0622+3754</td>
+<td>95.500 / +37.900</td>
+<td>+11.0</td>
+<td>LHAASO J0621+3755</td>
+<td>S5 0716+714</td>
+<td>34.32</td>
+</tr>
+<tr>
+<td>J1740+0948</td>
+<td>265.030 / +9.810</td>
+<td>+20.3</td>
+<td>(UNID)</td>
+<td>Mrk 501</td>
+<td>31.67</td>
+</tr>
+</tbody>
+</table>
+<h4 id="结论">结论<a class="headerlink" href="#结论" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>1LHAASO catalog (截至 2022-09) 内只有 Mrk 421 / Mrk 501 与本调研 Fermi QPO<br />
+   样本直接对应</strong>（角距 &lt; 0.1°，比 LHAASO 位置不确定度 0.05–0.4° 还小）。</li>
+<li>余下 20 个 FoV 内 Fermi QPO 源到任意 1LHAASO 源的最近邻角距均 <strong>≥ 7.95°</strong><br />
+   （4C +21.35 ↔ J1219+2915），<strong>远超 LHAASO PSF</strong>。位置一致性的「未证认近邻」<br />
+   候选 <strong>不存在</strong>。</li>
+<li>反向看，1LHAASO 中 3 个 high-|b| 未证认源：<br />
+   - <strong>J1219+2915</strong>（|b|=+82.7°，原文建议 NGC 4278，关联弱）— 与所有 34 个<br />
+     Fermi QPO 源最小角距 7.95°（4C +21.35）—— <strong>不是任何 Fermi QPO 源的<br />
+     合理对应</strong>。<br />
+   - <strong>J1727+5016</strong>（|b|=+33.7°，关联 1ES 1727+502，一个 BL Lac）— 1ES 1727+502<br />
+     不在本调研覆盖的 Fermi QPO 样本里，但作为 VHE 已证认 BL Lac 可单独被<br />
+     检验是否在 GeV 段有 QPO（<strong>留作未来工作的潜在目标</strong>）。<br />
+   - <strong>J0206+4302 / J0212+4254 / J0216+4237</strong>（Perseus 区 3 个 KM2A UNID，<br />
+     |b|=−17.5°）— 距 NGC 1275 都在 11–14°，<strong>不是位置匹配</strong>；这片区域的<br />
+     UHE 起源仍是 LHAASO 内部待解课题，与 Fermi blazar QPO 无关。</li>
+<li><strong>任何"位置非常接近、可能还没完全证认"的 Fermi-QPO × LHAASO 候选体在<br />
+   1LHAASO catalog 内不存在</strong>。下一步要扩展候选必须等：<br />
+   (a) 2022-09 后的 LHAASO 后续公开（&gt;1500 d 累计数据）形成的更新 catalog；<br />
+   (b) LHAASO 对单个 blazar 的专文 / ATels（如 2024 后已出现的 NGC 4278<br />
+       论文级别报告）；<br />
+   (c) 把 Sharma+25 等论文的 C 档 (Dec &lt; −20°) 源留给规划中的 <strong>SWGO</strong>。</li>
+</ol>
+<blockquote>
+<p><strong>可复算</strong>：该交叉匹配的具体脚本逻辑写在 plan 文档里；catalog 提取自<br />
+<code>data/papers/lhaaso_cao2024_1lhaaso_catalog.pdf</code> Table 1。</p>
+</blockquote>
+<h3 id="2026-05-14b-81-源扩样本位置交叉匹配复核">2026-05-14b 81 源扩样本位置交叉匹配复核<a class="headerlink" href="#2026-05-14b-81-源扩样本位置交叉匹配复核" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>复核动机</strong>：Peñil 系列 3 篇加 45 个新 hint/candidate 源进来。重新跑<br />
+全 81 × 90 great-circle 角距，验证 A 档是否仍是 Mrk 421/501 二件套。</p>
+</blockquote>
+<h4 id="方法_1">方法<a class="headerlink" href="#方法_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fermi QPO 源 <strong>81 个</strong>：34 (原列) + 18 (Peñil+22 new) + 22 (Rico+24 ★ new) +<br />
+  5 (Peñil+25 hint new) + 2 (Rico+24 ★ 3C 66A、PKS 1424+240 视为新探测，但<br />
+  4FGL 名已在 Ren+22 表中)。位置全部用 4FGL DR4 / Peñil+22 Table 1 / Rico+24<br />
+  Table A.1 的 J2000 直接表列。</li>
+<li>1LHAASO 仍 90 源，与 2026-05-14 节同。</li>
+</ul>
+<h4 id="表--81-源扩样本-forward-match-角距分布">表 — 81 源扩样本 forward match 角距分布<a class="headerlink" href="#表--81-源扩样本-forward-match-角距分布" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>角距区间 (°)</th>
+<th>Fermi QPO 源数</th>
+<th>标志源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&lt; 0.1°</strong></td>
+<td><strong>2</strong></td>
+<td>Mrk 421, Mrk 501</td>
+</tr>
+<tr>
+<td>0.1 – 2.0°</td>
+<td>1</td>
+<td>3C 66A → J0216+4237 (1.22°)</td>
+</tr>
+<tr>
+<td>2.0 – 5.0°</td>
+<td>1</td>
+<td>TXS 0518+211 → J0534+2200 (3.06° Crab 区)</td>
+</tr>
+<tr>
+<td>5.0 – 10.0°</td>
+<td>9</td>
+<td>4C +48.41, TXS 0059+581, 7C 2010+4619, 87GB 164812.2+524023, S4 1030+41, OC 457, 4C +21.35, 4C +47.44, S4 1144+40</td>
+</tr>
+<tr>
+<td>10.0 – 20.0°</td>
+<td>9</td>
+<td>MG2 J130304+2434, OP 313, NGC 1275, B2 0716+33, 1H 1013+498, 4C +28.07, TXS 1902+556, PKS 0736+01, TXS 1318+225</td>
+</tr>
+<tr>
+<td>&gt; 20.0°</td>
+<td>34</td>
+<td>其余</td>
+</tr>
+<tr>
+<td><strong>总计 FoV 内</strong></td>
+<td><strong>56</strong></td>
+<td>(Dec &gt; −20°)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="最接近-mrk-421501-以外的近邻候选简评">「最接近 Mrk 421/501 以外」的近邻候选简评<a class="headerlink" href="#最接近-mrk-421501-以外的近邻候选简评" title="Permanent link">&para;</a></h4>
+<h5 id="3c-66a--1lhaaso-j02164237--122">3C 66A → 1LHAASO J0216+4237 = 1.22°<a class="headerlink" href="#3c-66a--1lhaaso-j02164237--122" title="Permanent link">&para;</a></h5>
+<p><strong>最有趣的"近邻但不匹配"案例</strong>：</p>
+<ul>
+<li>3C 66A：BL Lac, z=0.444, RA 35.67°, Dec +43.04°</li>
+<li>1LHAASO J0216+4237：UNID, RA 34.10°, Dec +42.63°, KM2A 检出，位置不确定度 0.10°</li>
+<li>角距 1.22° <strong>远超 PSF (0.10°)</strong>，因此<strong>不是位置匹配</strong></li>
+<li>但 3C 66A 是 known VERITAS VHE BL Lac + 长期 γ-ray hint，Rico+24 SSA 给 2.31 yr local 4.6σ / global 3.1σ —— 在所有 79 个非 Mrk421/501 源中<strong>离 1LHAASO 最近</strong></li>
+<li>Perseus cluster 周围有 3 个相关 1LHAASO UNID (J0206+4302, J0212+4254, J0216+4237)，归因更可能是该区域的 KM2A 系统效应或未知 Galactic 起源，与 3C 66A 高纬位置不直接关联</li>
+</ul>
+<p>结论：<strong>仍不存在 &lt; PSF 的 Fermi QPO × 1LHAASO 新对应</strong>；3C 66A 作为「最接近 LHAASO 视野的非配对源」值得在 LHAASO 后续 catalog 公开时优先复核。</p>
+<h5 id="510-近邻9-个源全部是-galactic-1lhaaso-邻居">5–10° 近邻：9 个源全部是 Galactic 1LHAASO 邻居<a class="headerlink" href="#510-近邻9-个源全部是-galactic-1lhaaso-邻居" title="Permanent link">&para;</a></h5>
+<p>落在 5–10° 的 9 对绝大多数来自高 |b| Fermi QPO 源 × 银道面附近 1LHAASO Galactic<br />
+UNID（Crab、Cygnus 区、Galactic anticenter）—— 不是物理关联，只是角度限制。</p>
+<h4 id="结论_1">结论<a class="headerlink" href="#结论_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>A 档仍是 2 源</strong>（Mrk 421 / Mrk 501）—— 81 源样本下保持不变</li>
+<li><strong>没有任何 &lt; PSF 的新对应</strong>；最近的非配对 (3C 66A → J0216+4237 = 1.22°)<br />
+   是 PSF 的 12 倍</li>
+<li>Peñil+25 1492 → 0 全局显著的 null result 与 LHAASO 位置 null 一致暗示：<br />
+<strong>GeV QPO × VHE QPO 关联在现有数据下极稀缺，Mrk 421 / Mrk 501 是仅有的<br />
+   两个 robust 标的</strong></li>
+<li>未来扩展候选必须等：<br />
+   - LHAASO post-2022-09 公开数据<br />
+   - LHAASO 对 PG 1553+113 / 3C 66A 等的专项搜寻（这些 BL Lac 在视场内且<br />
+     是 Peñil/Rico 系列的最佳候选）</li>
+</ol>
+<blockquote>
+<p><strong>可复算</strong>：cross-match 脚本同 2026-05-14 节，sample 列表参见上节<br />
+"Peñil 系列三篇大样本扩样" 三张表。</p>
+</blockquote>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Kushwaha P., Sarkar A., Gupta A. C., Tripathi A., Wiita P. J.</strong>, 2020, <em>MNRAS</em>, 499, 653. <em>A Possible γ-ray Quasi-periodic Oscillation of ~314 days in the Blazar OJ 287.</em> <a href="https://arxiv.org/abs/2009.13754" target="_blank" rel="noopener">arXiv:2009.13754</a> · <a href="https://doi.org/10.1093/mnras/staa2899" target="_blank" rel="noopener">DOI 10.1093/mnras/staa2899</a></li>
+<li><strong>Zhang H., Yan D., Zhang P., Yang S., Zhang L.</strong>, 2021, <em>ApJ</em>, 919, 58. <em>A Quasi-periodic Oscillation in the γ-ray Emission from the Non-blazar Active Galactic Nucleus PKS 0521-36.</em> <a href="https://arxiv.org/abs/2106.10040" target="_blank" rel="noopener">arXiv:2106.10040</a> · <a href="https://doi.org/10.3847/1538-4357/ac0cf0" target="_blank" rel="noopener">DOI 10.3847/1538-4357/ac0cf0</a></li>
+<li><strong>Ren H. X., Cerruti M., Sahakyan N.</strong>, 2023, <em>A&amp;A</em> (submitted Feb 2023). <em>Quasi-periodic oscillations in the γ-ray light curves of bright active galactic nuclei.</em> <a href="https://arxiv.org/abs/2204.13051" target="_blank" rel="noopener">arXiv:2204.13051</a></li>
+<li><strong>Gong Y., Tian S., Zhou L., Yi T., Fang J.</strong>, 2023, <em>ApJ</em>, 949, 39. <em>Two Transient Quasi-periodic Oscillations in γ-Ray Emission from the Blazar S4 0954+658.</em> <a href="https://arxiv.org/abs/2304.03085" target="_blank" rel="noopener">arXiv:2304.03085</a> · <a href="https://doi.org/10.3847/1538-4357/acca7b" target="_blank" rel="noopener">DOI 10.3847/1538-4357/acca7b</a></li>
+<li><strong>Zhang H., Wu F., Dai B.</strong>, 2023, <em>PASP</em>, 135, 074101. <em>The detection of possible γ-ray quasi-periodic modulation with ~600 days from the blazar S2 0109+22.</em> <a href="https://arxiv.org/abs/2306.11579" target="_blank" rel="noopener">arXiv:2306.11579</a> · <a href="https://doi.org/10.1088/1538-3873/acdf1f" target="_blank" rel="noopener">DOI 10.1088/1538-3873/acdf1f</a></li>
+<li><strong>Sharma A., Prince R., Bose D.</strong>, 2023, <em>MNRAS</em> (submitted). <em>Detection of gamma-ray quasi-periodic oscillations in non-blazar AGN PKS 0521-36.</em> <a href="https://arxiv.org/abs/2312.12623" target="_blank" rel="noopener">arXiv:2312.12623</a></li>
+<li><strong>Chen J., Yu J., Huang W., Ding N.</strong>, 2024, <em>MNRAS</em>, 528, 6807. <em>Transient quasi-periodic oscillations in the gamma-ray light curves of bright blazars.</em> <a href="https://arxiv.org/abs/2401.10658" target="_blank" rel="noopener">arXiv:2401.10658</a> · <a href="https://doi.org/10.1093/mnras/stae416" target="_blank" rel="noopener">DOI 10.1093/mnras/stae416</a></li>
+<li><strong>Sharma A., Chaudhary S., Sarath A., Bose D.</strong>, 2025, preprint. <em>Exploring Year-timescale Gamma-ray Quasi-Periodic Oscillations in Blazars: Evidence for Supermassive Binary Black Holes Scenario.</em> <a href="https://arxiv.org/abs/2505.23697" target="_blank" rel="noopener">arXiv:2505.23697</a></li>
+<li><strong>Peñil P., Ajello M., Buson S., Domínguez A., Westernacher-Schneider J. R., Rico A., Adhikari S., Zrake J.</strong>, 2022, preprint. <em>Search for Periodic Variability in γ-ray Blazars Using Fermi-LAT.</em> <a href="https://arxiv.org/abs/2211.01894" target="_blank" rel="noopener">arXiv:2211.01894</a> — 24 hint blazars, 12 yr; PG 1553+113 global ≈1.8σ 唯一通过</li>
+<li><strong>Rico A., Domínguez A., Peñil P., Ajello M., Buson S., Adhikari S., Movahedifar M.</strong>, 2024, <em>A&amp;A</em> (in press). <em>Singular Spectrum Analysis of Fermi-LAT Blazar Light Curves: A Systematic Search for Periodicity and Trends in the Time Domain.</em> <a href="https://arxiv.org/abs/2412.05812" target="_blank" rel="noopener">arXiv:2412.05812</a> · <a href="https://doi.org/10.1051/0004-6361/202452495" target="_blank" rel="noopener">DOI 10.1051/0004-6361/202452495</a> — 494 源 SSA，46 candidates (25 new γ-ray)</li>
+<li><strong>Peñil P., Domínguez A., Buson S., Ajello M., Adhikari S., Rico A.</strong>, 2025, preprint (v2). <em>Extensive Analysis of γ-Ray Periodicity in Jetted AGN from the 4FGL Catalog Using Fermi-LAT Observations.</em> <a href="https://arxiv.org/abs/2509.14013" target="_blank" rel="noopener">arXiv:2509.14013</a> — 1492 jetted AGN (排除 24 hint 源)，9-method ensemble，<strong>0 global-significant QPO</strong></li>
+<li><strong>Cao Z. et al.</strong> (LHAASO Collaboration), 2024, <em>ApJS</em>, 271, 25. <em>The First LHAASO Catalog of Gamma-Ray Sources.</em> <a href="https://arxiv.org/abs/2305.17030" target="_blank" rel="noopener">arXiv:2305.17030</a> · <a href="https://doi.org/10.3847/1538-4365/acfd29" target="_blank" rel="noopener">DOI 10.3847/1538-4365/acfd29</a> — LHAASO catalog 比对节的数据源</li>
+</ol>
+<hr />
+<p><em>报告生成：2026-05-13 · 修订：2026-05-13 加入 LHAASO catalog 比对节 · 2026-05-14 补 Ren+22 13 源 + 全 catalog 位置交叉匹配复核 · </em><em>2026-05-14b 集成 Peñil 系列三篇（Peñil+22 + Rico+24 + Peñil+25），样本从 34 扩到 81 unique 源</em><em> · 数据来源：上述 11 篇 Fermi 论文 + 1LHAASO catalog（保存在 <code>/mnt/mydisk/server/projects/QPO/data/papers/</code>）· 数字与论文原表/正文对应；同一源在不同论文给出不一致周期时，原值保留 — 不在本报告中合并。</em></p>
+    </article>
+    <footer class="page-footer">
+      <span>更新于 2026-05-14</span>
+      <a href="https://github.com/Pluto235/any-reports" target="_blank" rel="noopener">View on GitHub →</a>
+    </footer>
+  </main>
+
+  <aside class="anchors" id="anchors">
+    <p class="anchors-title">本页章节</p>
+    <ul>
+      <li><a href="#tldr">TL;DR</a></li><li><a href="#主表--每篇论文一览">主表 — 每篇论文一览</a></li><li><a href="#完整-qpo-候选列表每行--一个源--一个-qpo-信号">完整 QPO 候选列表（每行 = 一个源 × 一个 QPO 信号）</a></li><li><a href="#peñil-系列三篇大样本扩样2026-05-14b-加入">Peñil 系列三篇大样本扩样（2026-05-14b 加入）</a></li><li><a href="#逐篇细读">逐篇细读</a></li><li><a href="#跨论文交叉">跨论文交叉</a></li><li><a href="#显著性-σ-分布">显著性 σ 分布</a></li><li><a href="#数据-binning-约定">数据 binning 约定</a></li><li><a href="#lhaaso-catalog-比对vhe-follow-up-候选评估">LHAASO catalog 比对（VHE follow-up 候选评估）</a></li><li><a href="#参考文献">参考文献</a></li>
+    </ul>
+  </aside>
+
+</div>
+
+<script>
+// Scroll-spy：高亮当前可视区的章节
+(function () {
+  const navLinks = document.querySelectorAll('.sidebar-nav a, .anchors a');
+  if (!navLinks.length) return;
+
+  const idToLinks = new Map();
+  navLinks.forEach(a => {
+    const id = decodeURIComponent((a.getAttribute('href') || '').replace(/^#/, ''));
+    if (!id) return;
+    if (!idToLinks.has(id)) idToLinks.set(id, []);
+    idToLinks.get(id).push(a);
+  });
+
+  const headings = Array.from(document.querySelectorAll('.content h1, .content h2, .content h3, .content h4'))
+    .filter(h => h.id && idToLinks.has(h.id));
+  if (!headings.length) return;
+
+  let current = null;
+  function setActive(id) {
+    if (current === id) return;
+    if (current && idToLinks.has(current)) {
+      idToLinks.get(current).forEach(a => a.classList.remove('active'));
+    }
+    current = id;
+    if (id && idToLinks.has(id)) {
+      idToLinks.get(id).forEach(a => {
+        a.classList.add('active');
+        // 滚动到 nav 中可视区
+        const sb = a.closest('.sidebar, .anchors');
+        if (sb) {
+          const ar = a.getBoundingClientRect();
+          const sr = sb.getBoundingClientRect();
+          if (ar.top < sr.top || ar.bottom > sr.bottom) {
+            a.scrollIntoView({ block: 'nearest' });
+          }
+        }
+      });
+    }
+  }
+
+  function update() {
+    const offset = 80;
+    let active = headings[0].id;
+    for (const h of headings) {
+      if (h.getBoundingClientRect().top - offset <= 0) {
+        active = h.id;
+      } else {
+        break;
+      }
+    }
+    setActive(active);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('hashchange', update);
+  update();
+
+  // 移动端：点 nav 后关掉抽屉
+  document.querySelectorAll('.sidebar-nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.querySelector('.sidebar')?.classList.remove('open');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

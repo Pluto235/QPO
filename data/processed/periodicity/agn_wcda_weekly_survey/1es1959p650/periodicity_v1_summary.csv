@@ -1,0 +1,2 @@
+source_id,source,series,n_points,mjd_min,mjd_max,median_dt_days,cwt_peak_period_days,cwt_peak_gws,wwz_peak_period_days,wwz_peak_power
+1es1959p650,1ES 1959+650,wcda_weekly,264,59284.33328206009,61125.16668842604,6.999996874903445,327.2513854272149,4.873766617860989,330.60614208267543,5.27415667699693

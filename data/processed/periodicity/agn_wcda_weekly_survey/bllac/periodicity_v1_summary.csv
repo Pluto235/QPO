@@ -1,0 +1,2 @@
+source_id,source,series,n_points,mjd_min,mjd_max,median_dt_days,cwt_peak_period_days,cwt_peak_gws,wwz_peak_period_days,wwz_peak_power
+bllac,BL Lacertae,wcda_weekly,264,59284.33328206009,61125.16668842604,6.999996874903445,583.0956795735117,2.7839399888988456,600.0,3.175227570144264

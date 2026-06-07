@@ -1,0 +1,18 @@
+[INFO] host=ETO
+[INFO] start=2026-05-28T00:43:19+08:00
+[INFO] cwd=/mnt/mydisk/server/projects/QPO
+[INFO] cpus=88
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/mkn421/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/mkn501/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/1es1959p650/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/1es1727p502/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/1es2344p514/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/bllac/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/ngc1275/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/m87/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/4c_p42d22/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/ic310/wcda_weekly_local_significance.csv
+[OK] wrote data/processed/periodicity/agn_wcda_weekly_survey/agn_wcda_weekly_significance_summary.csv
+[OK] wrote reports/agn_wcda_weekly_survey_report.md
+[OK] wrote reports/agn_wcda_weekly_survey_report.html
+[INFO] end=2026-05-28T01:13:25+08:00

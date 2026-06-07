@@ -1,0 +1,3 @@
+window,target,period_days,wwz_power,cycles,significance
+60200-60700,v2 flux global peak,111.01223581757506,17.174967536186866,4.495000000000001,deferred
+60200-60700,xgm poster reference 51.05 d nearest grid,49.92496248124061,16.697398167754418,9.995000000000001,deferred
