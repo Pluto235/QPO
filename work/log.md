@@ -3,6 +3,10 @@
 This file is the cumulative lab-style project log.
 After each completed work session, append a new entry using `devlog`; do not replace prior entries unless correcting factual mistakes.
 
+## 2026-06-12
+
+- Completed a cross-environment QPO sync audit across the local Mac checkout, ETO, and IHEP; added local MinerU paper extraction products, archived missing IHEP flux/forward-folding run notes under `docs/ihep/`, and recorded `work/cross_environment_sync_2026-06-12.md` as the final lightweight GitHub handoff manifest while excluding raw FITS/ROOT, simulation arrays, and paper PDFs.
+
 ## 2026-06-08
 
 - Synchronized the local QPO working tree toward GitHub handoff, including current AGN WCDA survey/v2 strict-flux pipelines, processed CSV products, reports, presentation artifacts, Slurm handoff scripts, and `.DS_Store` ignore hygiene while keeping heavy raw/binary analysis data excluded.
