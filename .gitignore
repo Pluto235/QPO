@@ -21,6 +21,8 @@ data/*
 data/processed/**
 !data/processed/**/
 !data/processed/**/*.csv
+!data/processed/periodicity/**/*cwt*.png
+!data/processed/periodicity/**/*wwz*.png
 
 # Nested repo metadata
 **/.git/

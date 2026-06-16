@@ -3,6 +3,10 @@
 This file is the cumulative lab-style project log.
 After each completed work session, append a new entry using `devlog`; do not replace prior entries unless correcting factual mistakes.
 
+## 2026-06-16
+
+- Added generated CWT/WWZ PNG result figures under `data/processed/periodicity/` to the lightweight Git handoff set for report writing, while keeping NPZ/HDF5/FITS/ROOT/PDF analysis artifacts excluded.
+
 ## 2026-06-12
 
 - Completed a cross-environment QPO sync audit across the local Mac checkout, ETO, and IHEP; added local MinerU paper extraction products, archived missing IHEP flux/forward-folding run notes under `docs/ihep/`, and recorded `work/cross_environment_sync_2026-06-12.md` as the final lightweight GitHub handoff manifest while excluding raw FITS/ROOT, simulation arrays, and paper PDFs.
