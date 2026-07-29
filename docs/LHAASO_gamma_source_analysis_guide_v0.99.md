@@ -21,10 +21,22 @@
 *    分析复杂的区域之前，可以先看看本文档最后的使用建议
 
 ## <font color=Orange>更新</font>
-*    一键更新：将脚本`Update.sh`拷贝到自己的目录下并运行后，source软件环境即可开始分析
+*    首次安装：将公共版本复制到自己的目录，不要直接依赖其他用户的`/home`私有目录：
+        ```bash
+        mkdir -p /home/lhaaso/<your_username>/software/Space_energy_Joint_fitting
+        cp -a /home/lhaaso/hushicong/public/v0.99 /home/lhaaso/<your_username>/software/Space_energy_Joint_fitting/v0.99
+        ```
+*    更新数据和响应配置：将`Update_DataConfigs.sh`复制到自己的`Src_Main`所在目录，并在该目录运行：
+        ```bash
+        cd /home/lhaaso/<your_username>/software/Space_energy_Joint_fitting/v0.99
+        cp /home/lhaaso/hushicong/public/v0.99/Update_DataConfigs.sh .
+        chmod u+x Update_DataConfigs.sh
+        ./Update_DataConfigs.sh
+        ```
 *    [更新历史](https://jupyter.ihep.ac.cn/s/4_80LHQ3J)
-*    更新日期：2025/08/10
+*    更新日期：2026/07/28
 *    更新内容
+        *    IHEP路径迁移：数据和响应文件改用`root://eos01.ihep.ac.cn//eos/user/h/hushicong/public/`，弥散模板改用`/home/lhaaso/hushicong/public/DGE_Template`。
         *    版本：<font color=red>v0.9 -> v0.99</font>
                 *    兼容v0.9版本的配置文件
         *    数据：
@@ -96,7 +108,7 @@
         *    无需修改程序的其他部分，在模型配置文件中加入新模型后可直接调用
 
 ### <font color=violet>可用的弥散模板</font>
-*    路径：    `/home/lhaaso/hushicong/Standard_prog_lib/Source_Analysis/Space_energy_Joint_fitting/DGE_Template`
+*    路径：    `/home/lhaaso/hushicong/public/DGE_Template`
 *    文件名
         | 描述 | 文件名 | 坐标系 |
         | :--------: | :--------: | :--------: |
@@ -131,7 +143,7 @@
 
 ## <font color=orange>使用说明</font>
 ### <font color=violet>程序路径</font>
-`/home/lhaaso/hushicong/Standard_prog_lib/Source_Analysis/Space_energy_Joint_fitting/v0.99`
+`/home/lhaaso/<your_username>/software/Space_energy_Joint_fitting/v0.99`
 ### <font color=violet>主程序</font>
 ```bash=
 ./Src_Main
@@ -150,11 +162,11 @@
         ```yaml=
         # 主程序Src_Main所在的目录
         # 将程序拷贝到自己目录下后，要把这里的'WorkDir'改成自己的目录！
-        WorkDir: /home/lhaaso/hushicong/Standard_prog_lib/Source_Analysis/Space_energy_Joint_fitting/v0.99
+        WorkDir: /home/lhaaso/<your_username>/software/Space_energy_Joint_fitting/v0.99
         
         # 数据配置文件在WorkDir/config/Data目录下，其中包括天图文件、响应文件、模拟数据文件。可根据自己需要选择相应时段或坐标系的配置文件
         DataConfig: 
-            WCDA: config/Data/WCDA/Cod/Data_20210305_20240731.yaml
+            WCDA: config/Data/WCDA/Cod/Data_20210305_20250731.yaml
             KM2A: config/Data/KM2A/Data_20210720_20240731.yaml
         
         # 天图的坐标系选择：0为赤道坐标系下的天图，1为银道坐标系下的。目前已不再提供银道坐标系下的天图，故只能选0
@@ -273,7 +285,7 @@
                 # 模板文件：可设置成'ISO'即各向同性模板，也可指定模板文件。指定模板文件可为ROOT文件或txt文件
                     # txt文件：须包含三列，ra(l)、dec(b)、density，且第一行应为X坐标的起点、bin数和bin宽，第二行应为Y坐标的起点、bin数和bin宽（可参考DGE_Template/gll_dust_process.txt）
                     # ROOT文件：须包含一个存有模板信息的TH2
-                Tempfile: /home/lhaaso/hushicong/Standard_prog_lib/Source_Analysis/Space_energy_Joint_fitting/DGE_Template/gll_dust_process_Eqm.root
+                Tempfile: /home/lhaaso/hushicong/public/DGE_Template/gll_dust_process_Eqm.root
                 # 模板histogram的名字
                     # 若模板文件为txt文件，则此处必须是hTXT
                     # 若模板文件为ROOT文件，则此处可为除hTXT之外的任何符合C++变量命名规范的字符串
@@ -374,7 +386,7 @@
                 Name: Mkn421
                 Epiv: 1
                 # EBL/CMB光深文件，文件中需要两列内容：能量(E/D):光深(Tau/D)。可参考config/Tutorial/Example4_ExtraGal/ParInit.yaml
-                GGAbs: /home/lhaaso/hushicong/Standard_prog_lib/Source_Analysis/Space_energy_Joint_fitting/EBL_Model/Saldana_lopez2021/TAU_z0.031.txt
+                GGAbs: /home/lhaaso/hushicong/public/EBL_Model/Saldana_lopez2021/TAU_z0.031.txt
                 SEDModel:
                     type: LP
                     F0: [29.03979, 0.00, 500.00, 0, 1.e-12]
