@@ -1,0 +1,42 @@
+data:
+  evfile : /mnt/mydisk/server/projects/QPO/data/raw/fermi_mkn501/ft1.txt
+  scfile : /mnt/mydisk/server/projects/QPO/data/raw/fermi_mkn501/ft2.txt
+
+binning:
+
+  roiwidth: 16.9          # match mkn421 convention: 16.9 deg x 16.9 deg
+  binsz: 0.1               # 0.1 deg pixel
+  enumbins: 37              # 37 log energy bins
+
+selection:
+
+  ra: 253.4738
+  dec: 39.7595
+  radius: 12.0          # match mkn421 convention: 12 deg circular selection
+  emin    : 100
+  emax    : 316227
+  zmax    : 90
+  evclass : 128       # P8R3 SOURCE
+  evtype  : 3
+  filter: "(DATA_QUAL>0)&&(LAT_CONFIG==1)"
+  tmin    : 239557417
+  tmax    : 804700000
+  target  : mkn501
+
+gtlike:
+
+  edisp : True
+  irfs : 'P8R3_SOURCE_V3'
+  edisp_disable : ['isodiff','galdiff']
+
+model:
+
+  src_roiwidth : 17.0   # model extended to ROI+5 deg
+  galdiff  : ['$FERMI_DIFFUSE_DIR/gll_iem_v07.fits']
+  isodiff: ['$FERMI_DIFFUSE_DIR/iso_P8R3_SOURCE_V3_v1.txt']
+  catalogs : ['4FGL']  # initialize model from 4FGL
+
+
+fileio:
+  outdir : /mnt/mydisk/server/projects/QPO/data/processed/fermi_month/mkn501
+  logfile : /mnt/mydisk/server/projects/QPO/data/processed/fermi_month/mkn501/fermipy.log
