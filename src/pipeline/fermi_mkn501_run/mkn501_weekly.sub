@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --job-name=mkn501_fermi_week
+#SBATCH --partition=main
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=16
+#SBATCH --time=7-00:00:00
+#SBATCH --output=/mnt/mydisk/server/projects/QPO/src/pipeline/fermi_mkn501_run/slurm_%j.out
+#SBATCH --error=/mnt/mydisk/server/projects/QPO/src/pipeline/fermi_mkn501_run/slurm_%j.err
+
+source ~/anaconda3/bin/activate fermipy
+
+echo "=== Job started at $(date -Is) on $(hostname) ==="
+echo "CALDB=$CALDB"
+echo "FERMI_DIFFUSE_DIR=$FERMI_DIFFUSE_DIR"
+python -c "import fermipy; print('fermipy version', fermipy.__version__)"
+
+cd /mnt/mydisk/server/projects/QPO/src/pipeline/fermi_mkn501_run
+python run_mkn501_weekly.py
+
+echo "=== Job finished at $(date -Is) ==="
