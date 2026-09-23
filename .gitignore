@@ -39,6 +39,17 @@ archive/legacy_outputs/
 archive/notebooks/
 archive/periodicity_v1_unscoped_*/
 
+# Toolkit branch: keep local research material out of the shared checkout.
+/reports/
+/notebooks/
+/prestation/
+/qposim/
+/archive/
+/work/*
+!/work/slurm/
+/work/slurm/*
+!/work/slurm/qpo_toolkit.sbatch
+
 # Emmanoulopoulos local artifacts
 src/methods/emmanoulopoulos/**/*.pyc
 
