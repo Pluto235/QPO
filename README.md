@@ -22,4 +22,16 @@ Mrk 421 blazar QPO analysis workspace with lightweight project structure.
 - `python src/pipeline/wcda_weekly.py --output data/simulations/wcda/wcda_weekly_sims_full.h5 --nsim 10000 --ncores 48 --chunk 256 --overwrite`
 - `pytest -q src/methods/emmanoulopoulos/emmanoulopoulos/test`
 
+## Reusable QPO toolkit
+
+For a standard `time,flux,flux_err` CSV, run the complete CWT/WWZ workflow:
+
+```bash
+PYTHONPATH=src python -m qpo.cli analyze input.csv --outdir results/run
+```
+
+See [`docs/qpo_toolkit_quickstart.md`](docs/qpo_toolkit_quickstart.md) for the
+input contract, significance interpretation, and output files. Examples live
+under `examples/`.
+
 Legacy compatibility directories have been archived under `archive/compat/`.
