@@ -1,0 +1,42 @@
+{
+  "root": "/mnt/newdisk/shijie/QPO",
+  "FERMI_DIFFUSE_DIR": null,
+  "paths": [
+    {
+      "relative": "data/config",
+      "exists": false
+    },
+    {
+      "relative": "data/raw/fermi/ft1.txt",
+      "exists": false
+    },
+    {
+      "relative": "data/raw/fermi/ft2.txt",
+      "exists": false
+    },
+    {
+      "relative": "data/raw/fermi_mkn501",
+      "exists": false
+    },
+    {
+      "relative": "data/raw/fermi_wcda_20260818",
+      "exists": false
+    },
+    {
+      "relative": "data/processed/fermi_month",
+      "exists": false
+    },
+    {
+      "relative": "data/simulations/wcda",
+      "exists": false
+    },
+    {
+      "relative": "MakeLC",
+      "exists": false
+    },
+    {
+      "relative": "data/processed/fermi_week/Mrk501_Fermi_weekly_TSge9_MJD.csv",
+      "exists": false
+    }
+  ]
+}

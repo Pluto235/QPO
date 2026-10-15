@@ -1,0 +1,21 @@
+*** Starting Weighted Wavelet Z-transform ***
+
+Pseudo sample frequency (median) is  0.5
+largest tau window is  2.921
+64.49 seconds has passed to complete Weighted Wavelet Z-transform 
+
+Parity passed: observed max error=3.38e-13; null=3.16e-13
+Surrogates 100/1000; elapsed=74.6s
+Surrogates 200/1000; elapsed=82.5s
+Surrogates 300/1000; elapsed=90.5s
+Surrogates 400/1000; elapsed=98.4s
+Surrogates 500/1000; elapsed=106.3s
+Surrogates 600/1000; elapsed=114.2s
+Surrogates 700/1000; elapsed=122.2s
+Surrogates 800/1000; elapsed=130.1s
+Surrogates 900/1000; elapsed=138.0s
+Surrogates 1000/1000; elapsed=145.9s
+ period_days  n_surrogates  local_fap  global_fap
+   50.800582          1000   0.301698    0.972028
+   96.408840          1000   0.137862    0.478521
+  147.257384          1000   0.159840    0.379620

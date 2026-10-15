@@ -1,0 +1,68 @@
+{
+  "schema_version": "official_qpo_ihep_handoff_v1",
+  "created_at": "2026-08-04T18:00:00+08:00",
+  "source_host": "lxlogin007.ihep.ac.cn",
+  "source_root": "/home/lhaaso/liushijie/QPO",
+  "destination_root": "/mnt/mydisk/server/projects/QPO",
+  "transfer_method": "rsync over non-interactive SSH with checksum verification",
+  "transfer_state": "verified_lightweight_snapshot",
+  "excluded": [
+    "official ROOT sky maps",
+    "HTCondor job directories",
+    "bulk logs",
+    "simulation arrays"
+  ],
+  "collections": [
+    {
+      "source": "/home/lhaaso/hushicong/public/v1.0/config/Data/WCDA/Cod/LC",
+      "destination": "data/processed/official_qpo/fixtures/official_lc_configs",
+      "contents": "official 2/8/32-day YAML DataConfigs only",
+      "counts": {"2Days": 803, "8Days": 200, "32Days": 50, "total": 1053},
+      "total_bytes": 1046670,
+      "master_config_source": "/home/lhaaso/hushicong/public/v1.0/config/Data/WCDA/Cod/LCData_20210305_20250731.yaml",
+      "master_config_sha256": "3d0d261c5e014dbc43d737fb805c2b7052e20bfb004fb4fb63e980272b8b2a7b",
+      "local_collection_sha256": "bc8eaba6cea30cd0a79366fc26ff42a01a41792f60aba480e27b5b3e4e60130e",
+      "verification": "rsync --checksum transfer followed by full local parser validation"
+    }
+  ],
+  "remote_prepared_jobs": [
+    {
+      "purpose": "full-interval source-specific spectral fits for models unresolved by the public 2LHAASO catalog",
+      "host": "lxlogin007.ihep.ac.cn",
+      "work_root": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits",
+      "manifest": "spectral_fit_manifest.csv",
+      "manifest_sha256": "500c5eb8fc88f33309ca274c39f4065e619539e48fcc45898289715e281a1424",
+      "queue_args_sha256": "3ea2abd6c4474e9d5e9e2883d53e96c45201db7f36f420f8541b0fc10fbfea45",
+      "expected_jobs": 3,
+      "sources": ["bllac", "ngc1275", "4c_p42d22"],
+      "submit_validation": "condor_submit -dry-run parsed exactly 3 jobs with no warning",
+      "cluster": "80164595",
+      "schedd": "scheduler@schedd06.ihep.ac.cn",
+      "state_at_2026-08-04T18:27:00+08:00": "3 idle, 0 held, 0 completed"
+    },
+    {
+      "purpose": "full-interval fits required because public 2LHAASO PLC catalog spectra are not supported public-v1.0 Src_Main model tags",
+      "host": "lxlogin007.ihep.ac.cn",
+      "work_root": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_plc",
+      "manifest": "spectral_fit_manifest.csv",
+      "manifest_sha256": "1f17c823c720342b024705865320c13d3c6d3734a74d12a3bc15105c5d6c7d7d",
+      "queue_args_sha256": "ffa9ed72070ba1549f0b6907065399931d5e1ad73bde66f8854f6fe48db439b7",
+      "expected_jobs": 6,
+      "sources": ["mkn421", "mkn501", "1es1959p650", "1es1727p502", "m87", "ic310"],
+      "submit_validation": "condor_submit -dry-run parsed exactly 6 jobs with no warning",
+      "cluster": "80164665",
+      "schedd": "scheduler@schedd06.ihep.ac.cn",
+      "state_at_2026-08-04T18:34:00+08:00": "6 idle, 0 held, 0 completed"
+    }
+  ],
+  "artifacts": [
+    {"source": "MakeLC/standard_flux_lc.py", "destination": "archive/ihep_official_lc_snapshot/MakeLC/standard_flux_lc.py", "sha256": "a1627a6c1cd79adc2739f2ab52f0c6fbc9695c114f06d44e9d3df0d5793baa36", "schema": "Python source"},
+    {"source": "docs/official_daily_qpo_rebuild_status.md", "destination": "archive/ihep_official_lc_snapshot/docs/official_daily_qpo_rebuild_status.md", "sha256": "9821a9da405938d39e01b8f8477ffc8187188a74e7b366b315771f12e92f5da4", "schema": "Markdown status report"},
+    {"source": "JOBs_official_lc_smoke/summary.json", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_lc/summary.json", "sha256": "2826590d24f7221561dc641f3cad5150143b825075a9e69f516288a2bf6003b6", "schema": "JSON smoke summary"},
+    {"source": "JOBs_official_lc_smoke/fit_jobs.csv", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_lc/fit_jobs.csv", "sha256": "8dfdaba9a14535f96a04a8ecacc7a668930340e4b68015c81474faf1e1658449", "schema": "CSV official LC fit manifest"},
+    {"source": "results/official_lc_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_lc/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv", "sha256": "01c1a5bb1714c4de6445be87c44f367227fd8d18e52a69b15ec04fb3ede95608", "schema": "CSV point-estimate smoke output; not a profile likelihood"},
+    {"source": "JOBs_official_daily_smoke/summary.json", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_daily/summary.json", "sha256": "a7a123ebe4ba3af66b74f31c6fad20353e726095ceb47f885ab5d9a39b448402", "schema": "JSON daily smoke summary"},
+    {"source": "JOBs_official_daily_smoke/smoke_validation.json", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_daily/smoke_validation.json", "sha256": "37b75a210a1ea8fef2bfd3f419ea3e894f3425cc7de81891ce0d67ef5cc7d803", "schema": "JSON smoke validation"},
+    {"source": "results/official_daily_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv", "destination": "data/processed/official_qpo/fixtures/ihep_smoke/official_daily/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv", "sha256": "a674bde64c0c148178caf6585344cbe1f7b4a13a9c77d3ff50f871622fa50e6b", "schema": "CSV daily point-estimate smoke output; not a profile likelihood"}
+  ]
+}

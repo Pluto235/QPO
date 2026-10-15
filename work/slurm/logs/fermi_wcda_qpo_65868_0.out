@@ -1,0 +1,10 @@
+[INFO] host=ETO task=0 source=mkn421 cadence=2day start=2026-08-25T12:48:02+08:00
+*** Starting Weighted Wavelet Z-transform ***
+
+Pseudo sample frequency (median) is  0.5
+largest tau window is  20.304
+28.07 seconds has passed to complete Weighted Wavelet Z-transform 
+
+  [2day/Mrk 421] WWZ AR(1) surrogates: 1000 across 32 workers
+[OK] mkn421/2day: analysis=785/803, candidates=5, policy=all-successful
+[INFO] end=2026-08-25T13:28:20+08:00

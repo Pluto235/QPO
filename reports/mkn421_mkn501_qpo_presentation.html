@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LHAASO-WCDA QPO Search: Mrk 421 and Mrk 501</title>
+  <script>
+    function switchDeckPanel(button){
+      var switcher=button.closest('[data-switcher]');
+      var slide=switcher.closest('.slide');
+      switcher.querySelectorAll('button').forEach(function(item){item.classList.toggle('is-active',item===button);});
+      slide.querySelectorAll('.toggle-panel').forEach(function(panel){panel.classList.toggle('is-active',panel.id===button.dataset.target);});
+    }
+  </script>
+  <link rel="stylesheet" href="/Users/luoji/.agents/skills/html-ppt/assets/fonts.css">
+  <link rel="stylesheet" href="/Users/luoji/.agents/skills/html-ppt/assets/base.css">
+  <link rel="stylesheet" href="/Users/luoji/.agents/skills/html-ppt/assets/animations/animations.css">
+  <link rel="stylesheet" href="/Users/luoji/.agents/skills/html-ppt/assets/themes/academic-paper.css">
+  <style>
+    .slide{padding:58px 84px 68px;justify-content:flex-start}.slide.cover,.slide.section-slide{justify-content:center}
+    .h1{font-size:clamp(52px,5vw,78px);max-width:15ch}.h2{font-size:clamp(36px,3.5vw,54px);margin-bottom:8px}.lede{font-size:21px;max-width:72ch}.kicker{margin:0 0 8px}
+    .deck-footer{font-family:var(--font-sans);font-size:13px}.page-no{font-weight:700;color:var(--accent);min-width:52px;text-align:right}.title-rule{width:100%;height:2px;background:var(--text-1);margin:20px 0 26px}
+    .figure-stage{display:flex;flex-direction:column;flex:1;min-height:0;margin-top:12px}.figure-stage img{width:100%;height:100%;max-height:68vh;object-fit:contain;border:1px solid var(--border-strong);background:var(--surface)}.figure-stage figcaption{font:14px/1.35 var(--font-sans);color:var(--text-2);margin-top:7px}
+    .switcher{display:flex;gap:8px;align-items:center;margin:8px 0 2px;font-family:var(--font-sans)}.switcher button{appearance:none;border:1px solid var(--border-strong);background:var(--surface);color:var(--text-2);padding:7px 15px;font:600 13px/1 var(--font-sans);cursor:pointer}.switcher button:hover,.switcher button:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}.switcher button.is-active{background:var(--accent);border-color:var(--accent);color:var(--surface)}.switcher .hint{margin-left:auto;color:var(--text-3);font-size:12px}
+    .toggle-panel{display:none;flex:1;min-height:0}.toggle-panel.is-active{display:flex;flex-direction:column}.pair{display:grid;grid-template-columns:1.28fr .72fr;gap:16px;flex:1;min-height:0}.pair img{width:100%;height:100%;max-height:57vh;object-fit:contain;border:1px solid var(--border);background:var(--surface)}.pair figure{margin:0;display:flex;flex-direction:column;min-width:0;min-height:0}.pair figcaption{font:13px/1.25 var(--font-sans);color:var(--text-2);margin-top:5px}
+    .callout{border-left:4px solid var(--accent);background:var(--surface-2);padding:12px 17px;font-size:17px;line-height:1.4;margin-top:10px}.callout.warn{border-left-color:var(--accent-3)}
+    .metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:24px}.metric{border-top:3px solid var(--accent);padding:18px 20px;background:var(--surface)}.metric strong{display:block;font:700 36px/1.05 var(--font-display);margin:5px 0 9px}.metric p{margin:0;color:var(--text-2);font-size:16px;line-height:1.4}
+    .method-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:18px}.method-grid .card{padding:24px 26px}.method-grid p{font-size:18px;line-height:1.5}
+    .significance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.significance-grid .card{padding:18px 20px}.significance-grid h3{font-size:22px;margin-bottom:8px}.significance-grid p{font-size:16px;line-height:1.42;margin:0;color:var(--text-2)}.significance-grid .arrow{font:700 28px/1 var(--font-display);color:var(--accent);text-align:center;align-self:center}.significance-grid .wide{grid-column:1 / -1;border-left:4px solid var(--accent-3);background:var(--surface-2);padding:13px 18px;font-size:17px;line-height:1.4}
+    .appendix-layout{display:flex;flex:1;min-height:0;margin-top:8px}.appendix-layout figure{margin:0;min-height:0;width:100%;display:flex;flex-direction:column}.appendix-layout img{width:100%;height:100%;max-height:72vh;object-fit:contain;border:1px solid var(--border-strong);background:var(--surface)}.appendix-layout figcaption{font:12px/1.2 var(--font-sans);color:var(--text-2);margin-top:3px}
+    .appendix-meta{position:absolute;right:84px;top:66px;font:13px/1.35 var(--font-sans);color:var(--text-2);text-align:right}.source-index{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}.source-index div{border-top:2px solid var(--accent);padding:12px 10px;font-size:18px}.small{font:14px/1.4 var(--font-sans);color:var(--text-2)}.refs{font:16px/1.55 var(--font-sans);color:var(--text-2)}
+    @media(max-width:900px){.slide{padding:44px 34px 60px}.pair,.method-grid,.metric-grid,.significance-grid{grid-template-columns:1fr}.appendix-meta{right:34px}.switcher .hint{display:none}}
+  </style>
+</head>
+<body>
+<div class="deck">
+  <section class="slide cover" data-title="Cover">
+    <p class="kicker">Status presentation · 2026-07-06 analysis snapshot</p><div class="title-rule"></div>
+    <h1 class="h1" data-anim="fade-up">LHAASO-WCDA Flux Periodicity Search</h1><p class="lede">Mrk 421, Mrk 501, and an eight-source control sample</p>
+    <div class="row wrap mt-l"><span class="pill pill-accent">strict flux</span><span class="pill">daily + weekly bins</span><span class="pill">CWT + WWZ</span><span class="pill">AR(1) red-noise null</span></div>
+    <div class="deck-footer"><span>QPO working group · advisor and collaborator review</span><span class="page-no">1 / 18</span></div>
+    <div class="notes">This presentation follows a source-first order. It summarizes the existing report and does not introduce a new analysis.</div>
+  </section>
+
+  <section class="slide" data-title="Data and methods">
+    <p class="kicker">Analysis framework</p><h2 class="h2">Strict flux products and two complementary time-frequency tests</h2>
+    <div class="method-grid"><div class="card card-accent"><h3>Data</h3><p>Weekly: 229 bins per source, 2021-03-08 to 2025-07-27.<br>Daily: 1570 / 1560 bins for Mrk 421 / Mrk 501, through 2025-07-31.</p><p class="small">Forward-folded normalization N0 at 3 TeV; rows with N0_err &gt; 5× the cadence-specific median are removed.</p></div><div class="card card-accent"><h3>Periodicity tests</h3><p><strong>CWT:</strong> Morlet global wavelet spectrum against analytic AR(1) 95% / 99% references.<br><strong>WWZ:</strong> 1000 fitted-AR(1) surrogates with local and global false-alarm probabilities.</p><p class="small">No source × cadence × method trial correction is applied in this snapshot.</p></div></div>
+    <div class="callout warn"><strong>Interpretation rule:</strong> a pointwise or local 99% crossing is not, by itself, a publication-level QPO detection.</div>
+    <div class="deck-footer"><span>50–600 day search range for weekly analyses</span><span class="page-no">2 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="Rigorous significance workflow">
+    <p class="kicker">Statistical interpretation</p><h2 class="h2">A QPO claim must survive four increasingly strict tests</h2>
+    <div class="significance-grid">
+      <div class="card card-accent"><h3>1 · Red-noise null</h3><p>Fit an AR(1) process to the observed light curve, preserving its lag-1 correlation, mean, variance, sampling, and measurement errors.</p></div>
+      <div class="card card-accent"><h3>2 · Pointwise threshold</h3><p>At a fixed, pre-specified period, compare the observed CWT/WWZ power with the AR(1) 95% and 99% reference curves.</p></div>
+      <div class="card card-accent"><h3>3 · Search-wide FAP</h3><p>For WWZ, 1000 AR(1) surrogate spectra define the probability that a peak this strong appears anywhere in the 50–600 d search.</p></div>
+      <div class="wide"><strong>4 · Claim-level robustness:</strong> apply the look-elsewhere correction across sources, cadences, and methods; require an independent cadence or future-data recovery; and reject boundary peaks or features spanning too few cycles. A local 99% crossing alone is evidence for follow-up, not a detection.</div>
+    </div>
+    <div class="callout warn"><strong>Decision rule used here:</strong> quote pointwise references and WWZ global FAP separately; retain all current signals as candidates/diagnostics until the full trial budget and independent confirmation are satisfied.</div>
+    <div class="deck-footer"><span>Pointwise significance ≠ global discovery significance</span><span class="page-no">3 / 18</span></div>
+    <div class="notes">Explain the hierarchy: AR(1) handles red noise, pointwise curves test a fixed period, global FAP handles the scanned period range, and a publication-level claim additionally needs the full trial budget and independent recovery.</div>
+  </section>
+
+  <section class="slide" data-title="Mrk 421 light curves">
+    <p class="kicker">Mrk 421 · light curve</p><h2 class="h2">Daily and weekly WCDA flux coverage</h2>
+    <div class="switcher" data-switcher><button class="is-active" data-target="m421-lc-d" onclick="switchDeckPanel(this)">Daily bins</button><button data-target="m421-lc-w" onclick="switchDeckPanel(this)">Weekly bins</button><span class="hint">Click to switch cadence</span></div>
+    <div id="m421-lc-d" class="toggle-panel is-active"><figure class="figure-stage"><img src="assets/status_report_figures/mkn421_daily_lc_ts.png" alt="Mrk 421 daily light curve and TS"><figcaption>Daily strict-flux light curve and per-bin TS: 1570 retained points, MJD 59281.5–60887.5.</figcaption></figure></div>
+    <div id="m421-lc-w" class="toggle-panel"><figure class="figure-stage"><img src="assets/status_report_figures/mkn421_weekly_lc_ts.png" alt="Mrk 421 weekly light curve and TS"><figcaption>Weekly strict-flux light curve and per-bin TS: median TS = 137.90; TS ≥ 9 in 218/229 weeks.</figcaption></figure></div>
+    <div class="deck-footer"><span>Mrk 421 · timing-grade source</span><span class="page-no">4 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="Mrk 421 periodicity">
+    <p class="kicker">Mrk 421 · daily periodicity</p><h2 class="h2">CWT and WWZ agree on a weak 128–132 day feature</h2>
+    <div class="switcher" data-switcher><button class="is-active" data-target="m421-cwt" onclick="switchDeckPanel(this)">CWT</button><button data-target="m421-wwz" onclick="switchDeckPanel(this)">WWZ</button><span class="hint">Method switch updates both panels</span></div>
+    <div id="m421-cwt" class="toggle-panel is-active"><div class="pair"><figure><img src="assets/status_report_figures/mkn421_daily_cwt_summary.png" alt="Mrk 421 daily CWT"><figcaption>CWT time-period map and global wavelet spectrum.</figcaption></figure><figure><img src="assets/status_report_figures/mkn421_daily_cwt_significance.png" alt="Mrk 421 daily CWT significance"><figcaption>132.2 d: observed 15.95 vs 95% reference 16.82; below threshold.</figcaption></figure></div></div>
+    <div id="m421-wwz" class="toggle-panel"><div class="pair"><figure><img src="assets/status_report_figures/mkn421_daily_wwz_summary.png" alt="Mrk 421 daily WWZ"><figcaption>WWZ time-period map and global spectrum.</figcaption></figure><figure><img src="assets/status_report_figures/mkn421_daily_wwz_significance.png" alt="Mrk 421 daily WWZ significance"><figcaption>128.2 d: local FAP 6.1%; global FAP 19.5%; a borderline local-only hint.</figcaption></figure></div></div>
+    <div class="callout">Weekly binning gives no significant counterpart; the daily feature is therefore cadence-sensitive.</div>
+    <div class="deck-footer"><span>Mrk 421 · no robust QPO detection</span><span class="page-no">5 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="Mrk 421 xgm window">
+    <p class="kicker">Mrk 421 · xgm poster window reproduction</p><h2 class="h2">MJD 60200–60700: the ≈51 day feature is reproducible but not significant</h2>
+    <div class="switcher" data-switcher><button class="is-active" data-target="xgm-cwt" onclick="switchDeckPanel(this)">CWT</button><button data-target="xgm-wwz" onclick="switchDeckPanel(this)">WWZ</button><span class="hint">Strict N0 flux · identical AR(1) framework</span></div>
+    <div id="xgm-cwt" class="toggle-panel is-active"><div class="pair"><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_quicklook.png" alt="xgm CWT reproduction"><figcaption>CWT quick look in the original poster window.</figcaption></figure><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_cwt_significance.png" alt="xgm CWT significance"><figcaption>≈51 d: local FAP 33.2%; global FAP 95.4%.</figcaption></figure></div></div>
+    <div id="xgm-wwz" class="toggle-panel"><div class="pair"><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_quicklook_with_sig.png" alt="xgm WWZ reproduction"><figcaption>WWZ quick look with the 51.05 d poster reference.</figcaption></figure><figure><img src="../data/processed/periodicity/periodicity_v2/xgm_poster_repro/mkn421/mkn421_daily_flux_60200_60700_wwz_significance.png" alt="xgm WWZ significance"><figcaption>49.92 d: local FAP 10.1%; global FAP 74.6%.</figcaption></figure></div></div>
+    <div class="callout warn">The flux-based AR(1) tests do not confirm the poster's visual &gt;99% reading.</div>
+    <div class="deck-footer"><span>Mrk 421 · xgm window cross-check</span><span class="page-no">6 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="Mrk 501 light curves">
+    <p class="kicker">Mrk 501 · light curve</p><h2 class="h2">Daily and weekly WCDA flux coverage</h2>
+    <div class="switcher" data-switcher><button class="is-active" data-target="m501-lc-d" onclick="switchDeckPanel(this)">Daily bins</button><button data-target="m501-lc-w" onclick="switchDeckPanel(this)">Weekly bins</button><span class="hint">Click to switch cadence</span></div>
+    <div id="m501-lc-d" class="toggle-panel is-active"><figure class="figure-stage"><img src="assets/status_report_figures/mkn501_daily_lc_ts.png" alt="Mrk 501 daily light curve and TS"><figcaption>Daily strict-flux light curve and per-bin TS: 1560 retained points, MJD 59282.5–60887.5.</figcaption></figure></div>
+    <div id="m501-lc-w" class="toggle-panel"><figure class="figure-stage"><img src="assets/status_report_figures/mkn501_weekly_lc_ts.png" alt="Mrk 501 weekly light curve and TS"><figcaption>Weekly strict-flux light curve and per-bin TS: median TS = 22.27; TS ≥ 9 in 165/229 weeks.</figcaption></figure></div>
+    <div class="deck-footer"><span>Mrk 501 · timing-grade source</span><span class="page-no">7 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="Mrk 501 periodicity">
+    <p class="kicker">Mrk 501 · daily periodicity</p><h2 class="h2">The strongest candidate: 152–157 days in both methods</h2>
+    <div class="switcher" data-switcher><button class="is-active" data-target="m501-cwt" onclick="switchDeckPanel(this)">CWT</button><button data-target="m501-wwz" onclick="switchDeckPanel(this)">WWZ</button><span class="hint">Method switch updates both panels</span></div>
+    <div id="m501-cwt" class="toggle-panel is-active"><div class="pair"><figure><img src="assets/status_report_figures/mkn501_daily_cwt_summary.png" alt="Mrk 501 daily CWT"><figcaption>CWT time-period map and global wavelet spectrum.</figcaption></figure><figure><img src="assets/status_report_figures/mkn501_daily_cwt_significance.png" alt="Mrk 501 daily CWT significance"><figcaption>157.2 d: above both AR(1) 95% and 99% analytic references.</figcaption></figure></div></div>
+    <div id="m501-wwz" class="toggle-panel"><div class="pair"><figure><img src="assets/status_report_figures/mkn501_daily_wwz_summary.png" alt="Mrk 501 daily WWZ"><figcaption>WWZ time-period map and global spectrum.</figcaption></figure><figure><img src="assets/status_report_figures/mkn501_daily_wwz_significance.png" alt="Mrk 501 daily WWZ significance"><figcaption>152.5 d: local FAP 0.30%; global FAP 1.00% from 1000 surrogates.</figcaption></figure></div></div>
+    <div class="callout warn">The candidate is absent in weekly binning and has not been corrected across sources, cadences, and methods.</div>
+    <div class="deck-footer"><span>Mrk 501 · strongest current candidate</span><span class="page-no">8 / 18</span></div>
+  </section>
+
+  <section class="slide section-slide" data-title="Main conclusions">
+    <p class="kicker">Main conclusions</p><h2 class="h2">One candidate warrants follow-up; neither source supports a current QPO claim</h2>
+    <div class="metric-grid"><div class="metric"><span>Mrk 421</span><strong>No robust detection</strong><p>The ≈128–132 d feature is local-only / sub-threshold; the ≈51 d xgm feature fails the same red-noise tests.</p></div><div class="metric"><span>Mrk 501</span><strong>152–157 d candidate</strong><p>Daily CWT and WWZ both cross 99% references, but weekly binning does not reproduce it.</p></div><div class="metric"><span>Next statistical gate</span><strong>Pre-register + extend</strong><p>Test the fixed target band on new WCDA coverage and apply a unified look-elsewhere correction.</p></div></div>
+    <p class="refs mt-l">Neither WCDA result reproduces the ≈300 d (Mrk 421) or ≈326 d (Mrk 501) GeV periods reported by Ren et al. (2022).</p>
+    <div class="deck-footer"><span>Primary-source synthesis</span><span class="page-no">9 / 18</span></div>
+  </section>
+
+  <section class="slide section-slide" data-title="Appendix overview">
+    <p class="kicker">Appendix · eight-source control sample</p><h2 class="h2">One source per page: light curve, periodicity, and significance</h2>
+    <div class="source-index"><div>1ES 1959+650</div><div>1ES 1727+502</div><div>1ES 2344+514</div><div>BL Lacertae</div><div>NGC 1275</div><div>M 87</div><div>4C +42.22</div><div>IC 310</div></div>
+    <div class="callout warn mt-l">All eight are Tier C / diagnostic-only in the current strict-flux survey. Nominal peaks must not be interpreted without accounting for low detection quality and survey-level trials.</div>
+    <div class="deck-footer"><span>Control-source appendix</span><span class="page-no">10 / 18</span></div>
+  </section>
+
+  <section class="slide" data-title="1ES 1959+650 appendix">
+    <p class="kicker">Appendix A1 · weekly strict flux</p><h2 class="h2">1ES 1959+650</h2><div class="appendix-meta">228 retained bins · Tier C<br>CWT 308.9 d · WWZ 309.3 d<br>WWZ global FAP 64.4%</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/1es1959p650/wcda_strict_flux_weekly_periodicity_significance.png" alt="1ES 1959+650 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">11 / 18</span></div>
+  </section>
+  <section class="slide" data-title="1ES 1727+502 appendix">
+    <p class="kicker">Appendix A2 · weekly strict flux</p><h2 class="h2">1ES 1727+502</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 583.1 d · WWZ 505.1 d<br>WWZ global FAP 25.7%; &lt;4 cycles</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/1es1727p502/wcda_strict_flux_weekly_periodicity_significance.png" alt="1ES 1727+502 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">12 / 18</span></div>
+  </section>
+  <section class="slide" data-title="1ES 2344+514 appendix">
+    <p class="kicker">Appendix A3 · weekly strict flux</p><h2 class="h2">1ES 2344+514</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 367.3 d crosses 95%, not 99%<br>WWZ 342.5 d: global FAP 17.9%</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/1es2344p514/wcda_strict_flux_weekly_periodicity_significance.png" alt="1ES 2344+514 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">13 / 18</span></div>
+  </section>
+  <section class="slide" data-title="BL Lacertae appendix">
+    <p class="kicker">Appendix A4 · weekly strict flux</p><h2 class="h2">BL Lacertae</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 308.9 d crosses 95%, not 99%<br>WWZ 309.3 d: global FAP 11.6%</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/bllac/wcda_strict_flux_weekly_periodicity_significance.png" alt="BL Lac light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">14 / 18</span></div>
+  </section>
+  <section class="slide" data-title="NGC 1275 appendix">
+    <p class="kicker">Appendix A5 · weekly strict flux</p><h2 class="h2">NGC 1275</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 436.8 d and WWZ 505.1 d cross 99%<br>WWZ global FAP 2.9%; &lt;4 cycles</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/ngc1275/wcda_strict_flux_weekly_periodicity_significance.png" alt="NGC 1275 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Nominal candidate, but diagnostic-only data quality</span><span class="page-no">15 / 18</span></div>
+  </section>
+  <section class="slide" data-title="M 87 appendix">
+    <p class="kicker">Appendix A6 · weekly strict flux</p><h2 class="h2">M 87</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 367.3 d · WWZ 383.7 d<br>WWZ global FAP 87.0%</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/m87/wcda_strict_flux_weekly_periodicity_significance.png" alt="M 87 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">16 / 18</span></div>
+  </section>
+  <section class="slide" data-title="4C +42.22 appendix">
+    <p class="kicker">Appendix A7 · weekly strict flux</p><h2 class="h2">4C +42.22</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 145.8 d · WWZ 149.7 d<br>WWZ global FAP 100.0%</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/4c_p42d22/wcda_strict_flux_weekly_periodicity_significance.png" alt="4C +42.22 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references on both global spectra.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · no trial correction</span><span class="page-no">17 / 18</span></div>
+  </section>
+  <section class="slide" data-title="IC 310 appendix">
+    <p class="kicker">Appendix A8 · weekly strict flux</p><h2 class="h2">IC 310</h2><div class="appendix-meta">229 bins · Tier C<br>CWT 583.1 d · WWZ rises to 600.0 d boundary<br>Pointwise AR(1) references shown</div>
+    <div class="appendix-layout"><figure><img src="../data/processed/periodicity/agn_wcda_weekly_flux_survey/ic310/wcda_strict_flux_weekly_periodicity_significance.png" alt="IC 310 light curve, CWT, WWZ, and AR(1) significance"><figcaption>Flux, CWT and WWZ maps, and 95% / 99% AR(1) references; no interior WWZ peak is defined.</figcaption></figure></div><div class="deck-footer"><span>Diagnostic only · boundary maximum, no candidate FAP</span><span class="page-no">18 / 18</span></div>
+  </section>
+</div>
+<script src="/Users/luoji/.agents/skills/html-ppt/assets/runtime.js"></script>
+</body>
+</html>

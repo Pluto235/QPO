@@ -472,11 +472,11 @@ def _plot_wcda_counts(path: Path, name: str, wcda_counts: pd.DataFrame) -> None:
     ax_totals.set_ylabel("Counts")
     ax_totals.grid(True, alpha=0.25)
 
-    fig.savefig(path, dpi=180)
+    fig.savefig(path, dpi=240)
     plt.close(fig)
 
 
-def _plot_cwt(path: Path, name: str, t_mjd: np.ndarray, flux: np.ndarray, flux_err: np.ndarray, result: dict) -> None:
+def _plot_cwt(path: Path, name: str, t_mjd: np.ndarray, flux: np.ndarray, flux_err: np.ndarray, result: dict, *, xlim: tuple[float, float] | None = None) -> None:
     period = result["period"]
     mask_period = result["mask_period"]
     power = result["power"]
@@ -498,6 +498,8 @@ def _plot_cwt(path: Path, name: str, t_mjd: np.ndarray, flux: np.ndarray, flux_e
     ax_lc.set_title(name)
     ax_lc.set_xlabel("MJD")
     ax_lc.set_ylabel("Flux")
+    if xlim is not None:
+        ax_lc.set_xlim(*xlim)
 
     im = ax_map.contourf(
         t_grid[mask_period, :],
@@ -525,6 +527,8 @@ def _plot_cwt(path: Path, name: str, t_mjd: np.ndarray, flux: np.ndarray, flux_e
     ax_map.set_xlabel("MJD")
     ax_map.set_ylabel("Period (day)")
     ax_map.set_title("CWT Power")
+    if xlim is not None:
+        ax_map.set_xlim(*xlim)
     ax_map.legend(loc="upper right")
     fig.colorbar(im, ax=ax_map, pad=0.02, label="Power")
 
@@ -535,11 +539,19 @@ def _plot_cwt(path: Path, name: str, t_mjd: np.ndarray, flux: np.ndarray, flux_e
     ax_gws.set_xlabel("GWS")
     ax_gws.set_title("Global Spectrum")
     plt.setp(ax_gws.get_yticklabels(), visible=False)
-    fig.savefig(path, dpi=180)
+    fig.savefig(path, dpi=240)
     plt.close(fig)
 
 
-def _plot_wwz(path: Path, name: str, result: dict, *, color_scale: str = "linear") -> None:
+def _plot_wwz(
+    path: Path,
+    name: str,
+    result: dict,
+    *,
+    color_scale: str = "linear",
+    mark_global_peak: bool = False,
+    xlim: tuple[float, float] | None = None,
+) -> None:
     t = result["t"]
     y = result["y"]
     yerr = result["yerr"]
@@ -567,6 +579,8 @@ def _plot_wwz(path: Path, name: str, result: dict, *, color_scale: str = "linear
     ax_lc.set_title(name)
     ax_lc.set_xlabel("MJD")
     ax_lc.set_ylabel("Flux")
+    if xlim is not None:
+        ax_lc.set_xlim(*xlim)
 
     wwz_plot_masked, wwz_norm = _wwz_power_for_plot(wwz_plot, color_scale)
     mesh = ax_map.pcolormesh(
@@ -583,15 +597,32 @@ def _plot_wwz(path: Path, name: str, result: dict, *, color_scale: str = "linear
     ax_map.set_xlabel("MJD")
     ax_map.set_ylabel("Period (day)")
     ax_map.set_title("WWZ Power")
+    if xlim is not None:
+        ax_map.set_xlim(*xlim)
     ax_map.legend(loc="upper right")
     fig.colorbar(mesh, ax=ax_map, pad=0.02, label=f"WWZ ({color_scale})")
 
     ax_gwwz.plot(global_wwz[global_sort], global_period[global_sort], color="black", lw=1.5)
+    if mark_global_peak:
+        peak_mask = (global_period >= period_min) & (global_period <= period_max)
+        peak_idx = np.nanargmax(np.where(peak_mask, global_wwz, np.nan))
+        peak_period = float(global_period[peak_idx])
+        peak_power = float(global_wwz[peak_idx])
+        ax_gwwz.axhline(peak_period, color="crimson", ls="--", lw=1.0)
+        ax_gwwz.plot(peak_power, peak_period, "o", color="crimson", ms=5)
+        ax_gwwz.annotate(
+            f"peak = {peak_period:.2f} d",
+            xy=(peak_power, peak_period),
+            xytext=(6, 6),
+            textcoords="offset points",
+            color="crimson",
+            fontsize=9,
+        )
     ax_gwwz.set_ylim(period_min, period_max)
     ax_gwwz.set_xlabel("Mean WWZ")
     ax_gwwz.set_title("Global WWZ")
     plt.setp(ax_gwwz.get_yticklabels(), visible=False)
-    fig.savefig(path, dpi=180)
+    fig.savefig(path, dpi=240)
     plt.close(fig)
 
 
@@ -606,13 +637,21 @@ def _plot_periodicity_summary(
     *,
     color_scale: str = "linear",
     include_global_row: bool = False,
+    cwt_significance: dict | None = None,
+    wwz_significance: dict | None = None,
+    light_curve_ylim: tuple[float, float] | None = None,
+    light_curve_note: str | None = None,
+    mark_global_peaks_on_maps: bool = False,
+    mark_lc_clipping: bool = False,
+    global_legends_above: bool = False,
 ) -> None:
     cwt_period = cwt["period"]
     cwt_mask = cwt["mask_period"]
     cwt_power = cwt["power"]
     cwt_period_min = cwt["period_min"]
     cwt_period_max = cwt["period_max"]
-    cwt_t_grid, cwt_p_grid = np.meshgrid(t_mjd, cwt_period)
+    cwt_t = np.asarray(cwt.get("t_mjd", t_mjd), dtype=float)
+    cwt_t_grid, cwt_p_grid = np.meshgrid(cwt_t, cwt_period)
 
     wwz_period_min = wwz["period_min"]
     wwz_period_max = wwz["period_max"]
@@ -622,10 +661,13 @@ def _plot_periodicity_summary(
     wwz_period_axis = wwz_period_mat[0, wwz_sort_idx]
     wwz_power = wwz["wwz_mat"][:, wwz_sort_idx]
 
-    fig_height = 10.2 if include_global_row else 8.2
-    fig = plt.figure(figsize=(14, fig_height), constrained_layout=True)
+    has_significance = cwt_significance is not None or wwz_significance is not None
+    fig_height = 8.3 if has_significance else (10.2 if include_global_row else 8.2)
+    fig_width = 15.5 if has_significance else 14
+    fig = plt.figure(figsize=(fig_width, fig_height), constrained_layout=True)
     if include_global_row:
-        gs = fig.add_gridspec(3, 2, height_ratios=[1.0, 1.45, 0.85])
+        height_ratios = [0.72, 1.15, 0.72] if has_significance else [1.0, 1.45, 0.85]
+        gs = fig.add_gridspec(3, 2, height_ratios=height_ratios)
     else:
         gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.45])
     ax_lc = fig.add_subplot(gs[0, :])
@@ -638,6 +680,29 @@ def _plot_periodicity_summary(
     ax_lc.set_title(name)
     ax_lc.set_xlabel("MJD")
     ax_lc.set_ylabel("Flux")
+    if light_curve_ylim is not None:
+        ax_lc.set_ylim(*light_curve_ylim)
+        if mark_lc_clipping:
+            low, high = light_curve_ylim
+            below = np.asarray(flux) - np.asarray(flux_err) < low
+            above = np.asarray(flux) + np.asarray(flux_err) > high
+            ax_lc.scatter(np.asarray(t_mjd)[below], np.full(np.count_nonzero(below), low),
+                          marker="v", color="#be493c", s=16, clip_on=False, zorder=4)
+            ax_lc.scatter(np.asarray(t_mjd)[above], np.full(np.count_nonzero(above), high),
+                          marker="^", color="#be493c", s=16, clip_on=False, zorder=4)
+            ax_lc.text(.995,.96,f"{np.count_nonzero(below | above)} point/error ranges clipped (display only)",
+                       transform=ax_lc.transAxes,ha="right",va="top",fontsize=8,color="#be493c")
+    if light_curve_note:
+        ax_lc.text(
+            0.995,
+            0.04,
+            light_curve_note,
+            transform=ax_lc.transAxes,
+            ha="right",
+            va="bottom",
+            fontsize=8,
+            color="0.35",
+        )
 
     cwt_im = ax_cwt.contourf(
         cwt_t_grid[cwt_mask, :],
@@ -649,7 +714,7 @@ def _plot_periodicity_summary(
     )
     cwt_coi_clip = np.clip(cwt["coi"], cwt_period_min, cwt_period_max)
     ax_cwt.fill_between(
-        t_mjd,
+        cwt_t,
         cwt_period_max,
         cwt_coi_clip,
         where=cwt_coi_clip <= cwt_period_max,
@@ -659,13 +724,18 @@ def _plot_periodicity_summary(
         edgecolor="0.7",
         linewidth=0.0,
     )
-    ax_cwt.plot(t_mjd, cwt_coi_clip, color="white", lw=1.2, label="COI")
+    ax_cwt.plot(cwt_t, cwt_coi_clip, color="white", lw=1.2, label="COI")
     ax_cwt.set_yscale("log")
     ax_cwt.set_ylim(cwt_period_min, cwt_period_max)
     ax_cwt.set_xlabel("MJD")
     ax_cwt.set_ylabel("Period (day)")
     ax_cwt.set_title("CWT Power")
-    ax_cwt.legend(loc="upper right")
+    if mark_global_peaks_on_maps:
+        _mark_map_candidate_periods(
+            ax_cwt,
+            _global_peak_periods(cwt_period[cwt_mask], np.asarray(cwt["gws"], dtype=float)[cwt_mask]),
+        )
+    ax_cwt.legend(loc="lower left" if mark_global_peaks_on_maps else "upper right")
     fig.colorbar(cwt_im, ax=ax_cwt, pad=0.02, label="Power")
 
     wwz_power_masked, wwz_norm = _wwz_power_for_plot(wwz_power, color_scale)
@@ -683,18 +753,32 @@ def _plot_periodicity_summary(
     ax_wwz.set_xlabel("MJD")
     ax_wwz.set_ylabel("Period (day)")
     ax_wwz.set_title("WWZ Power")
-    ax_wwz.legend(loc="upper right")
+    if mark_global_peaks_on_maps:
+        _mark_map_candidate_periods(
+            ax_wwz,
+            _global_peak_periods(
+                np.asarray(wwz["period_axis"], dtype=float),
+                np.asarray(wwz["global_wwz"], dtype=float),
+            ),
+        )
+    ax_wwz.legend(loc="lower left" if mark_global_peaks_on_maps else "upper right")
     fig.colorbar(wwz_mesh, ax=ax_wwz, pad=0.02, label=f"WWZ ({color_scale})")
 
     if include_global_row:
-        _plot_cwt_global_row(ax_cwt_global, cwt)
-        _plot_wwz_global_row(ax_wwz_global, wwz)
+        _plot_cwt_global_row(ax_cwt_global, cwt, cwt_significance)
+        _plot_wwz_global_row(ax_wwz_global, wwz, wwz_significance)
+        if global_legends_above:
+            for ax in (ax_cwt_global, ax_wwz_global):
+                if ax.get_legend() is not None:
+                    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.01),
+                              borderaxespad=0, fontsize=8, ncols=3)
+                    ax.set_title(ax.get_title(), pad=28)
 
     fig.savefig(path, dpi=180)
     plt.close(fig)
 
 
-def _plot_cwt_global_row(ax: plt.Axes, cwt: dict) -> None:
+def _plot_cwt_global_row(ax: plt.Axes, cwt: dict, significance: dict | None = None) -> None:
     period = np.asarray(cwt["period"], dtype=float)
     gws = np.asarray(cwt["gws"], dtype=float)
     mask = np.asarray(cwt["mask_period"], dtype=bool) & np.isfinite(period) & np.isfinite(gws)
@@ -703,17 +787,22 @@ def _plot_cwt_global_row(ax: plt.Axes, cwt: dict) -> None:
     order = np.argsort(period_plot)
     period_plot = period_plot[order]
     gws_plot = gws_plot[order]
-    ax.plot(period_plot, gws_plot, color="black", lw=1.4)
+    ax.plot(period_plot, gws_plot, color="black", lw=1.4, label="Observed")
+    if significance is not None:
+        _plot_global_references(ax, period_plot, significance, "signif_95", "signif_99")
     ax.set_xscale("log")
     ax.set_xlim(float(cwt["period_min"]), float(cwt["period_max"]))
     ax.set_xlabel("Period (day)")
     ax.set_ylabel("GWS")
-    ax.set_title("CWT Global Spectrum")
+    title = "CWT Global Spectrum · analytic AR(1)" if significance is not None else "CWT Global Spectrum"
+    ax.set_title(title)
     ax.grid(True, alpha=0.25)
     _mark_global_peaks(ax, period_plot, gws_plot)
+    if significance is not None:
+        ax.legend(loc="best", fontsize=8, ncols=3)
 
 
-def _plot_wwz_global_row(ax: plt.Axes, wwz: dict) -> None:
+def _plot_wwz_global_row(ax: plt.Axes, wwz: dict, significance: dict | None = None) -> None:
     period = np.asarray(wwz["period_axis"], dtype=float)
     global_wwz = np.asarray(wwz["global_wwz"], dtype=float)
     mask = (
@@ -725,41 +814,54 @@ def _plot_wwz_global_row(ax: plt.Axes, wwz: dict) -> None:
     order = np.argsort(period[mask])
     period_plot = period[mask][order]
     global_wwz_plot = global_wwz[mask][order]
-    ax.plot(period_plot, global_wwz_plot, color="black", lw=1.4)
+    ax.plot(period_plot, global_wwz_plot, color="black", lw=1.4, label="Observed")
+    if significance is not None:
+        _plot_global_references(ax, period_plot, significance, "q95", "q99")
     ax.set_xscale("log")
     ax.set_xlim(float(wwz["period_min"]), float(wwz["period_max"]))
     ax.set_xlabel("Period (day)")
     ax.set_ylabel("Mean WWZ")
-    ax.set_title("WWZ Global Spectrum")
+    if significance is None:
+        title = "WWZ Global Spectrum"
+    else:
+        n_surrogates = int(significance.get("n_surrogates", 0))
+        title = f"WWZ Global Spectrum · AR(1), N={n_surrogates}"
+    ax.set_title(title)
     ax.grid(True, alpha=0.25)
     _mark_global_peaks(ax, period_plot, global_wwz_plot)
+    if significance is not None:
+        ax.legend(loc="best", fontsize=8, ncols=3)
+
+
+def _plot_global_references(
+    ax: plt.Axes,
+    period_plot: np.ndarray,
+    significance: dict,
+    key_95: str,
+    key_99: str,
+) -> None:
+    reference_period = np.asarray(significance["period"], dtype=float)
+    finite = np.isfinite(reference_period)
+    if not np.any(finite):
+        return
+    order = np.argsort(reference_period[finite])
+    reference_period = reference_period[finite][order]
+    reference_95 = np.asarray(significance[key_95], dtype=float)[finite][order]
+    reference_99 = np.asarray(significance[key_99], dtype=float)[finite][order]
+    interpolated_95 = np.interp(period_plot, reference_period, reference_95, left=np.nan, right=np.nan)
+    interpolated_99 = np.interp(period_plot, reference_period, reference_99, left=np.nan, right=np.nan)
+    ax.plot(period_plot, interpolated_95, color="#0072B2", lw=1.2, ls="--", label="AR(1) 95%")
+    ax.plot(period_plot, interpolated_99, color="#D55E00", lw=1.2, ls=":", label="AR(1) 99%")
 
 
 def _mark_global_peaks(ax: plt.Axes, period: np.ndarray, power: np.ndarray) -> None:
-    period = np.asarray(period, dtype=float)
-    power = np.asarray(power, dtype=float)
-    finite = np.isfinite(period) & np.isfinite(power)
-    period = period[finite]
-    power = power[finite]
-    if len(period) < 3:
-        return
-
-    power_range = float(np.nanmax(power) - np.nanmin(power))
-    if not np.isfinite(power_range) or power_range <= 0:
-        return
-
-    peaks, _properties = find_peaks(
-        power,
-        prominence=GLOBAL_PEAK_PROMINENCE_FRACTION * power_range,
-        distance=GLOBAL_PEAK_MIN_DISTANCE_BINS,
-    )
-    if len(peaks) == 0:
+    peak_periods = _global_peak_periods(period, power)
+    if len(peak_periods) == 0:
         return
 
     y_min, y_max = ax.get_ylim()
     y_text = y_min + 0.90 * (y_max - y_min)
-    for peak_idx in peaks:
-        peak_period = float(period[peak_idx])
+    for peak_period in peak_periods:
         ax.axvline(peak_period, color="red", ls="--", lw=1.0, alpha=0.85)
         ax.text(
             peak_period,
@@ -770,6 +872,49 @@ def _mark_global_peaks(ax: plt.Axes, period: np.ndarray, power: np.ndarray) -> N
             rotation=90,
             ha="right",
             va="top",
+        )
+
+
+def _global_peak_periods(period: np.ndarray, power: np.ndarray) -> np.ndarray:
+    period = np.asarray(period, dtype=float)
+    power = np.asarray(power, dtype=float)
+    finite = np.isfinite(period) & np.isfinite(power)
+    period = period[finite]
+    power = power[finite]
+    if len(period) < 3:
+        return np.array([], dtype=float)
+
+    order = np.argsort(period)
+    period = period[order]
+    power = power[order]
+
+    power_range = float(np.nanmax(power) - np.nanmin(power))
+    if not np.isfinite(power_range) or power_range <= 0:
+        return np.array([], dtype=float)
+
+    peaks, _properties = find_peaks(
+        power,
+        prominence=GLOBAL_PEAK_PROMINENCE_FRACTION * power_range,
+        distance=GLOBAL_PEAK_MIN_DISTANCE_BINS,
+    )
+    if len(peaks) == 0:
+        return np.array([], dtype=float)
+    return period[peaks]
+
+
+def _mark_map_candidate_periods(ax: plt.Axes, periods: np.ndarray) -> None:
+    for period in np.asarray(periods, dtype=float):
+        ax.axhline(period, color="#F0E442", ls="--", lw=1.1, alpha=0.95)
+        ax.text(
+            0.985,
+            period,
+            f" {_format_period_label(period)} ",
+            transform=ax.get_yaxis_transform(),
+            color="#172126",
+            fontsize=8,
+            ha="right",
+            va="bottom",
+            bbox={"facecolor": "#F0E442", "edgecolor": "none", "alpha": 0.85, "pad": 1.2},
         )
 
 

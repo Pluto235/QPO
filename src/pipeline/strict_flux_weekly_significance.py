@@ -25,6 +25,7 @@ if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
 from methods.periodicity import run_wwz, standardize_flux  # noqa: E402
+from pipeline.periodicity_v1 import _plot_periodicity_summary  # noqa: E402
 from pipeline.weekly_qpo_local_significance import (  # noqa: E402
     DEFAULT_N_SURROGATES,
     DEFAULT_SEED,
@@ -93,6 +94,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Only collect existing per-source strict-flux significance CSVs into the survey summary.",
     )
     parser.add_argument(
+        "--render-saved",
+        action="store_true",
+        help="Rebuild significance composites from saved curves without rerunning WWZ surrogates.",
+    )
+    parser.add_argument(
         "--write-summary",
         action="store_true",
         help="Write the 10-source strict-flux significance summary after processing or collecting.",
@@ -107,6 +113,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> None:
     args = parse_args(argv)
     source_ids = _resolve_source_ids(args)
+    if args.render_saved:
+        for source_id in source_ids:
+            render_saved_source(source_id)
+        return
     if args.collect_summary_only:
         _write_summary(source_ids)
         return
@@ -174,6 +184,21 @@ def assess_source(
         workers=workers,
     )
 
+    np.savez_compressed(
+        periodicity_dir / "wcda_strict_flux_weekly_significance_curves.npz",
+        cwt_period=cwt_refs["period"],
+        cwt_signif_95=cwt_refs["signif_95"],
+        cwt_signif_99=cwt_refs["signif_99"],
+        cwt_alpha=cwt_refs["alpha"],
+        wwz_period=wwz_refs["period"],
+        wwz_q95=wwz_refs["q95"],
+        wwz_q99=wwz_refs["q99"],
+        wwz_alpha=wwz_refs["alpha"],
+        wwz_n_surrogates=n_surrogates,
+    )
+
+    _plot_significance_composite(periodicity_dir, source_label, aligned, cwt, wwz, cwt_refs, wwz_refs)
+
     _plot_cwt_global_significance(
         periodicity_dir / "wcda_strict_flux_weekly_cwt_global_significance.png",
         source_label,
@@ -189,6 +214,75 @@ def assess_source(
         wwz_refs,
     )
     return cwt_rows + wwz_rows
+
+
+def render_saved_source(source_id: str) -> None:
+    source_label = get_source(source_id).label
+    aligned = _load_strict_flux_light_curve(FLUX_SURVEY_ALIGNED_DIR / source_id / "wcda_strict_flux_weekly_aligned.csv")
+    periodicity_dir = FLUX_SURVEY_PERIODICITY_DIR / source_id
+    cwt = _load_npz_dict(periodicity_dir / "wcda_strict_flux_weekly_cwt.npz")
+    wwz = _load_npz_dict(periodicity_dir / "wcda_strict_flux_weekly_wwz.npz")
+    saved = _load_npz_dict(periodicity_dir / "wcda_strict_flux_weekly_significance_curves.npz")
+    cwt_refs = {
+        "period": saved["cwt_period"],
+        "signif_95": saved["cwt_signif_95"],
+        "signif_99": saved["cwt_signif_99"],
+        "alpha": float(saved["cwt_alpha"]),
+    }
+    wwz_refs = {
+        "period": saved["wwz_period"],
+        "q95": saved["wwz_q95"],
+        "q99": saved["wwz_q99"],
+        "alpha": float(saved["wwz_alpha"]),
+        "n_surrogates": int(saved["wwz_n_surrogates"]),
+    }
+    significance_csv = periodicity_dir / "wcda_strict_flux_weekly_local_significance.csv"
+    rows = pd.read_csv(significance_csv).to_dict("records")
+    cwt_rows = [row for row in rows if row["method"] == "CWT"]
+    wwz_rows = [row for row in rows if row["method"] == "WWZ"]
+    _plot_cwt_global_significance(
+        periodicity_dir / "wcda_strict_flux_weekly_cwt_global_significance.png",
+        source_label,
+        cwt,
+        cwt_rows,
+        cwt_refs,
+    )
+    _plot_wwz_global_significance(
+        periodicity_dir / "wcda_strict_flux_weekly_wwz_global_significance.png",
+        source_label,
+        wwz,
+        wwz_rows,
+        wwz_refs,
+    )
+    _plot_significance_composite(periodicity_dir, source_label, aligned, cwt, wwz, cwt_refs, wwz_refs)
+    print(f"[OK] re-rendered saved significance composite -> {periodicity_dir.relative_to(PROJECT_ROOT)}")
+
+
+def _plot_significance_composite(
+    periodicity_dir: Path,
+    source_label: str,
+    aligned: pd.DataFrame,
+    cwt: dict,
+    wwz: dict,
+    cwt_refs: dict,
+    wwz_refs: dict,
+) -> None:
+    t = aligned["mjd"].to_numpy(dtype=float)
+    flux = aligned["N0"].to_numpy(dtype=float)
+    flux_err = aligned["N0_err"].to_numpy(dtype=float)
+    for suffix in ("png", "pdf"):
+        _plot_periodicity_summary(
+            periodicity_dir / f"wcda_strict_flux_weekly_periodicity_significance.{suffix}",
+            f"{source_label} WCDA strict weekly flux",
+            t,
+            flux,
+            flux_err,
+            cwt,
+            wwz,
+            include_global_row=True,
+            cwt_significance=cwt_refs,
+            wwz_significance=wwz_refs,
+        )
 
 
 def _load_strict_flux_light_curve(path: Path) -> pd.DataFrame:
@@ -294,9 +388,6 @@ def _assess_wwz(
     period = np.asarray(wwz["period_axis"], dtype=float)
     global_wwz = np.asarray(wwz["global_wwz"], dtype=float)
     period_plot, peaks = _candidate_peaks(period, global_wwz, float(wwz["period_min"]), float(wwz["period_max"]))
-    if len(peaks) == 0:
-        return [], {"period": period, "q95": np.full_like(period, np.nan), "q99": np.full_like(period, np.nan)}
-
     t = aligned["mjd"].to_numpy(dtype=float)
     y = aligned["N0"].to_numpy(dtype=float)
     yerr = aligned["N0_err"].to_numpy(dtype=float)
@@ -388,7 +479,13 @@ def _assess_wwz(
                 "note": _candidate_note(peak_period, t_span, float(wwz["period_min"]), float(wwz["period_max"])),
             }
         )
-    return rows, {"period": period, "q95": q95, "q99": q99, "alpha": alpha}
+    return rows, {
+        "period": period,
+        "q95": q95,
+        "q99": q99,
+        "alpha": alpha,
+        "n_surrogates": n_surrogates,
+    }
 
 
 def _run_wwz_surrogate_global(task: tuple) -> np.ndarray:
@@ -490,7 +587,7 @@ def _plot_wwz_global_significance(path: Path, source_label: str, wwz: dict, rows
     ax.set_title(f"{source_label} strict flux WWZ local significance")
     ax.grid(True, alpha=0.25)
     ax.legend(loc="best", fontsize=8)
-    n_surrogates = int(rows[0]["n_surrogates"]) if rows else 0
+    n_surrogates = int(refs.get("n_surrogates", rows[0]["n_surrogates"] if rows else 0))
     ax.text(
         0.01,
         0.02,

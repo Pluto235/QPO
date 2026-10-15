@@ -1,0 +1,8 @@
+*** Starting Weighted Wavelet Z-transform ***
+
+Pseudo sample frequency (median) is  0.5
+largest tau window is  2.921
+59.2 seconds has passed to complete Weighted Wavelet Z-transform 
+
+  [2day/Mkn421] WWZ AR(1) surrogates: 1000 across 30 workers
+slurmstepd: error: *** JOB 66073 ON ETO CANCELLED AT 2026-10-14T14:12:07 ***

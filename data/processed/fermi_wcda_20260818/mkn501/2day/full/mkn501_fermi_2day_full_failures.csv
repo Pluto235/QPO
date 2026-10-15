@@ -1,0 +1,2 @@
+source_id,cadence_days,bin_index,tmin_met,tmax_met,tmin_mjd,tmax_mjd,mjd,flux,flux_err,flux_ul95,ts,npred,fit_success,fit_status,fit_quality,failure_reason,is_detection,is_upper_limit
+mkn501,2,690,756057605.0,756230405.0,60660.66666667,60662.66666667,60661.66666667,,,,,,False,0,0,Fermipy fit unsuccessful,False,False

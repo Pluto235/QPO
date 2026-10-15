@@ -1,0 +1,3 @@
+source_id,source,cadence,window_mjd_min,window_mjd_max,method,target_period_days,nearest_grid_period_days,observed_statistic,reference_95,reference_99,above_95,above_99,n_surrogates
+mkn421,Mkn421,2day,59800.0,60500.0,CWT,140.0,140.09236731553767,11.005385741527629,14.028892566382474,19.17743003228928,False,False,0
+mkn421,Mkn421,2day,59800.0,60500.0,WWZ,140.0,139.87975951903806,12.334930287102756,15.160090699449583,19.461115149139758,False,False,200

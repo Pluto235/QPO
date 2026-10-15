@@ -1,0 +1,16 @@
+{
+  "destination": "/Users/luoji/Documents/projects/QPO/qposim",
+  "regular_files_sha256_verified": 28766,
+  "selected_bytes": 2210553358,
+  "symlinks_verified": 2510,
+  "symlink_availability": {
+    "available_locally": 1891,
+    "remote_dependency_omitted": 619
+  },
+  "old_entries_preserved_and_backed_up": 167,
+  "backup": "/Users/luoji/Documents/projects/QPO/archive/qposim_mac_before_sync_20261013",
+  "git_metadata_found": false,
+  "heavy_regular_files": [],
+  "errors": [],
+  "temporary_transfer_copy_removed": true
+}

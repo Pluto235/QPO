@@ -1,0 +1,13 @@
+[Crab] retained=799/803; CWT interpolated=4; alpha=0.337948 (794 real pairs)
+[Crab] libwwz 341.25s; cached 0.649s; max grid difference=6.02e-11
+[Crab] surrogates 100/1000 (106.0s)
+[Crab] surrogates 200/1000 (166.6s)
+[Crab] surrogates 300/1000 (227.5s)
+[Crab] surrogates 400/1000 (288.8s)
+[Crab] surrogates 500/1000 (349.4s)
+[Crab] surrogates 600/1000 (410.1s)
+[Crab] surrogates 700/1000 (471.7s)
+[Crab] surrogates 800/1000 (532.3s)
+[Crab] surrogates 900/1000 (592.7s)
+[Crab] surrogates 1000/1000 (651.6s)
+[Crab] rendered composite

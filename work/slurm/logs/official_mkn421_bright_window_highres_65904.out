@@ -1,0 +1,11 @@
+[INFO] host=ETO start=2026-09-02T17:53:50+08:00
+*** Starting Weighted Wavelet Z-transform ***
+
+Pseudo sample frequency (median) is  0.5
+largest tau window is  2.921
+60.85 seconds has passed to complete Weighted Wavelet Z-transform 
+
+  [2day/Mkn421] WWZ AR(1) surrogates: 200 across 32 workers
+[OK] Mkn421: window rows=349, candidate rows=6
+[OK] wrote window summaries -> data/processed/periodicity/official_lc_20260817/bright_window_59800_60500_highres
+[INFO] end=2026-09-02T18:11:48+08:00

@@ -1,0 +1,2103 @@
+{
+  "host": "lxlogin002.ihep.ac.cn",
+  "files": [
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/config/official_qpo_source_models.yaml",
+      "relative": "data/config/official_qpo_source_models.yaml",
+      "group": "data",
+      "bytes": 19530,
+      "sha256": "f6c3843ea3f21de91933be6cbf4fa1b25b4582159d9d9ed2623133586883996a"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/config/official_qpo_source_models_dge_policy_r5_collected.yaml",
+      "relative": "data/config/official_qpo_source_models_dge_policy_r5_collected.yaml",
+      "group": "data",
+      "bytes": 21837,
+      "sha256": "12059d6e0d06a83080597903dea6c61c6d76797e623394d192d460dc333a9ef0"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_1ES1727p502_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_1ES1727p502_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99437,
+      "sha256": "7e0f1d56b59859d738b876e19845976898708b5847380f41d47d3c5131cd8b06",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_1ES1959p650_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_1ES1959p650_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99555,
+      "sha256": "5423161ffdcd5fb740b1cdf185d8bcdebbc881e459fcb8b3821c5ad7f5066eed",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_1ES2344p514_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_1ES2344p514_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99435,
+      "sha256": "9ef8041576b99e2b5414317d7af3a4374d621c8d06f614d3d86196bafbf10e78",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_4C_p42d22_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_4C_p42d22_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99002,
+      "sha256": "1fb4ee0613990f4daae5b3a69fa120cab18a84e8fa9bd5f1162a06218ea5b24c",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_BLLacertae_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_BLLacertae_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99447,
+      "sha256": "f9fe409b49d366c081c4cabb85283f1e8a844d4835ebbd61676a6cc730268ede",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_IC310_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_IC310_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99329,
+      "sha256": "791bf21c5880eb0e167c9056de50ab45bf9c3b836609ba2e1d1f480b50d241b4",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_M87_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_M87_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99438,
+      "sha256": "2cb79e17d3ed7dc007e3a73d876668f3e633dabb4ed47d7b9bd20cab81e177b0",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/data/wcda_week/LHAASO-WCDA_NGC1275_2021-03-08_2026-03-29_week.csv",
+      "relative": "data/wcda_week/LHAASO-WCDA_NGC1275_2021-03-08_2026-03-29_week.csv",
+      "group": "data",
+      "bytes": 99384,
+      "sha256": "78abb4b660e94ee3f8c6618f16571634c2857c92fbec12291a36764805239ca7",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/2021-03-08_2026-03-29_week.csv",
+      "relative": "results/2021-03-08_2026-03-29_week.csv",
+      "group": "results",
+      "bytes": 72727,
+      "sha256": "7ea43063e64ff29db60709c2ea735a23c45de078501a380fe5fdb5d4b50e65e4",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/2025-03-29_2026-03-29_day.csv",
+      "relative": "results/2025-03-29_2026-03-29_day.csv",
+      "group": "results",
+      "bytes": 75727,
+      "sha256": "9b31b037b3efbba22ab0e9c820007e2d1c2e4a1c53f82f39309f905ba6370dee",
+      "csv_rows": 366
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv",
+      "relative": "results/LHAASO-WCDA_Mkn421_2021-03-08_2026-03-29_week.csv",
+      "group": "results",
+      "bytes": 99604,
+      "sha256": "bd057a5da1613e4a855d8b98ae6f9e37832b36a4b61b03000087a2a0406772ee",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv",
+      "relative": "results/LHAASO-WCDA_Mkn421_2025-03-29_2026-03-29_day.csv",
+      "group": "results",
+      "bytes": 371121,
+      "sha256": "9a6d86b04207e2f5cfb592695cdb6032969df9af1700dd0d6ea7d9f22d2798e4",
+      "csv_rows": 1002
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/LHAASO-WCDA_Mkn421_week_flux_status.csv",
+      "relative": "results/LHAASO-WCDA_Mkn421_week_flux_status.csv",
+      "group": "results",
+      "bytes": 33658,
+      "sha256": "ad244195d0760a219be287321770d22f484b083cec75d56b7d1680e99719475e",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv",
+      "relative": "results/LHAASO-WCDA_Mkn501_2021-03-08_2026-03-29_week.csv",
+      "group": "results",
+      "bytes": 99475,
+      "sha256": "3cb8c20e9d468634c8f6ff17ca74561d44203fa3fcf05c910be79b81fad322f9",
+      "csv_rows": 264
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/CHECKSUMS.sha256",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/CHECKSUMS.sha256",
+      "group": "results",
+      "bytes": 3946,
+      "sha256": "74928baab0012b4fa23e26c144c2401477fa8de04b57b603dc1c1bd7e1167bdb"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/README.md",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/README.md",
+      "group": "results",
+      "bytes": 10776
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/code/standard_flux_lc.py",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/code/standard_flux_lc.py",
+      "group": "results",
+      "bytes": 81344,
+      "sha256": "fd7e710724746c606d4945285c1e7450b787e28f4fc8c28d7e91197dec1978b1"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 577033,
+      "sha256": "517e36d9a69f11f7322e6a40b65a7e37dc101b2daaa2d40a20f0e6cbe38d2110",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 576873,
+      "sha256": "c5f31d31a889a603764250b9d01f4efa7803ecb19de840969fc8b4e756c653b7",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 576445,
+      "sha256": "c6236b369683ce99a4b3b90a5d2fbb504617bbff6be12062ffdb1a7a8636738a",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 570857,
+      "sha256": "bfbd0ff6be7659e5eae310fef707887010c7f878b55498f428befc709e0fab73",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 573581,
+      "sha256": "42b020d4c8f88e126a68991b23945f82a5b9ea45b2a3bcd927c399d36a1078d9",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Crab_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Crab_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 571661,
+      "sha256": "e68ab39c81b7619f9f83be3fb80aa7978bae0c27136792bae0079ccfdc6486ca",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_IC310_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_IC310_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 561717,
+      "sha256": "d3b4339f367f6aa64a68bef7f1f9df707e8659bb6022f7b42eb9e0e91124037e",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_M87_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_M87_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 556983,
+      "sha256": "87036cf8d75a361501dee8a13eda4d7ae95e251b3e92de04a0950a36c57ac767",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 567605,
+      "sha256": "099f4e3978af2904dc4ffd09a648ca932f9b5b8572c94570c69ab8b59a209fc6",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 566878,
+      "sha256": "f2829376cfd1e09ced2aedb6e4e833e9247b0d74df7d86cc6019e754cf4d5784",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/2day/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 566328,
+      "sha256": "df7aed632bd233ba2e1b3d634c97492dcc5f85ce320e96a0437d9516cd5fd06f",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES1727p502_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES1727p502_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144351,
+      "sha256": "2c3a5b7927abd344cb961b84945ebfad3f01cbfc53c59bee5ebb938688437be1",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES1959p650_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES1959p650_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144313,
+      "sha256": "082cee98da37bec4b1119516f1775584dc06b4b5a8ced81c269fe331767b613b",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES2344p514_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_1ES2344p514_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144173,
+      "sha256": "598af3e143be664708d1eb4e3768f5550f0c56d3cb4a899945f4890214edba10",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_4C_p42d22_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_4C_p42d22_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 142694,
+      "sha256": "780d62af8ebcd48fdb010711fb41da5da41f62f8a770b0403aee2e667daf5a17",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_BLLacertae_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_BLLacertae_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 143459,
+      "sha256": "586d08c772f332339d23e70f829fbac848b7a37a26330b8505e772661cc96010",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Crab_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Crab_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 142996,
+      "sha256": "49f5ec72eafd6f9604252aed31234dd5be55badaa0b21d682bffc1706d966223",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_IC310_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_IC310_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 140397,
+      "sha256": "2b0f597357ecda794c8b12655714edcd890d5dc41c4bb6b02c917a586deae517",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_M87_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_M87_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 139342,
+      "sha256": "dcc2956e3f73128084e14611d20ddbf5743177ca637e18a0f21128d7c4ee314f",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Mkn421_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Mkn421_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141940,
+      "sha256": "fbf206cfd6c6c18460b646e6444e65fa1610fcef531a21a42a8764db010f9df7",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Mkn501_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_Mkn501_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141785,
+      "sha256": "04a93c5cd742366035a428fef04e5809ffe126b36b276827b62efbbd858d56b0",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_NGC1275_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/data/8day/LHAASO-WCDA_NGC1275_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141569,
+      "sha256": "09390002c79665217229c0295fb68582c69e23dcf8cd36331fa59064c8553fb8",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/Crab_ParInit_official_v1.0.yaml",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/Crab_ParInit_official_v1.0.yaml",
+      "group": "results",
+      "bytes": 1306,
+      "sha256": "aaba38d57ba570a3c8307c7462bd39b151105fdd330f5bb0440a646bff721a6d"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/LCData_20210305_20250731.yaml",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/LCData_20210305_20250731.yaml",
+      "group": "results",
+      "bytes": 976,
+      "sha256": "b66085958ae6a9762e5bdeea438817a1b7c14b97e7bef2917c3c55eab1958713"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/QUALITY_FLAGS.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/QUALITY_FLAGS.csv",
+      "group": "results",
+      "bytes": 3329,
+      "sha256": "4be3f3cbd9cecf4d2089b888c23a6ad19a0754768c72bd1c8e9f195bc6f2bdf4",
+      "csv_rows": 34
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/SOURCE_MODELS.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/SOURCE_MODELS.csv",
+      "group": "results",
+      "bytes": 1217,
+      "sha256": "b20087fcb1c73feb2c664fdffa99ab371fb92c3b202f1118a68089c767fee2a1",
+      "csv_rows": 11
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/fit_manifest_2day.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/fit_manifest_2day.csv",
+      "group": "results",
+      "bytes": 7756593,
+      "sha256": "9dfb506e31117c210250d656fef972b0a30efc0ac5317e506fed2b6e7ab78a18",
+      "csv_rows": 8833
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/fit_manifest_8day.csv",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/fit_manifest_8day.csv",
+      "group": "results",
+      "bytes": 1928872,
+      "sha256": "015d0da6bdbaf3e827b1bf5b6e0a1bb2ee5c6578667d51fc95ab2784dffd5b84",
+      "csv_rows": 2200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/official_lc_20260817_summary.json",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/official_lc_20260817_summary.json",
+      "group": "results",
+      "bytes": 1484,
+      "sha256": "2823f6e6a7830b01bfe8095b4c6c68c15028efb99f5591bed633b140f0e02c57"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/production_run_note.md",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff/metadata/production_run_note.md",
+      "group": "results",
+      "bytes": 3777
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff.tar.gz",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff.tar.gz",
+      "group": "results",
+      "bytes": 900633,
+      "sha256": "7246fbb7cc13c777bf79c18fc241012796360e75d809be38082a8d925f373889"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/WCDA_official_LC_2day_8day_20260817_handoff.tar.gz.sha256",
+      "relative": "results/WCDA_official_LC_2day_8day_20260817_handoff.tar.gz.sha256",
+      "group": "results",
+      "bytes": 125,
+      "sha256": "0c218d84596ad7285b0fb4f557618525fcea756820c12306b5e10f64f3cc8090"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 92267,
+      "sha256": "e08023b2a9d3636d127b316cba3fbba2f5e6005e7124fa3443435869a4af465b",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "relative": "results/flux/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "group": "results",
+      "bytes": 621379,
+      "sha256": "60746648174383fc65bd221109d30e7b85320ff686b86ef5ee31d4ae96c855c3",
+      "csv_rows": 1607
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 92397,
+      "sha256": "df9cb756b8ba51c4d247d24625288f51cdf0bb22de9ba7e8aead7d9e0a7a2673",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-31_day_flux.csv",
+      "relative": "results/flux/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-31_day_flux.csv",
+      "group": "results",
+      "bytes": 605975,
+      "sha256": "09ed4ecfdf8172e3c9996c7fa527b462fd799295f2395ca74d1166e65596630d",
+      "csv_rows": 1607
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 104967,
+      "sha256": "37b012086cea4a16f5c7741a09c4a401de043f3e0f58e7ecc88b596ea04c0c77",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 104910,
+      "sha256": "84c7a34cc0ab204f9c1021b8b66c2b514bc6fedacec21fb27b55fdf7495673f2",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 104824,
+      "sha256": "191b5961223b095908c4df09865faf2411ab28d93059dbcf2e9f772fd0d260a0",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 103013,
+      "sha256": "9a082f8da94242656a32a87493012451ef63eeea2badaac695de413858eaf537",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 103898,
+      "sha256": "facc16dce23e94c7761c3f71d14ffc84ffa11833c279c24e1e84f592086aa34e",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_IC310_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_IC310_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 100535,
+      "sha256": "dcac711e82b841f6104d4bf8e6dffc0d1ee630ad16023c9cd867a0c1f4d53965",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_M87_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_M87_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 99210,
+      "sha256": "01c73ecbed714feb55017717a97569062fe5910955a42ee7949015382b35bdcc",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_agn_week/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 101842,
+      "sha256": "666967aea493105b4a9616ba982671870ff6384f38bb1896555aeb8547dd59c9",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES1727p502_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/1ES1727p502_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 21564
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES1727p502_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/1ES1727p502_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 57789
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES1959p650_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/1ES1959p650_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 20682
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES1959p650_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/1ES1959p650_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 47336
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES2344p514_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/1ES2344p514_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 21302
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/1ES2344p514_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/1ES2344p514_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 53364
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/4C_p42d22_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/4C_p42d22_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 20903
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/4C_p42d22_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/4C_p42d22_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 50265
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/BLLacertae_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/BLLacertae_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 21611
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/BLLacertae_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/BLLacertae_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 52073
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/IC310_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/IC310_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 20574
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/IC310_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/IC310_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 51134
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/M87_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/M87_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 20286
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/M87_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/M87_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 50266
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/NGC1275_2021-03-08_2025-07-27_week_flux.pdf",
+      "relative": "results/flux_strict_agn_week/figures/NGC1275_2021-03-08_2025-07-27_week_flux.pdf",
+      "group": "results",
+      "bytes": 20617
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_agn_week/figures/NGC1275_2021-03-08_2025-07-27_week_flux.png",
+      "relative": "results/flux_strict_agn_week/figures/NGC1275_2021-03-08_2025-07-27_week_flux.png",
+      "group": "results",
+      "bytes": 49793
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_batch/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_batch/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 105705,
+      "sha256": "35911c07028cce7b1f4e0a2e86360001a3a5a5c7bddb53866e6281d9fe173203",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_batch/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "relative": "results/flux_strict_batch/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "group": "results",
+      "bytes": 698587,
+      "sha256": "d9b30211ae82ba2fcd123acfbf7bf79282a16934f8726c54b88a6b21ccdf1c7d",
+      "csv_rows": 1607
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_batch/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-27_week_flux.csv",
+      "relative": "results/flux_strict_batch/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-27_week_flux.csv",
+      "group": "results",
+      "bytes": 105645,
+      "sha256": "955ec62da04392a76eb79d3da4b8f4620c16aa99be6fccc1a07efd5f1bde98e5",
+      "csv_rows": 229
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/flux_strict_batch/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-31_day_flux.csv",
+      "relative": "results/flux_strict_batch/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-31_day_flux.csv",
+      "group": "results",
+      "bytes": 681633,
+      "sha256": "420319e08e04b39515dcc6c8cd714590332ae327cb8030e570f0e14b9b809de4",
+      "csv_rows": 1607
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_daily_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "relative": "results/official_daily_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-31_day_flux.csv",
+      "group": "results",
+      "bytes": 2638,
+      "sha256": "a674bde64c0c148178caf6585344cbe1f7b4a13a9c77d3ff50f871622fa50e6b",
+      "csv_rows": 3
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_1ES1727p502_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 577033,
+      "sha256": "517e36d9a69f11f7322e6a40b65a7e37dc101b2daaa2d40a20f0e6cbe38d2110",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_1ES1959p650_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 576873,
+      "sha256": "c5f31d31a889a603764250b9d01f4efa7803ecb19de840969fc8b4e756c653b7",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_1ES2344p514_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 576445,
+      "sha256": "c6236b369683ce99a4b3b90a5d2fbb504617bbff6be12062ffdb1a7a8636738a",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_4C_p42d22_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 570857,
+      "sha256": "bfbd0ff6be7659e5eae310fef707887010c7f878b55498f428befc709e0fab73",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_BLLacertae_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 573581,
+      "sha256": "42b020d4c8f88e126a68991b23945f82a5b9ea45b2a3bcd927c399d36a1078d9",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_Crab_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_Crab_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 571661,
+      "sha256": "e68ab39c81b7619f9f83be3fb80aa7978bae0c27136792bae0079ccfdc6486ca",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_IC310_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_IC310_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 561717,
+      "sha256": "d3b4339f367f6aa64a68bef7f1f9df707e8659bb6022f7b42eb9e0e91124037e",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_M87_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_M87_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 556983,
+      "sha256": "87036cf8d75a361501dee8a13eda4d7ae95e251b3e92de04a0950a36c57ac767",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 567605,
+      "sha256": "099f4e3978af2904dc4ffd09a648ca932f9b5b8572c94570c69ab8b59a209fc6",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_Mkn501_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 566878,
+      "sha256": "f2829376cfd1e09ced2aedb6e4e833e9247b0d74df7d86cc6019e754cf4d5784",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_2day/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_20260817_2day/LHAASO-WCDA_NGC1275_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 566328,
+      "sha256": "df7aed632bd233ba2e1b3d634c97492dcc5f85ce320e96a0437d9516cd5fd06f",
+      "csv_rows": 803
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_1ES1727p502_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_1ES1727p502_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144351,
+      "sha256": "2c3a5b7927abd344cb961b84945ebfad3f01cbfc53c59bee5ebb938688437be1",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_1ES1959p650_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_1ES1959p650_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144313,
+      "sha256": "082cee98da37bec4b1119516f1775584dc06b4b5a8ced81c269fe331767b613b",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_1ES2344p514_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_1ES2344p514_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 144173,
+      "sha256": "598af3e143be664708d1eb4e3768f5550f0c56d3cb4a899945f4890214edba10",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_4C_p42d22_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_4C_p42d22_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 142694,
+      "sha256": "780d62af8ebcd48fdb010711fb41da5da41f62f8a770b0403aee2e667daf5a17",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_BLLacertae_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_BLLacertae_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 143459,
+      "sha256": "586d08c772f332339d23e70f829fbac848b7a37a26330b8505e772661cc96010",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_Crab_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_Crab_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 142996,
+      "sha256": "49f5ec72eafd6f9604252aed31234dd5be55badaa0b21d682bffc1706d966223",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_IC310_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_IC310_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 140397,
+      "sha256": "2b0f597357ecda794c8b12655714edcd890d5dc41c4bb6b02c917a586deae517",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_M87_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_M87_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 139342,
+      "sha256": "dcc2956e3f73128084e14611d20ddbf5743177ca637e18a0f21128d7c4ee314f",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_Mkn421_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_Mkn421_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141940,
+      "sha256": "fbf206cfd6c6c18460b646e6444e65fa1610fcef531a21a42a8764db010f9df7",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_Mkn501_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_Mkn501_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141785,
+      "sha256": "04a93c5cd742366035a428fef04e5809ffe126b36b276827b62efbbd858d56b0",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_8day/LHAASO-WCDA_NGC1275_2021-03-11_2025-07-20_8day_flux.csv",
+      "relative": "results/official_lc_20260817_8day/LHAASO-WCDA_NGC1275_2021-03-11_2025-07-20_8day_flux.csv",
+      "group": "results",
+      "bytes": 141569,
+      "sha256": "09390002c79665217229c0295fb68582c69e23dcf8cd36331fa59064c8553fb8",
+      "csv_rows": 200
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_20260817_summary.json",
+      "relative": "results/official_lc_20260817_summary.json",
+      "group": "results",
+      "bytes": 1484,
+      "sha256": "2823f6e6a7830b01bfe8095b4c6c68c15028efb99f5591bed633b140f0e02c57"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "relative": "results/official_lc_smoke/LHAASO-WCDA_Mkn421_2021-03-08_2025-07-29_2day_flux.csv",
+      "group": "results",
+      "bytes": 2347,
+      "sha256": "01c1a5bb1714c4de6445be87c44f367227fd8d18e52a69b15ec04fb3ede95608",
+      "csv_rows": 3
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_smoke_20260817_2day/LHAASO-WCDA_Crab_2021-03-08_2021-03-08_2day_flux.csv",
+      "relative": "results/official_lc_smoke_20260817_2day/LHAASO-WCDA_Crab_2021-03-08_2021-03-08_2day_flux.csv",
+      "group": "results",
+      "bytes": 1026,
+      "sha256": "726388886ef29ad8eefdd050a984a751a3e8687802773beeaaeaf1073a76f7da",
+      "csv_rows": 1
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_smoke_20260817_2day/LHAASO-WCDA_Mkn421_2021-03-08_2021-03-08_2day_flux.csv",
+      "relative": "results/official_lc_smoke_20260817_2day/LHAASO-WCDA_Mkn421_2021-03-08_2021-03-08_2day_flux.csv",
+      "group": "results",
+      "bytes": 1021,
+      "sha256": "e2658d85a65b1a461f40507d42bec410166568f1df18fce75bec539d364afa33",
+      "csv_rows": 1
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_smoke_20260817_8day/LHAASO-WCDA_Crab_2021-03-11_2021-03-11_8day_flux.csv",
+      "relative": "results/official_lc_smoke_20260817_8day/LHAASO-WCDA_Crab_2021-03-11_2021-03-11_8day_flux.csv",
+      "group": "results",
+      "bytes": 1027,
+      "sha256": "f922c593db4cd9e0cf7b1fed681c57c359e5d4e63b73af07fd0f7409e2bc6578",
+      "csv_rows": 1
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/results/official_lc_smoke_20260817_8day/LHAASO-WCDA_Mkn421_2021-03-11_2021-03-11_8day_flux.csv",
+      "relative": "results/official_lc_smoke_20260817_8day/LHAASO-WCDA_Mkn421_2021-03-11_2021-03-11_8day_flux.csv",
+      "group": "results",
+      "bytes": 1023,
+      "sha256": "c9b50b6beebd3cb516d0246f91b8b2b01fb9ac4bd0d87de0462847c1d6740035",
+      "csv_rows": 1
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/data/config/official_qpo_source_models.yaml",
+      "relative": "official_qpo_eto_sync/data/config/official_qpo_source_models.yaml",
+      "group": "official_qpo_eto_sync",
+      "bytes": 15220,
+      "sha256": "a739015d19ddf9c0e2649c8b218508cc16792ae42670e46506eebf2341f6f7e7"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/collect_official_qpo_spectral_fits.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/collect_official_qpo_spectral_fits.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 4358,
+      "sha256": "c584d43b75e39fdb807a02d923184009ec8266574723db8975137a5bfeb3609b"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/official_profile.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/official_profile.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 5159,
+      "sha256": "25f2a218e3a75bfe125f4fefeebc0bf0033199a502000d1caac530bffdf03966"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/official_qpo_source_models.yaml",
+      "relative": "official_qpo_eto_sync/profile_pilot/official_qpo_source_models.yaml",
+      "group": "official_qpo_eto_sync",
+      "bytes": 15220,
+      "sha256": "a739015d19ddf9c0e2649c8b218508cc16792ae42670e46506eebf2341f6f7e7"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/official_spectral.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/official_spectral.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 3003,
+      "sha256": "5e6f759d78b7d09db93e48fd8a3f1ee59b1125991e3fb460876ded39f031c184"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/prepare_official_qpo_fixed_dge_diagnostic.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/prepare_official_qpo_fixed_dge_diagnostic.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 7515,
+      "sha256": "08aef8969d7b4bfd2d000928ca2931bc3810488082ac0ef666d803fc0068ea6e"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/prepare_official_qpo_profile_pilot.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/prepare_official_qpo_profile_pilot.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 16887,
+      "sha256": "b6ddc768a216ceb2d508c53754c71413ab9bbe21af62ae87245408318ca5efd0"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_pilot/prepare_official_qpo_profile_smoke.py",
+      "relative": "official_qpo_eto_sync/profile_pilot/prepare_official_qpo_profile_smoke.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 19777,
+      "sha256": "f96420002476e5a8aeb59d9f4571ddaf63e2faa9ee467d4b282b123b5cdcadb8"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_smoke/official_profile.py",
+      "relative": "official_qpo_eto_sync/profile_smoke/official_profile.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 4505,
+      "sha256": "7a37a671e5c10767d969ea5a0e5097f895b62df824af7172dbf8d84c1979c312"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_smoke/official_qpo_source_models.yaml",
+      "relative": "official_qpo_eto_sync/profile_smoke/official_qpo_source_models.yaml",
+      "group": "official_qpo_eto_sync",
+      "bytes": 15220,
+      "sha256": "a739015d19ddf9c0e2649c8b218508cc16792ae42670e46506eebf2341f6f7e7"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/profile_smoke/prepare_official_qpo_profile_smoke.py",
+      "relative": "official_qpo_eto_sync/profile_smoke/prepare_official_qpo_profile_smoke.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 19777,
+      "sha256": "f96420002476e5a8aeb59d9f4571ddaf63e2faa9ee467d4b282b123b5cdcadb8"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/__init__.py",
+      "relative": "official_qpo_eto_sync/src/__init__.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 349,
+      "sha256": "0d9b7745667d04b982d46a6d258f6fe2f155c00908001f313dcf3a5fd8e770fd"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/official_qpo_source_models.yaml",
+      "relative": "official_qpo_eto_sync/src/official_qpo_source_models.yaml",
+      "group": "official_qpo_eto_sync",
+      "bytes": 15220,
+      "sha256": "a739015d19ddf9c0e2649c8b218508cc16792ae42670e46506eebf2341f6f7e7"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/pipeline/prepare_official_qpo_spectral_fits.py",
+      "relative": "official_qpo_eto_sync/src/pipeline/prepare_official_qpo_spectral_fits.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 12773,
+      "sha256": "65ea0d31f049b85f4d2968961f23fcd953cd03352553cf663b4c1c780a1a9770"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/prepare_official_qpo_spectral_fits.py",
+      "relative": "official_qpo_eto_sync/src/prepare_official_qpo_spectral_fits.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 12753,
+      "sha256": "38589184db566373f79e9b08bf1114f6b3124bf8f079533f4ab2648fa69a7662"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/project_paths.py",
+      "relative": "official_qpo_eto_sync/src/project_paths.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 1336,
+      "sha256": "f923064274a33fdfa6bd5b19b3e802d543d367c859309b412a5f445d365f6730"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/utils/__init__.py",
+      "relative": "official_qpo_eto_sync/src/utils/__init__.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 349,
+      "sha256": "0d9b7745667d04b982d46a6d258f6fe2f155c00908001f313dcf3a5fd8e770fd"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/official_qpo_eto_sync/src/utils/project_paths.py",
+      "relative": "official_qpo_eto_sync/src/utils/project_paths.py",
+      "group": "official_qpo_eto_sync",
+      "bytes": 1336,
+      "sha256": "f923064274a33fdfa6bd5b19b3e802d543d367c859309b412a5f445d365f6730"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/DI_Merge",
+      "relative": "MakeLC/DI_merge/DI_Merge",
+      "group": "MakeLC",
+      "bytes": 128560
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/DI_Merge.cc",
+      "relative": "MakeLC/DI_merge/DI_Merge.cc",
+      "group": "MakeLC",
+      "bytes": 7675
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/DI_Merge.d",
+      "relative": "MakeLC/DI_merge/DI_Merge.d",
+      "group": "MakeLC",
+      "bytes": 35495
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/DI_Merge.d.3086816",
+      "relative": "MakeLC/DI_merge/DI_Merge.d.3086816",
+      "group": "MakeLC",
+      "bytes": 0
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/DI_Merge.o",
+      "relative": "MakeLC/DI_merge/DI_Merge.o",
+      "group": "MakeLC",
+      "bytes": 73616
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/Makefile",
+      "relative": "MakeLC/DI_merge/Makefile",
+      "group": "MakeLC",
+      "bytes": 2228
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/Makefile.arch",
+      "relative": "MakeLC/DI_merge/Makefile.arch",
+      "group": "MakeLC",
+      "bytes": 9574
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/DI_Config.h",
+      "relative": "MakeLC/DI_merge/src/DI_Config.h",
+      "group": "MakeLC",
+      "bytes": 9519,
+      "sha256": "a751eb56bdf3b5a8df1518af78d0e9dcf602dd3d48ffe54a51f3af732fe4f6cd"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/Moon.h",
+      "relative": "MakeLC/DI_merge/src/Moon.h",
+      "group": "MakeLC",
+      "bytes": 10473,
+      "sha256": "6b24b70fdd2aa42c4587d6aeb4741c494d00c71a5506d3b2d9afb192dc443899"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/Sun.h",
+      "relative": "MakeLC/DI_merge/src/Sun.h",
+      "group": "MakeLC",
+      "bytes": 4917,
+      "sha256": "e336220af2c9b66415b337c316308a90c08604bed399ac74f1080725a9595eef"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/astro.h",
+      "relative": "MakeLC/DI_merge/src/astro.h",
+      "group": "MakeLC",
+      "bytes": 6999,
+      "sha256": "1bb7ea3b64ced6e58afd020237098bf88be3c49815c79c4759bef47ce35e54de"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/eopdut.h",
+      "relative": "MakeLC/DI_merge/src/eopdut.h",
+      "group": "MakeLC",
+      "bytes": 74455,
+      "sha256": "b1143afeb5e2a0fa36bd943fd4cf9a120a650c8aeaff556273ef6f799cdb7b60"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/hpatimer.cc",
+      "relative": "MakeLC/DI_merge/src/hpatimer.cc",
+      "group": "MakeLC",
+      "bytes": 204
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/hpatimer.d",
+      "relative": "MakeLC/DI_merge/src/hpatimer.d",
+      "group": "MakeLC",
+      "bytes": 62
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/hpatimer.h",
+      "relative": "MakeLC/DI_merge/src/hpatimer.h",
+      "group": "MakeLC",
+      "bytes": 33253,
+      "sha256": "6f469426083f398a27a853f052c72633fa9c8c4e257a2e53eee6978490d88053"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/hpatimer.o",
+      "relative": "MakeLC/DI_merge/src/hpatimer.o",
+      "group": "MakeLC",
+      "bytes": 40416
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/lhaasosite.h",
+      "relative": "MakeLC/DI_merge/src/lhaasosite.h",
+      "group": "MakeLC",
+      "bytes": 1320,
+      "sha256": "00d29b8e548e93a3146298f772fe5b965e23c105a091c777a01a9283bc3f7f8c"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/papi.cc",
+      "relative": "MakeLC/DI_merge/src/papi.cc",
+      "group": "MakeLC",
+      "bytes": 71
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/papi.d",
+      "relative": "MakeLC/DI_merge/src/papi.d",
+      "group": "MakeLC",
+      "bytes": 883
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/papi.h",
+      "relative": "MakeLC/DI_merge/src/papi.h",
+      "group": "MakeLC",
+      "bytes": 29385,
+      "sha256": "af62879415d42ee493db0a0be15a5a5b32a3a0a4e92c58150845f5972434496d"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/papi.o",
+      "relative": "MakeLC/DI_merge/src/papi.o",
+      "group": "MakeLC",
+      "bytes": 47888
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/wcdaevent_skymap_Cod_simu.C",
+      "relative": "MakeLC/DI_merge/src/wcdaevent_skymap_Cod_simu.C",
+      "group": "MakeLC",
+      "bytes": 1533
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/DI_merge/src/wcdaevent_skymap_Cod_simu.h",
+      "relative": "MakeLC/DI_merge/src/wcdaevent_skymap_Cod_simu.h",
+      "group": "MakeLC",
+      "bytes": 26021,
+      "sha256": "28795f06869af56e91fefac2eb0e7dce00d32884484dbe3a5acef148ea0b8155"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/__init__.py",
+      "relative": "MakeLC/__init__.py",
+      "group": "MakeLC",
+      "bytes": 54,
+      "sha256": "d237d0d08e18de2b3ec178560eff121eeb1a9103c5594c798ffc5d50c22ddaf9"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/annual_controls_lc.py",
+      "relative": "MakeLC/annual_controls_lc.py",
+      "group": "MakeLC",
+      "bytes": 28107,
+      "sha256": "f7473e748a6b80c76a9002c922b63e69d483c5e787f6f3969727e1fee3d6b1ce"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/flux_forward_folding.py",
+      "relative": "MakeLC/flux_forward_folding.py",
+      "group": "MakeLC",
+      "bytes": 5949,
+      "sha256": "02069ca0ab9060a6e436463600b64a4faff7fba609127c6f850bb1440603b70d"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/ic443_lc.py",
+      "relative": "MakeLC/ic443_lc.py",
+      "group": "MakeLC",
+      "bytes": 36910,
+      "sha256": "ef591b5250dad4afd163975f795ebaae9dbf53fc4dea8ecd53d0ced9321da909"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/merge.py",
+      "relative": "MakeLC/merge.py",
+      "group": "MakeLC",
+      "bytes": 11401,
+      "sha256": "2872942013d7a53a6fc03c980f6ea0109c68a6e5fd2d51d9867cd1049a3c77a0"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/read.py",
+      "relative": "MakeLC/read.py",
+      "group": "MakeLC",
+      "bytes": 17535,
+      "sha256": "3cc267bbd41733486bf2e4a47feff66597399b19c091f57d4f559a93c93595cc"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/standard_flux_lc.py",
+      "relative": "MakeLC/standard_flux_lc.py",
+      "group": "MakeLC",
+      "bytes": 82620,
+      "sha256": "b26e367153dd5a7412c21c5dc19b5717b9d68d1ea2be93586994de3b2452ba72"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/subjobs.py",
+      "relative": "MakeLC/subjobs.py",
+      "group": "MakeLC",
+      "bytes": 9721,
+      "sha256": "e2bd9524deed9b6d308aa743f03e7fd83082c29e6fa8365711e28d3b4f5f1d70"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/tests/test_annual_controls_lc.py",
+      "relative": "MakeLC/tests/test_annual_controls_lc.py",
+      "group": "MakeLC",
+      "bytes": 5163,
+      "sha256": "7a2af48baf61e3a20ecfb4192b869b15d68079812ca41cb363b9e8f0837c59e1"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/tests/test_ic443_lc.py",
+      "relative": "MakeLC/tests/test_ic443_lc.py",
+      "group": "MakeLC",
+      "bytes": 5886,
+      "sha256": "c07ec40def3827beb8f9c9138639d7de788667ee3cb6263e0dedc6d28483e3ec"
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/MakeLC/wcda_spectral_abc.py",
+      "relative": "MakeLC/wcda_spectral_abc.py",
+      "group": "MakeLC",
+      "bytes": 8477,
+      "sha256": "4b686b2faf37650afba5007701f6eaf8d8ad0b22e06ad60c26c41e253912ec3c"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/J1952_2day_20261011_provenance.tar.gz",
+      "relative": "exports/J1952_2day_20261011_provenance.tar.gz",
+      "group": "workfs_exports",
+      "bytes": 12826898,
+      "sha256": "db011e900d2cc38f39ad39894927c3177dc3dd99a6dc1a995fd03b8bbdac39d8"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/Blank175_2day.csv",
+      "relative": "exports/detector_controls_2day_20261011/Blank175_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 125477,
+      "sha256": "9d41ab13ff9a9fac7df8afe989566b0545b8dd1fe97394229880c658e1dfad2d",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/Blank175_2day_original.csv",
+      "relative": "exports/detector_controls_2day_20261011/Blank175_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 1006794,
+      "sha256": "27fa75e9c5cafe89e8d920f4169c0fa30b6d4383f75402bb2c3dc92e92e7e90e",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/Crab_2day.csv",
+      "relative": "exports/detector_controls_2day_20261011/Crab_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 103855,
+      "sha256": "3f5a74dcdb79b3a397a4f7b536346415927d74c499eecfda6d9579272a2d90f6",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/Crab_2day_original.csv",
+      "relative": "exports/detector_controls_2day_20261011/Crab_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 571661,
+      "sha256": "e68ab39c81b7619f9f83be3fb80aa7978bae0c27136792bae0079ccfdc6486ca",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/IC443_2day.csv",
+      "relative": "exports/detector_controls_2day_20261011/IC443_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 104238,
+      "sha256": "cc00b7da98d0f0d560e3520bece27504682b07959e3ff1985c1a8fc5fac5a351",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/IC443_2day_original.csv",
+      "relative": "exports/detector_controls_2day_20261011/IC443_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 992117,
+      "sha256": "af312013a49214985d0a1c54ddcf463bb5beff5556109f558b782bfc934f6bfe",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/README.txt",
+      "relative": "exports/detector_controls_2day_20261011/README.txt",
+      "group": "workfs_exports",
+      "bytes": 1264
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011/manifest.json",
+      "relative": "exports/detector_controls_2day_20261011/manifest.json",
+      "group": "workfs_exports",
+      "bytes": 1204,
+      "sha256": "ff5359e69903eb98b25e29279cec845e6099889f0dd3bee2cd2ba801c4d6c6af"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_20261011.zip",
+      "relative": "exports/detector_controls_2day_20261011.zip",
+      "group": "workfs_exports",
+      "bytes": 221380,
+      "sha256": "f4125d2843b8d72ade24416a31a6d2c39e098e68133761220f7236571428948f"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/Blank175_2day.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/Blank175_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 125477,
+      "sha256": "9d41ab13ff9a9fac7df8afe989566b0545b8dd1fe97394229880c658e1dfad2d",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/Blank175_2day_original.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/Blank175_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 1006794,
+      "sha256": "27fa75e9c5cafe89e8d920f4169c0fa30b6d4383f75402bb2c3dc92e92e7e90e",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/CHECKSUMS.sha256",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/CHECKSUMS.sha256",
+      "group": "workfs_exports",
+      "bytes": 1137,
+      "sha256": "cf2da8d47241f08e097a674f85c5707d579ad3593a9b8f52c17d6779ebd71d91"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/Crab_2day.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/Crab_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 103855,
+      "sha256": "3f5a74dcdb79b3a397a4f7b536346415927d74c499eecfda6d9579272a2d90f6",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/Crab_2day_original.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/Crab_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 571661,
+      "sha256": "e68ab39c81b7619f9f83be3fb80aa7978bae0c27136792bae0079ccfdc6486ca",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/IC443_2day.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/IC443_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 104238,
+      "sha256": "cc00b7da98d0f0d560e3520bece27504682b07959e3ff1985c1a8fc5fac5a351",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/IC443_2day_original.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/IC443_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 992117,
+      "sha256": "af312013a49214985d0a1c54ddcf463bb5beff5556109f558b782bfc934f6bfe",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/J1952_2day.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/J1952_2day.csv",
+      "group": "workfs_exports",
+      "bytes": 160859,
+      "sha256": "421bd2e9642c90920c83967b7b89e69f9e2c3f805a8eb957f35baf028855042a",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/J1952_2day_original.csv",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/J1952_2day_original.csv",
+      "group": "workfs_exports",
+      "bytes": 1026660,
+      "sha256": "6a85b2722dc2e309eb680b4d61b8a5b5450e66218b497c12b1e5ae949945ad66",
+      "csv_rows": 803
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/J1952_frozen_model.yaml",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/J1952_frozen_model.yaml",
+      "group": "workfs_exports",
+      "bytes": 4898,
+      "sha256": "3d1ed355e6e99b6815c0247286f73d8c27519b619700be8cbc24de0b8dd5dd60"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/J1952_frozen_model_metadata.json",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/J1952_frozen_model_metadata.json",
+      "group": "workfs_exports",
+      "bytes": 1888,
+      "sha256": "959c8566e2c38b6dff821862f9d6e7dbac9895bc746d12fb2badfa015664cd4f"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/J1952_original_calibration_gate.json",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/J1952_original_calibration_gate.json",
+      "group": "workfs_exports",
+      "bytes": 215,
+      "sha256": "dd7853f2b8916784885a31d7d664be59217972224a28563c02a859fe170ca381"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/README.txt",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/README.txt",
+      "group": "workfs_exports",
+      "bytes": 1669
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011/manifest.json",
+      "relative": "exports/detector_controls_2day_four_sources_20261011/manifest.json",
+      "group": "workfs_exports",
+      "bytes": 1599,
+      "sha256": "126ac9af86e11bd9fcdeeadcd50de65bcccf68b7bef2f57ea7421c672350f369"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/exports/detector_controls_2day_four_sources_20261011.zip",
+      "relative": "exports/detector_controls_2day_four_sources_20261011.zip",
+      "group": "workfs_exports",
+      "bytes": 301968,
+      "sha256": "a8eb5aa92293dcc7feaa269e90ce0ae65f5fe655a19067b8a0bb65407554744f"
+    }
+  ],
+  "jobs": [
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "manifests",
+        "map.sub",
+        "map_chunks.args",
+        "map_jobs.csv",
+        "missing_input_maps.csv",
+        "probe.sub",
+        "probe_logs",
+        "run_fit_chunk.sh",
+        "run_map_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict/fit_jobs.csv",
+          "bytes": 2248130,
+          "sha256": "dc53b635af7c0fda526eec4ee1da63aae0ff733f36a0b2e4f93609d8ab5c37da"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict/summary.json",
+          "bytes": 285,
+          "sha256": "cd2296f6095b19565f05cd3683275504984ff40d589ed10cbb1996c3f7a0b942"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_agn_week",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "missing_fit_outputs.csv",
+        "missing_week_maps.csv",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_agn_week/fit_jobs.csv",
+          "bytes": 1284868,
+          "sha256": "0c6f9fd7ca62a47d9d7f9bf519c7f1f27d9eebd5135cb5a5c416ea5bc214d4b4"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_agn_week/summary.json",
+          "bytes": 576,
+          "sha256": "13386ade868586e2f12767e9c5b98b6ad90e0f27e5d3529f1aeb6b86c8736f9b"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_batch",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "batch_manifest.csv",
+        "batch_state.json",
+        "batches",
+        "day_2021_notok_fits.csv",
+        "day_2022_notok_fits.csv",
+        "day_2023_notok_fits.csv",
+        "day_2024_notok_fits.csv",
+        "day_2025_notok_fits.csv",
+        "fit_jobs.csv",
+        "fit_jobs.csv.before_old_week_maps",
+        "fits",
+        "logs",
+        "manifests",
+        "map_jobs.csv",
+        "map_jobs.csv.before_old_week_maps",
+        "missing_input_maps.csv",
+        "run_fit_chunk.sh",
+        "run_map_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_batch/fit_jobs.csv",
+          "bytes": 2418194,
+          "sha256": "8c4f5490d99e6cec22ad2d02d2860fc73cab5b16c9401d15974310a1c8ff32c0"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_flux_strict_batch/summary.json",
+          "bytes": 285,
+          "sha256": "cd2296f6095b19565f05cd3683275504984ff40d589ed10cbb1996c3f7a0b942"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_daily_smoke",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit_jobs.csv",
+        "fits",
+        "missing_period_mc.csv",
+        "run_fit_chunk.sh",
+        "smoke_validation.json",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_daily_smoke/fit_jobs.csv",
+          "bytes": 3175,
+          "sha256": "f46d7f79998c46d6a256824b7858d4838ac865b84e452b2dcc06b4faf64c93d4"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_daily_smoke/summary.json",
+          "bytes": 1380,
+          "sha256": "a7a123ebe4ba3af66b74f31c6fad20353e726095ceb47f885ab5d9a39b448402"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "retry_rows.args",
+        "retry_rows.sub",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fit_jobs.csv",
+          "bytes": 7756593,
+          "sha256": "9dfb506e31117c210250d656fef972b0a30efc0ac5317e506fed2b6e7ab78a18"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/summary.json",
+          "bytes": 954,
+          "sha256": "8810f57267cd413e2784d31945e5e967f2fb9323a1722c8250b65167f6c62b50"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "retry_bllac_lc0198.sub",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fit_jobs.csv",
+          "bytes": 1928872,
+          "sha256": "015d0da6bdbaf3e827b1bf5b6e0a1bb2ee5c6578667d51fc95ab2784dffd5b84"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/summary.json",
+          "bytes": 954,
+          "sha256": "44a8a8c50ff0844f16d73a0496bd4a73e286418b10301970aa3ee33e42f25e1f"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke/fit_jobs.csv",
+          "bytes": 2673,
+          "sha256": "8dfdaba9a14535f96a04a8ecacc7a668930340e4b68015c81474faf1e1658449"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke/summary.json",
+          "bytes": 601,
+          "sha256": "2826590d24f7221561dc641f3cad5150143b825075a9e69f516288a2bf6003b6"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_2day",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_2day/fit_jobs.csv",
+          "bytes": 1970,
+          "sha256": "ef39e9c983722b87f62e46dd9fc1d94512b0b664ed257894adb331dfd0a44d9e"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_2day/summary.json",
+          "bytes": 802,
+          "sha256": "a93b6436fa3052b5b966b11a8e298548b2ca03ad438b260dea82220dac9b07a7"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_8day",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fit.sub",
+        "fit_chunks.args",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "run_fit_chunk.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_8day/fit_jobs.csv",
+          "bytes": 1970,
+          "sha256": "19157a577c3195f5cc37811a0cf06643cbe02305231ccb804abe3ff380d62c2f"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_smoke_20260817_8day/summary.json",
+          "bytes": 802,
+          "sha256": "25667e4e031bbcc538bccf6e668e93547a68da55f466ed170345e5b5930815c3"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r1",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fixed_dge_diagnostic.args",
+        "fixed_dge_diagnostic.classads",
+        "fixed_dge_diagnostic.sub",
+        "fixed_f0",
+        "logs",
+        "normal",
+        "run_fixed_dge_diagnostic.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r1/summary.json",
+          "bytes": 652,
+          "sha256": "627749beefedd535e510a44c0d214feb806af0c2471090dafd5fa8619d00613c"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r2",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fixed_dge_diagnostic.args",
+        "fixed_dge_diagnostic.classads",
+        "fixed_dge_diagnostic.sub",
+        "fixed_f0",
+        "logs",
+        "normal",
+        "run_fixed_dge_diagnostic.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r2/summary.json",
+          "bytes": 652,
+          "sha256": "7d561215ea72adc2c97845ddd5c208d9095396dd20c9e6f05d0b8dacd1273e3b"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r3",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fixed_dge_diagnostic.args",
+        "fixed_dge_diagnostic.dryrun",
+        "fixed_dge_diagnostic.sub",
+        "fixed_f0",
+        "logs",
+        "normal",
+        "run_fixed_dge_diagnostic.sh",
+        "summary.json"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_fixed_dge_diagnostic_r3/summary.json",
+          "bytes": 652,
+          "sha256": "e7ab2e34c18da623421911efd9120a964ca580d0d127de7f569fdc5baaa824a7"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_profile_pilot",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "LC0001",
+        "LC0402",
+        "LC0803",
+        "logs",
+        "normal_fit_queue.args",
+        "normal_profile_pilot.classads",
+        "normal_profile_pilot.sub",
+        "official_profile.py",
+        "prepare_official_qpo_profile_smoke.py",
+        "profile_pilot_summary.json",
+        "profile_smoke_manifest.csv",
+        "profile_smoke_summary.json",
+        "registry.yaml",
+        "run_profile_fit.sh",
+        "run_profile_smoke.sh"
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_profile_pilot_r2",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "LC0001",
+        "LC0402",
+        "LC0803",
+        "fixed_f0_profile_pilot.classads",
+        "fixed_f0_profile_pilot.sub",
+        "fixed_f0_scan_queue.args",
+        "logs",
+        "normal_fit_queue.args",
+        "normal_profile_pilot.classads",
+        "normal_profile_pilot.sub",
+        "official_profile.py",
+        "prepare_official_qpo_profile_smoke.py",
+        "profile_pilot_summary.json",
+        "profile_smoke_manifest.csv",
+        "profile_smoke_summary.json",
+        "registry.yaml",
+        "run_profile_fit.sh",
+        "run_profile_smoke.sh"
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_profile_smoke",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "LC0001",
+        "LC0402",
+        "LC0803",
+        "__pycache__",
+        "official_profile.py",
+        "prepare_official_qpo_profile_smoke.py",
+        "profile_smoke_manifest.csv",
+        "profile_smoke_summary.json",
+        "registry.yaml",
+        "run_profile_smoke.sh"
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_profile_smoke_r2",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "LC0001",
+        "LC0402",
+        "LC0803",
+        "__pycache__",
+        "official_profile.py",
+        "prepare_official_qpo_profile_smoke.py",
+        "profile_smoke_manifest.csv",
+        "profile_smoke_summary.json",
+        "registry.yaml",
+        "run_profile_smoke.sh"
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_profile_smoke_r3",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "LC0001",
+        "LC0402",
+        "LC0803",
+        "__pycache__",
+        "official_profile.py",
+        "prepare_official_qpo_profile_smoke.py",
+        "profile_smoke_manifest.csv",
+        "profile_smoke_summary.json",
+        "registry.yaml",
+        "run_profile_smoke.sh"
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.classads",
+        "spectral_fits.sub"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits/spectral_fit_manifest.csv",
+          "bytes": 2044,
+          "sha256": "500c5eb8fc88f33309ca274c39f4065e619539e48fcc45898289715e281a1424"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits/spectral_fit_summary.json",
+          "bytes": 1285,
+          "sha256": "16d885956e9a7f59b48c7539cdaebf3d84e7de9e11c348c34482fbe0ba5ae157"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_dge_policy_r5",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.dryrun",
+        "spectral_fits.schedd06.dryrun",
+        "spectral_fits.sub"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_dge_policy_r5/spectral_fit_manifest.csv",
+          "bytes": 4962,
+          "sha256": "f726726795bbc1831e59ee9b7f93c783aabd4d62dc8868df478765ebaca0d43c"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_dge_policy_r5/spectral_fit_summary.json",
+          "bytes": 1305,
+          "sha256": "c75660fc5565081177300b4abf905c68bb5d76b2ff010c131daf4f0573f5327d"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_plc",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.classads",
+        "spectral_fits.sub"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_plc/spectral_fit_manifest.csv",
+          "bytes": 4077,
+          "sha256": "1f17c823c720342b024705865320c13d3c6d3734a74d12a3bc15105c5d6c7d7d"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_plc/spectral_fit_summary.json",
+          "bytes": 1297,
+          "sha256": "ebdb4ae77e269e73044cc9502542ec19b0d47d569d158af96d05cbd7198e3d31"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r2",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.classads",
+        "spectral_fits.sub"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r2/spectral_fit_manifest.csv",
+          "bytes": 6279,
+          "sha256": "9cee754a88d5a506676ec3c3dcbc18e0737cafb3a4a2a86d8affc49205378402"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r2/spectral_fit_summary.json",
+          "bytes": 1312,
+          "sha256": "77787dc367c4c83dfa2e7b75e6c10a4c00147d49f26211b0f0a01eb8acb0509d"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r3",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_manifest_bllac.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.classads",
+        "spectral_fits.sub",
+        "validated_registry_bllac.yaml"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r3/spectral_fit_manifest.csv",
+          "bytes": 6279,
+          "sha256": "47a36ca71531954a54920d8fdfb47716a127a7acbede51195b6de130c3c81c84"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r3/spectral_fit_summary.json",
+          "bytes": 1312,
+          "sha256": "02724b183cc89782c1fb63695396f1bc7f4ab529d558c196a4b7db87bfbd82ca"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r4",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "fits",
+        "logs",
+        "run_spectral_fit.sh",
+        "spectral_fit_manifest.csv",
+        "spectral_fit_queue.args",
+        "spectral_fit_summary.json",
+        "spectral_fits.classads",
+        "spectral_fits.sub"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r4/spectral_fit_manifest.csv",
+          "bytes": 4259,
+          "sha256": "2777f1bae232db488910376211074a9d5cd583b9635ac54723ef87f28968b007"
+        },
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_official_qpo_spectral_fits_retry_r4/spectral_fit_summary.json",
+          "bytes": 1312,
+          "sha256": "3778f7cf5a8237c832da40442b6e2586249e037091fe83f7d361138e7571ba62"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "args",
+        "dryrun.ads",
+        "fit.sub",
+        "fit_jobs.csv",
+        "fits",
+        "logs",
+        "provenance.json",
+        "run.sh"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908/fit_jobs.csv",
+          "bytes": 1223286,
+          "sha256": "887a0fceeb3abd7f88384d38f7c75ec0a8abf2389af2a6119792e12b873ed413"
+        }
+      ]
+    },
+    {
+      "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "args",
+        "fit.sub",
+        "fit_jobs.csv",
+        "fits",
+        "full.ads",
+        "lightcurves.csv",
+        "logs",
+        "pilot.ads",
+        "pilot.args",
+        "pilot.sub",
+        "provenance.json",
+        "run.sh"
+      ],
+      "top_files": [
+        {
+          "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fit_jobs.csv",
+          "bytes": 1241286,
+          "sha256": "0c1fd57be8fc84b8061230b2798abbbaaac692a71907296d70155d75239f90cc"
+        }
+      ]
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/JOBs_J1952_2day_diagnostic_20261011",
+      "exists": false,
+      "is_symlink": true,
+      "link_target": "/tmp/liushijie_QPO_J1952_2day_20261011"
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/JOBs_annual_controls_2day_20260923",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        "Blank175",
+        "J1952",
+        "catalog_veto.json",
+        "code",
+        "neighbor_selection.json",
+        "results",
+        "run.json",
+        "snapshot_sha256.json",
+        "software"
+      ]
+    },
+    {
+      "path": "/workfs2/lhaaso/liushijie/QPO/JOBs_ic443_official_2day_20260922",
+      "exists": true,
+      "is_symlink": false,
+      "top_entries": [
+        ".mplconfig",
+        "IMPLEMENTATION.md",
+        "calibration",
+        "calibration_transfer_failure.json",
+        "code",
+        "code_before_production",
+        "code_before_spool",
+        "code_calibration_version",
+        "code_factory_spool",
+        "collection_qa.json",
+        "collector_code",
+        "collector_sha256.json",
+        "continue_production.py",
+        "factory_spool_diagnostic.txt",
+        "fit_jobs.csv",
+        "fits",
+        "frozen_model.yaml",
+        "frozen_model_metadata.json",
+        "held_before_spool_3571958.json",
+        "held_before_spool_3571962.json",
+        "input_retry",
+        "preproduction_checks.json",
+        "production_monitor.log",
+        "production_wave1",
+        "production_wave2",
+        "production_wave2_retry",
+        "production_wave3",
+        "production_waves.json",
+        "qa_smoke_collection",
+        "results",
+        "run.json",
+        "smoke",
+        "snapshot_sha256.json",
+        "snapshot_sha256_before_spool.json",
+        "software",
+        "storage_probe",
+        "storage_probe_transfer",
+        "ts_policy.json"
+      ],
+      "top_files": [
+        {
+          "path": "/workfs2/lhaaso/liushijie/QPO/JOBs_ic443_official_2day_20260922/fit_jobs.csv",
+          "bytes": 876137,
+          "sha256": "216354a4087f1ff32c707341c08872d195a16e8d8211506ed40d43a41ec0af4f"
+        }
+      ]
+    }
+  ]
+}

@@ -123,6 +123,7 @@ Do not hard-code new absolute paths in scripts when a project-relative path help
 
 - SSH host alias is `ETO` in `~/.ssh/config`.
 - Login lands in `/home/server`.
+- Store ETO project backups and working files under `/mnt/newdisk/shijie`; the QPO repository is `/mnt/newdisk/shijie/QPO`.
 - This server has a clone of the repository and can be used for larger jobs.
 - Use ETO when the work needs longer runtime, heavier CPU usage, or Slurm submission.
 - Prefer running batch or large periodicity / simulation workloads there instead of overloading the local machine.
@@ -142,13 +143,16 @@ Do not hard-code new absolute paths in scripts when a project-relative path help
 
 ### ETO
 
-Checked from this machine on 2026-05-27.
+Checked from this machine on 2026-10-13.
 
 - The SSH alias `ETO` connects successfully in batch mode.
 - The login directory is `/home/server`.
 - Slurm is installed and usable from this environment.
-- The home directory contains a `projects` symlink to `/mnt/mydisk/server/projects`.
-- A `QPO` directory was not located by the non-interactive probe under `/home/server` during this check, so the exact ETO clone path is still unverified.
+- The current storage disk is mounted at `/mnt/newdisk`, replacing the failed disk previously mounted at `/mnt/mydisk`; the personal directory is `/mnt/newdisk/shijie`.
+- Use `/mnt/newdisk/shijie/QPO` for all new ETO QPO work and backups; do not use the old `/mnt/mydisk` paths.
+- The QPO checkout is restored from the canonical local working tree at `/mnt/newdisk/shijie/QPO`, including Git history and uncommitted files.
+- `/mnt/mydisk` is currently an unmounted, empty directory; old ETO-only files are not recovered by this restore.
+- Legacy files under `src/pipeline/fermi_mkn501_run/` still contain `/mnt/mydisk/server/projects/QPO` paths and require adaptation before use.
 
 ### IHEP
 

@@ -1,0 +1,299 @@
+{
+  "trees": [
+    {
+      "path": "/eos/lhaaso/rec/wcda/publish/skymap/Cod/DailySkyMap",
+      "root_names_count": 1592,
+      "top_entries": 6,
+      "sample_paths": [
+        "/eos/lhaaso/rec/wcda/publish/skymap/Cod/DailySkyMap/2021/2021067_period001_dailymap.root",
+        "/eos/lhaaso/rec/wcda/publish/skymap/Cod/DailySkyMap/2021/2021068_period001_dailymap.root",
+        "/eos/lhaaso/rec/wcda/publish/skymap/Cod/DailySkyMap/2021/2021069_period001_dailymap.root",
+        "/eos/lhaaso/rec/wcda/publish/skymap/Cod/DailySkyMap/2021/2021070_period001_dailymap.root"
+      ]
+    },
+    {
+      "path": "/eos/lhaaso/rec/wcda/publish/simulation/Cod/MCGammaPeriod",
+      "root_names_count": 166,
+      "top_entries": 83,
+      "sample_paths": [
+        "/eos/lhaaso/rec/wcda/publish/simulation/Cod/MCGammaPeriod/period001/Cod_period001_corsika.root",
+        "/eos/lhaaso/rec/wcda/publish/simulation/Cod/MCGammaPeriod/period001/Cod_period001_rec.root",
+        "/eos/lhaaso/rec/wcda/publish/simulation/Cod/MCGammaPeriod/period002/Cod_period002_corsika.root",
+        "/eos/lhaaso/rec/wcda/publish/simulation/Cod/MCGammaPeriod/period002/Cod_period002_rec.root"
+      ]
+    },
+    {
+      "path": "/eos/user/l/liushijie/Skymap/2021-03-08_2026-03-29_week",
+      "root_names_count": 264,
+      "top_entries": 264,
+      "sample_paths": [
+        "/eos/user/l/liushijie/Skymap/2021-03-08_2026-03-29_week/Loop0_2021-03-08_2021-03-14.root",
+        "/eos/user/l/liushijie/Skymap/2021-03-08_2026-03-29_week/Loop100_2023-02-06_2023-02-12.root",
+        "/eos/user/l/liushijie/Skymap/2021-03-08_2026-03-29_week/Loop101_2023-02-13_2023-02-19.root",
+        "/eos/user/l/liushijie/Skymap/2021-03-08_2026-03-29_week/Loop102_2023-02-20_2023-02-26.root"
+      ]
+    },
+    {
+      "path": "/eos/lhaaso/ai/wcda/raw/2022/0101",
+      "root_names_count": null,
+      "top_entries": 23,
+      "sample_paths": [
+        "/eos/lhaaso/ai/wcda/raw/2022/0101/Esg20220101_00.root",
+        "/eos/lhaaso/ai/wcda/raw/2022/0101/Esg20220101_01.root",
+        "/eos/lhaaso/ai/wcda/raw/2022/0101/Esg20220101_02.root",
+        "/eos/lhaaso/ai/wcda/raw/2022/0101/Esg20220101_03.root"
+      ]
+    }
+  ],
+  "fit_samples": [
+    {
+      "job": "JOBs_official_lc_20260817_2day",
+      "source": "Mkn421",
+      "bin": "LC0001",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Mkn421/2days/LC0001/Fit.yaml",
+        "exists": true,
+        "sha256": "e4bb95ab0f4a2369f3310c9c7e81ad31f9fcdc170812c96d3f687530a23cef9e"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Mkn421/2days/LC0001/ParInit.yaml",
+        "exists": true,
+        "sha256": "88d365195f32597b2f060e905167195b8fa2a8a9b4e70bf0c714c993c984b825"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Mkn421/2days/LC0001/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "8ba9a9af0d95f3e02e0f9f5451b620a8f2a4b8b48b17133cfe45308044ecfbd7"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Mkn421/2days/LC0001/fit.log",
+        "exists": true,
+        "sha256": "c27698581bae023df35cc557f967931b3877faff906eb46bbe5843d8cb630b85"
+      }
+    },
+    {
+      "job": "JOBs_official_lc_20260817_2day",
+      "source": "BLLacertae",
+      "bin": "LC0402",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/BLLacertae/2days/LC0402/Fit.yaml",
+        "exists": true,
+        "sha256": "54c7a8c4eac6d086d976b883ba9ece174926e009e3b23d84c29c7eddba1843f7"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/BLLacertae/2days/LC0402/ParInit.yaml",
+        "exists": true,
+        "sha256": "66a030a83978efd9a881b2c033efa4dd8d5e3c2f3c04e33375b1b337c4c47789"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/BLLacertae/2days/LC0402/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "5ba06e3a396e011d4373790a15612068b8a118876b6e36c84a62113d4987c8c8"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/BLLacertae/2days/LC0402/fit.log",
+        "exists": true,
+        "sha256": "3580907e75a6f8af798812eda00f8d76c61bc8b049b3c4c4282edce17c72fc0b"
+      }
+    },
+    {
+      "job": "JOBs_official_lc_20260817_2day",
+      "source": "Crab",
+      "bin": "LC0803",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Crab/2days/LC0803/Fit.yaml",
+        "exists": true,
+        "sha256": "19033f317cecb6227ecb9ca3ec84bd4c0050025a930bac7bc51c4b5d393821a5"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Crab/2days/LC0803/ParInit.yaml",
+        "exists": true,
+        "sha256": "8302cc320a9ae1cf50186d8f5d3efc5d7b3ce0e6d15da5dbd8a4116e539b8f00"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Crab/2days/LC0803/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "832e72a905e3cf33a4a54082633d857c0ae4190e7e32f7c91f0ed55a0badd338"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_2day/fits/Crab/2days/LC0803/fit.log",
+        "exists": true,
+        "sha256": "cd2a7b67885b47a9fb9b7393cd01447f0c40279d17f9ccacdd9b5763b35856a2"
+      }
+    },
+    {
+      "job": "JOBs_official_lc_20260817_8day",
+      "source": "Mkn421",
+      "bin": "LC0001",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0001/Fit.yaml",
+        "exists": true,
+        "sha256": "5c6a28a0569f04242ce65641cc9f150c835fa6f13cf77a9e57d056aa6685eb2b"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0001/ParInit.yaml",
+        "exists": true,
+        "sha256": "88d365195f32597b2f060e905167195b8fa2a8a9b4e70bf0c714c993c984b825"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0001/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "d034c17fec64496a04b7ea86517abcb4ed52a3e1db378b9c2a66bbac03b824b8"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0001/fit.log",
+        "exists": true,
+        "sha256": "60bdc2034aed85b2ebe7f17c0699db26173f0e43a0b02d2e323ef0766f94949b"
+      }
+    },
+    {
+      "job": "JOBs_official_lc_20260817_8day",
+      "source": "Mkn421",
+      "bin": "LC0101",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0101/Fit.yaml",
+        "exists": true,
+        "sha256": "0e7bc2d241e9996721decea259b93e31bde3d05b049af1f21ae61b29bd51a5b6"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0101/ParInit.yaml",
+        "exists": true,
+        "sha256": "88d365195f32597b2f060e905167195b8fa2a8a9b4e70bf0c714c993c984b825"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0101/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "21208f8cb7e7ead6189870a1370a64b77d2ed3715cdf5b197a782a4534e12c77"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Mkn421/8days/LC0101/fit.log",
+        "exists": true,
+        "sha256": "a80485b2f4044b0522f0d871ba3969215c4dd2eeae9c72aac2cb27ded17c2a7b"
+      }
+    },
+    {
+      "job": "JOBs_official_lc_20260817_8day",
+      "source": "Crab",
+      "bin": "LC0200",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Crab/8days/LC0200/Fit.yaml",
+        "exists": true,
+        "sha256": "3495d23eecbd695bb9aed23b49a5f20db0ea87669dce4bb11bb71a17d56ce229"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Crab/8days/LC0200/ParInit.yaml",
+        "exists": true,
+        "sha256": "8302cc320a9ae1cf50186d8f5d3efc5d7b3ce0e6d15da5dbd8a4116e539b8f00"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Crab/8days/LC0200/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "8a6e1bf6ba7132953018e63b3b64480eb8fdd419a035eaa098df6e73a828479f"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_official_lc_20260817_8day/fits/Crab/8days/LC0200/fit.log",
+        "exists": true,
+        "sha256": "9bed9cf85c8747b5d62a7f9f00962cabd6025d7530b271b804a75fe706b58105"
+      }
+    },
+    {
+      "job": "JOBs_spectral_abc_8day_20260908_r2",
+      "source": "Mkn421",
+      "bin": "LC0001",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0001/Fit.yaml",
+        "exists": true,
+        "sha256": "6aec929c7c7cdd7821cc28fe462b4f0c32e726b3ab8f470ebb97524232e17e9d"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0001/ParInit.yaml",
+        "exists": true,
+        "sha256": "abb7c800e25b0f9b35d2c674cb96c40e359e2334c7c0873460999d0ef2e8bb9c"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0001/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "8d2f291d22e0dde510222098b7ffaafcc4b91853b0aaf1c31da8cd5cf7a38c89"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0001/fit.log",
+        "exists": true,
+        "sha256": "0b73657d01bd6c6bafd0c4a651bbca35c38368a17a90b7b9c5a316db00ea43c5"
+      }
+    },
+    {
+      "job": "JOBs_spectral_abc_8day_20260908_r2",
+      "source": "Mkn421",
+      "bin": "LC0101",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0101/Fit.yaml",
+        "exists": true,
+        "sha256": "437cec7cbe12133c4e55e83eb40976fc5756df0b5f77cc6a7a0cb699e3c5a61a"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0101/ParInit.yaml",
+        "exists": true,
+        "sha256": "abb7c800e25b0f9b35d2c674cb96c40e359e2334c7c0873460999d0ef2e8bb9c"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0101/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "d07e82af92610632c5735c1f2dc9be8031d0ec94b25ee68197a3f7cfc0cbf6d1"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/B/Mkn421/LC0101/fit.log",
+        "exists": true,
+        "sha256": "98da72c20a16e10c6e17bb31a4abe2b8bfff5cf6d1b212f6541b463f253a8b84"
+      }
+    },
+    {
+      "job": "JOBs_spectral_abc_8day_20260908_r2",
+      "source": "Mkn501",
+      "bin": "LC0200",
+      "fit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/C_plus/Mkn501/LC0200/Fit.yaml",
+        "exists": true,
+        "sha256": "69f62d1882059dbd99ec11658eaa129021cc9db7a2738d8a9560586136fc2a28"
+      },
+      "parinit_yaml": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/C_plus/Mkn501/LC0200/ParInit.yaml",
+        "exists": true,
+        "sha256": "5bc9a1dd7310e07c7e0f20cef1891d5e3786abef04f94016438931f6b5a3ca91"
+      },
+      "parres": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/C_plus/Mkn501/LC0200/out/ParRes.yaml",
+        "exists": true,
+        "sha256": "6736d97730214439c556e47d85fec7907d5bbe8bd2979eac47681c9cb724026f"
+      },
+      "log": {
+        "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/fits/C_plus/Mkn501/LC0200/fit.log",
+        "exists": true,
+        "sha256": "ec5704ee75f2833fa7b8e5ed8f5a48d07a59de75fef52238f73e28dd3a5b0865"
+      }
+    }
+  ],
+  "manifest_rows": {
+    "JOBs_official_lc_20260817_2day": 8833,
+    "JOBs_official_lc_20260817_8day": 2200,
+    "JOBs_spectral_abc_8day_20260908_r2": 1200
+  },
+  "spectral_abc_csv": {
+    "path": "/home/lhaaso/liushijie/QPO/JOBs_spectral_abc_8day_20260908_r2/lightcurves.csv",
+    "sha256": "b4228dbaa20991202564907c08bf828f4dba13d47d18806889b26ed71380a04f"
+  },
+  "j1952_archive": {
+    "path": "/workfs2/lhaaso/liushijie/QPO/exports/J1952_2day_20261011_provenance.tar.gz",
+    "members": 11180,
+    "first_names": [
+      "code",
+      "code/annual_controls_lc.py",
+      "code/ic443_lc.py",
+      "code/standard_flux_lc.py",
+      "run.json",
+      "continue_and_package.py",
+      "completed.json",
+      "J1952"
+    ],
+    "file_bytes": 62139655
+  }
+}

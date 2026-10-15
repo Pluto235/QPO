@@ -1,0 +1,46 @@
+{
+  "verified_at": "2026-10-12T21:36:30.270339+08:00",
+  "raw_bundle_unchanged": true,
+  "zip_crc": true,
+  "internal_sha256_checks": 13,
+  "exactly_four_png": true,
+  "all_simulated_spectra_finite": true,
+  "first_surrogate_reproduced_for_all_sources": true,
+  "saved_reference_quantiles_recomputed": true,
+  "all_wwz_faps_independently_recomputed": true,
+  "html_embedded_images_match_pngs": true,
+  "html_sha256": "b42d4ed8cf3efd0613a2ae54c240fdf8198aa49776ce209c0514823b3cdc7c24",
+  "sources": [
+    {
+      "source": "Crab",
+      "retained": 799,
+      "simulation_count": 1000,
+      "png_sha256": "423c39ffe7f2ceb0f9da413f2e523c233b0b1a087e4d49d2e0d72e044c4910f4"
+    },
+    {
+      "source": "IC443",
+      "retained": 676,
+      "simulation_count": 1000,
+      "png_sha256": "122d625f39b67350244da4f53e1d20e5f5c6ed00d677db1b61a114a3d1ae9b69"
+    },
+    {
+      "source": "Blank175",
+      "retained": 309,
+      "simulation_count": 1000,
+      "png_sha256": "1534dffda7b15fa5b4f4c3e106a60c839417eaa84d5d33d9f7761ddcd8e60191"
+    },
+    {
+      "source": "J1952",
+      "retained": 540,
+      "simulation_count": 1000,
+      "png_sha256": "566ff8b9855ab56532c1289c01f47752c612b67403d35b744504e84d95b02497"
+    }
+  ],
+  "targeted_tests_passed": 21,
+  "browser_desktop_checked": true,
+  "browser_390px_checked": true,
+  "browser_no_page_horizontal_overflow": true,
+  "browser_four_images_loaded": true,
+  "browser_toc_anchors_valid": true,
+  "browser_image_zoom_open_close_checked": true
+}
